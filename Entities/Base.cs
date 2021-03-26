@@ -648,6 +648,7 @@ namespace GizmoDALV2.Entities
             this.StockTransactions = new HashSet<StockTransaction>();
             this.StockTransactionsSource = new HashSet<StockTransaction>();
             this.Images = new HashSet<ProductImage>();
+            this.HiddenHostGroups = new HashSet<ProductHostHidden>();
         }
         #endregion
 
@@ -850,6 +851,12 @@ namespace GizmoDALV2.Entities
         /// </summary>
         [ProtoMember(22)]
         public virtual ISet<ProductImage> Images { get; protected set; }
+
+        /// <summary>
+        /// Gets dissalowed user groups.
+        /// </summary>
+        [ProtoMember(23)]
+        public virtual ISet<ProductHostHidden> HiddenHostGroups { get; protected set; }
 
         /// <summary>
         /// Gets product stock transactions.
