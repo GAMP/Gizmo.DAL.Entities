@@ -853,7 +853,7 @@ namespace GizmoDALV2.Entities
         public virtual ISet<ProductImage> Images { get; protected set; }
 
         /// <summary>
-        /// Gets dissalowed user groups.
+        /// Gets hidden host groups.
         /// </summary>
         [ProtoMember(23)]
         public virtual ISet<ProductHostHidden> HiddenHostGroups { get; protected set; }

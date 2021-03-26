@@ -343,7 +343,8 @@ namespace GizmoDALV2
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(559, typeof(AssetType));
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(560, typeof(Asset));
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(562, typeof(HostGroupWaitingLine));
-            
+            RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(563, typeof(ProductHostHidden));
+
 
             RuntimeTypeModel.Default[typeof(FileListEntityBase)].AddSubType(500, typeof(PersonalFile));
             RuntimeTypeModel.Default[typeof(FileListEntityBase)].AddSubType(501, typeof(Deployment));
