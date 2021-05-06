@@ -9390,6 +9390,8 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets or sets shift.
         /// </summary>
+        [DataMember()]
+        [ProtoMember(16)]
         public virtual Shift Shift
         {
             get; set;
