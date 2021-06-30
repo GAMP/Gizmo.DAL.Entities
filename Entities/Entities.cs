@@ -903,7 +903,7 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets or sets application.
         /// </summary>
-        [ProtoMember(23,AsReference =true)]
+        [ProtoMember(23, AsReference = true)]
         public virtual App App
         {
             get;
@@ -913,7 +913,7 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets or sets defualt deployment profile.
         /// </summary>        
-        [ProtoMember(22,AsReference =true)]
+        [ProtoMember(22, AsReference = true)]
         public virtual Deployment DefaultDeployment
         {
             get;
@@ -1296,7 +1296,7 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets or sets task.
         /// </summary>
-        [ProtoMember(6,AsReference =true)]
+        [ProtoMember(6, AsReference = true)]
         public virtual TaskBase TaskBase
         {
             get;
@@ -1360,7 +1360,7 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets or sets license profile.
         /// </summary>
-        [ProtoMember(4,AsReference =true)]
+        [ProtoMember(4, AsReference = true)]
         public virtual License License { get; set; }
 
         #endregion
@@ -1420,7 +1420,7 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets or sets personal user file.
         /// </summary>
-        [ProtoMember(4,AsReference =true)]
+        [ProtoMember(4, AsReference = true)]
         public virtual PersonalFile PersonalFile { get; set; }
 
         #endregion
@@ -1480,7 +1480,7 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets or sets deployment profile.
         /// </summary>
-        [ProtoMember(4,AsReference =true)]
+        [ProtoMember(4, AsReference = true)]
         public virtual Deployment Deployment { get; set; }
 
         #endregion
@@ -2088,7 +2088,7 @@ namespace GizmoDALV2.Entities
         [StringLength(255)]
         public string MediaUrl
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -2982,7 +2982,7 @@ namespace GizmoDALV2.Entities
         {
             get;
             set;
-        }   
+        }
 
         /// <summary>
         /// Gets or sets value.
@@ -3455,7 +3455,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(20)]
         public int WaitingLinePriority
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -3465,7 +3465,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(21)]
         public bool IsWaitingLinePriorityEnabled
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -3908,7 +3908,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         public virtual ISet<Token> Tokens
         {
-            get;protected set;
+            get; protected set;
         }
 
         /// <summary>
@@ -3916,7 +3916,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         public virtual ISet<Verification> Verifications
         {
-            get;protected set;
+            get; protected set;
         }
 
 
@@ -4148,7 +4148,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(7)]
         public DateTime? EnableDate
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -4158,7 +4158,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(8)]
         public DateTime? DisabledDate
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -4332,7 +4332,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         public virtual ISet<Reservation> Reservations
         {
-            get;protected set;
+            get; protected set;
         }
 
         #endregion
@@ -4716,7 +4716,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(11)]
         public double PendSpanTotal
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -4726,7 +4726,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(12)]
         public double PauseSpan
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -4736,7 +4736,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(13)]
         public double PauseSpanTotal
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -5222,7 +5222,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         public virtual HostGroupWaitingLine WaitingLine
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -6080,7 +6080,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(7)]
         public bool IsClient
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -6110,7 +6110,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(10)]
         public bool IsDeleted
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -8808,7 +8808,7 @@ namespace GizmoDALV2.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class ProductOrder : ModifiableByWithRequiredUserMemberBase, IDeletable, IVoidable , IDeliverable
+    public class ProductOrder : ModifiableByWithRequiredUserMemberBase, IDeletable, IVoidable, IDeliverable
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -8936,7 +8936,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(13)]
         public int? PreferedPaymentMethodId
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -8946,7 +8946,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(14)]
         public bool IsDelivered
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -8956,7 +8956,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(15)]
         public DateTime? DeliveredTime
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -8966,7 +8966,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(16)]
         public OrderSource Source
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -8977,7 +8977,7 @@ namespace GizmoDALV2.Entities
         [MaxLength(255)]
         public string UserNote
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -9034,7 +9034,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         public virtual PaymentMethod PreferedPaymentMethod
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -11408,7 +11408,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(4)]
         public bool IsManualPosition
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -11417,7 +11417,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(5)]
         public double TimeInLine
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -11459,7 +11459,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         public virtual HostGroup HostGroup
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -11511,7 +11511,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(1)]
         public int? UserId
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -11541,7 +11541,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(4)]
-        [Range(1,int.MaxValue)]
+        [Range(1, int.MaxValue)]
         public int Duration
         {
             get; set;
@@ -11586,7 +11586,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(8)]
         public ReservationStatus Status
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -11618,11 +11618,11 @@ namespace GizmoDALV2.Entities
         /// </summary>
         public virtual UserMember User
         {
-            get;set;
+            get; set;
         }
 
         #endregion
-    } 
+    }
     #endregion
 
     #region RESERVATIONUSER
@@ -11685,7 +11685,7 @@ namespace GizmoDALV2.Entities
         }
 
         #endregion
-    } 
+    }
     #endregion
 
     #region RESERVATIONHOST
@@ -11796,7 +11796,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(1)]
         public int? UserId
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -11818,7 +11818,7 @@ namespace GizmoDALV2.Entities
         [MaxLength(6)]
         public string ConfirmationCode
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -11838,7 +11838,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(5)]
         public TokenStatus Status
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -11848,7 +11848,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(6)]
         public DateTime? Expires
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -11860,7 +11860,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         public virtual User User
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -11903,7 +11903,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(2)]
         public int? UserId
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -11913,7 +11913,7 @@ namespace GizmoDALV2.Entities
         [ProtoMember(3)]
         public VerificationStatus Status
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -11933,7 +11933,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         public virtual User User
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -12005,6 +12005,6 @@ namespace GizmoDALV2.Entities
         }
 
         #endregion
-    } 
+    }
     #endregion
 }
