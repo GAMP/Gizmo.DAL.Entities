@@ -1,4 +1,5 @@
 ﻿using GizmoDALV2.Entities;
+using System.Collections.Generic;
 
 namespace Gizmo.DAL.Entities
 {
@@ -12,7 +13,9 @@ namespace Gizmo.DAL.Entities
         /// Creates new instance.
         /// </summary>
         public Device() : base()
-        { }
+        {
+            Hosts = new HashSet<DeviceHost>();
+        }
         #endregion
 
         #region PROPERTIES
@@ -23,6 +26,18 @@ namespace Gizmo.DAL.Entities
         {
             get; set;
         }
+        #endregion
+
+        #region NAVIGATION PROPERTIES
+
+        /// <summary>
+        /// Gets associated hosts.
+        /// </summary>
+        public virtual ISet<DeviceHost> Hosts
+        {
+            get;protected set;
+        }
+
         #endregion
     }
 }

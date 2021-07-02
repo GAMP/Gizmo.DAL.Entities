@@ -1,5 +1,6 @@
 ﻿using CoreLib;
 using CyClone;
+using Gizmo.DAL.Entities;
 using ProtoBuf;
 using SharedLib;
 using System;
@@ -4925,6 +4926,7 @@ namespace GizmoDALV2.Entities
             Layouts = new HashSet<HostLayoutGroupLayout>();
             ReservedGuests = new HashSet<UserGuest>();
             ProductOrders = new HashSet<ProductOrder>();
+            Devices = new HashSet<DeviceHost>();
         }
         #endregion
 
@@ -5022,6 +5024,14 @@ namespace GizmoDALV2.Entities
         /// Gets or sets product orders.
         /// </summary>
         public virtual ISet<ProductOrder> ProductOrders
+        {
+            get; protected set;
+        }
+
+        /// <summary>
+        /// Gets associated devices.
+        /// </summary>
+        public virtual ISet<DeviceHost> Devices
         {
             get; protected set;
         }

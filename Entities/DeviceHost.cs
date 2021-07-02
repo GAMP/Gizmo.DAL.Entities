@@ -3,14 +3,14 @@
     /// <summary>
     /// Host device relation entity.
     /// </summary>
-    public class HostDevice : GizmoDALV2.Entities.ModifiableByOperatorBase
+    public class DeviceHost : GizmoDALV2.Entities.ModifiableByOperatorBase
     {
         #region CONSTRUCTOR
         
         /// <summary>
         /// Creates new instance.
         /// </summary>
-        public HostDevice() : base()
+        public DeviceHost() : base()
         { } 
 
         #endregion

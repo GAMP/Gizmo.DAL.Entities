@@ -3,13 +3,13 @@
     /// <summary>
     /// HDMI Device entity.
     /// </summary>
-    public class HdmiDevice : Device
+    public class DeviceHdmi : Device
     {
         #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
-        public HdmiDevice() : base()
+        public DeviceHdmi() : base()
         {
         }
         #endregion
@@ -17,9 +17,9 @@
         #region PROPERTIES
 
         /// <summary>
-        /// Gets or sets unique serial number.
+        /// Gets or sets unique id.
         /// </summary>
-        public string SerialNumber
+        public string UniqueId
         {
             get; set;
         }
