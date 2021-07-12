@@ -2,12 +2,13 @@
 
 namespace GizmoDALV2
 {
-    #region IReplicatable
     /// <summary>
     /// Represents an entity that support replication by exposing a unique GUID.
     /// </summary>
     public interface IReplicatable
     {
+        #region PROPERTIES
+        
         /// <summary>
         /// Gets or sets item guid.
         /// </summary>
@@ -15,7 +16,8 @@ namespace GizmoDALV2
         {
             get;
             set;
-        }
+        } 
+
+        #endregion
     }
-    #endregion
 }

@@ -2,14 +2,13 @@
 
 namespace GizmoDALV2
 {
-    #region IDeliverable
     /// <summary>
     /// Represents an entity that can have deliverd status flags.
     /// </summary>
     public interface IDeliverable
     {
         #region PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets if product is delivered.
         /// </summary>
@@ -26,9 +25,8 @@ namespace GizmoDALV2
         {
             get;
             set;
-        } 
+        }
 
         #endregion
     }
-    #endregion
 }
