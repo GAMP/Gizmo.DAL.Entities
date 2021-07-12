@@ -1,4 +1,5 @@
-﻿using GizmoDALV2.Entities;
+﻿using GizmoDALV2;
+using GizmoDALV2.Entities;
 using System.Collections.Generic;
 
 namespace Gizmo.DAL.Entities
@@ -6,7 +7,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Device entity.
     /// </summary>
-    public class Device : ModifiableByOperatorBase
+    public class Device : ModifiableByOperatorBase, IEnabled, IDeletable
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -19,6 +20,7 @@ namespace Gizmo.DAL.Entities
         #endregion
 
         #region PROPERTIES
+
         /// <summary>
         /// Gets or set device name.
         /// </summary>
@@ -26,6 +28,16 @@ namespace Gizmo.DAL.Entities
         {
             get; set;
         }
+
+        /// <inheritdoc/>
+        public bool IsEnabled
+        {
+            get; set;
+        }
+
+        /// <inheritdoc/>
+        public bool IsDeleted { get; set; }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -35,9 +47,9 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public virtual ISet<DeviceHost> Hosts
         {
-            get;protected set;
+            get; protected set;
         }
-
+        
         #endregion
     }
 }
