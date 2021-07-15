@@ -4912,7 +4912,7 @@ namespace GizmoDALV2.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class Host : ModifiableByOperatorBase, IDeletable
+    public class Host : ModifiableByOperatorBase, IDeletable , IReplicatable
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -4981,6 +4981,12 @@ namespace GizmoDALV2.Entities
         public bool IsDeleted
         {
             get; set;
+        }
+
+        /// <inheritdoc/>
+        public Guid Guid
+        {
+            get;set;
         }
 
         #endregion
