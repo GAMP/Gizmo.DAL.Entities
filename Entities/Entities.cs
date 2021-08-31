@@ -4927,6 +4927,7 @@ namespace GizmoDALV2.Entities
             ReservedGuests = new HashSet<UserGuest>();
             ProductOrders = new HashSet<ProductOrder>();
             Devices = new HashSet<DeviceHost>();
+            Guid = Guid.NewGuid(); // always create a new GUID for the host
         }
         #endregion
 
