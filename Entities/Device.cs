@@ -45,11 +45,6 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
-        /// <inheritdoc/>
-        [DataMember()]
-        [ProtoMember(3)]
-        public bool IsDeleted { get; set; }
-
         #endregion
 
         #region NAVIGATION PROPERTIES
