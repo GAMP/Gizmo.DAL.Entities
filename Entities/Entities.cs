@@ -5038,6 +5038,7 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets associated devices.
         /// </summary>
+        [ProtoMember(100)]
         public virtual ISet<DeviceHost> Devices
         {
             get; protected set;

@@ -1,8 +1,15 @@
-﻿namespace Gizmo.DAL.Entities
+﻿using ProtoBuf;
+using System;
+using System.Runtime.Serialization;
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Host device relation entity.
     /// </summary>
+    [DataContract()]
+    [Serializable()]
+    [ProtoContract()]
     public class DeviceHost : GizmoDALV2.Entities.ModifiableByOperatorBase
     {
         #region CONSTRUCTOR
@@ -11,7 +18,7 @@
         /// Creates new instance.
         /// </summary>
         public DeviceHost() : base()
-        { } 
+        { }
 
         #endregion
 
@@ -20,6 +27,8 @@
         /// <summary>
         /// Gets or sets host id.
         /// </summary>
+        [DataMember()]
+        [ProtoMember(1)]
         public int HostId
         {
             get; set;
@@ -28,6 +37,8 @@
         /// <summary>
         /// Gets or sets device id.
         /// </summary>
+        [DataMember()]
+        [ProtoMember(2)]
         public int DeviceId
         {
             get; set;

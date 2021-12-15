@@ -1,12 +1,18 @@
 ﻿using GizmoDALV2;
 using GizmoDALV2.Entities;
+using ProtoBuf;
+using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Device entity.
     /// </summary>
+    [DataContract()]
+    [Serializable()]
+    [ProtoContract()]
     public class Device : ModifiableByOperatorBase, IEnabled
     {
         #region CONSTRUCTOR
@@ -24,16 +30,25 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or set device name.
         /// </summary>
+        [DataMember()]
+        [ProtoMember(1)]
         public string Name
         {
             get; set;
         }
 
         /// <inheritdoc/>
+        [DataMember()]
+        [ProtoMember(2)]
         public bool IsEnabled
         {
             get; set;
         }
+
+        /// <inheritdoc/>
+        [DataMember()]
+        [ProtoMember(3)]
+        public bool IsDeleted { get; set; }
 
         #endregion
 
