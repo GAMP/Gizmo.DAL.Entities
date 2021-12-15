@@ -7,7 +7,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Device entity.
     /// </summary>
-    public class Device : ModifiableByOperatorBase, IEnabled, IDeletable
+    public class Device : ModifiableByOperatorBase, IEnabled
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -34,9 +34,6 @@ namespace Gizmo.DAL.Entities
         {
             get; set;
         }
-
-        /// <inheritdoc/>
-        public bool IsDeleted { get; set; }
 
         #endregion
 
