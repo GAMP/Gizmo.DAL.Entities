@@ -1,19 +1,17 @@
 ﻿namespace GizmoDALV2
 {
-    #region IEnabled
     /// <summary>
     /// IEnabled interface.
     /// </summary>
     public interface IEnabled
     {
         #region PROPERTIES
-        
+
         /// <summary>
-        /// Gets or sets if enabled.
+        /// Gets or sets if entity is marked as enabled.
         /// </summary>
-        bool IsEnabled { get; set; } 
+        bool IsEnabled { get; set; }
 
         #endregion
-    } 
-    #endregion
+    }
 }

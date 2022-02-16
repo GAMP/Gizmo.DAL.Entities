@@ -2,12 +2,13 @@
 
 namespace GizmoDALV2
 {
-    #region IModifiable
     /// <summary>
     /// Represents an entity that can have modfication time.
     /// </summary>
     public interface IModifiable : ICreatable
     {
+        #region PROPERTIES
+        
         /// <summary>
         /// Gets or sets modification time.
         /// </summary>
@@ -20,7 +21,8 @@ namespace GizmoDALV2
         /// <summary>
         /// Indicates that when entity is saved update time and user shouldnt be set automatically.
         /// </summary>
-        bool IgnoreUpdatedUpdate { get; set; }
+        bool IgnoreUpdatedUpdate { get; set; } 
+
+        #endregion
     }
-    #endregion
 }
