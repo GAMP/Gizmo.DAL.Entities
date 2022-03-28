@@ -2,7 +2,6 @@
 
 namespace GizmoDALV2
 {
-    #region IRefundable
     /// <summary>
     /// Represents an entity that can be refunded.
     /// </summary>
@@ -23,10 +22,9 @@ namespace GizmoDALV2
         /// </summary>
         RefundStatus RefundStatus
         {
-            get;set;
+            get; set;
         }
 
         #endregion
     }
-    #endregion
 }

@@ -5,9 +5,13 @@
     /// </summary>
     public interface IOrderLineReference
     {
+        #region PROPERTIES
+        
         /// <summary>
         /// Gets or sets order line id.
         /// </summary>
-        int OrderLineId { get; set; }
+        int OrderLineId { get; set; } 
+
+        #endregion
     }
 }

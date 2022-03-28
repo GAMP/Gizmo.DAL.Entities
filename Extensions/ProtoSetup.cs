@@ -1,4 +1,5 @@
-﻿using GizmoDALV2.Entities;
+﻿using Gizmo.DAL.Entities;
+using GizmoDALV2.Entities;
 using ProtoBuf.Meta;
 
 namespace GizmoDALV2
@@ -344,6 +345,8 @@ namespace GizmoDALV2
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(560, typeof(Asset));
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(562, typeof(HostGroupWaitingLine));
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(563, typeof(ProductHostHidden));
+            RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(564, typeof(Device));
+            RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(565, typeof(DeviceHost));
 
 
             RuntimeTypeModel.Default[typeof(FileListEntityBase)].AddSubType(500, typeof(PersonalFile));
