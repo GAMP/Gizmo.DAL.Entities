@@ -5,22 +5,24 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Fiscal receipt entity.
     /// </summary>
-    public class FiscalReceipt
+    public class FiscalReceipt : FiscalReceiptBase
     {
+        #region CONSTRUCTOR
         /// <summary>
-        /// Gets or sets associated invoice id.
+        /// Creates new instance.
         /// </summary>
-        public int InvoiceId
-        {
-            get;set;
-        }
+        public FiscalReceipt() : base()
+        { }
+        #endregion
 
+        #region PROPERTIES
+        
         /// <summary>
         /// Gets or sets receipt status.
         /// </summary>
         public int Status
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -28,7 +30,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public int DocumentId
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -36,10 +38,12 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public string Signature
         {
-            get;set;
-        }
+            get; set;
+        } 
 
-        #region VIRTUAL PROPERTIES
+        #endregion
+
+        #region NAVIGATION PROPERTIES
 
         /// <summary>
         /// Gets or sets associated invocie.
@@ -49,7 +53,6 @@ namespace Gizmo.DAL.Entities
             get;
             set;
         }
-
 
         #endregion
     }

@@ -39,7 +39,7 @@ namespace Gizmo.DAL.Entities
 
         #endregion
 
-        #region VIRTUAL PROPERTIES
+        #region NAVIGATION PROPERTIES
 
         /// <summary>
         /// Gets or sets deposit payment.
