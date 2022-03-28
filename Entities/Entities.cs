@@ -9901,10 +9901,30 @@ namespace GizmoDALV2.Entities
         }
 
         /// <summary>
-        /// Gets or sets if deposit payment is voided.
+        /// Gets or sets refunded amount.
         /// </summary>
         [DataMember()]
         [ProtoMember(6)]
+        public decimal RefundedAmount
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets refund status.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(7)]
+        public RefundStatus RefundStatus
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets if deposit payment is voided.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(8)]
         public bool IsVoided
         {
             get;set;
