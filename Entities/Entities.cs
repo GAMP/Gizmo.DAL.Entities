@@ -9853,7 +9853,9 @@ namespace GizmoDALV2.Entities
         /// Creates new instance.
         /// </summary>
         public DepositPayment() : base()
-        { }
+        {
+            Voids = new HashSet<Gizmo.DAL.Entities.VoidDepositPayment>();
+        }
         #endregion
 
         #region PROPERTIES
@@ -9898,6 +9900,36 @@ namespace GizmoDALV2.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets refunded amount.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(6)]
+        public decimal RefundedAmount
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets refund status.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(7)]
+        public RefundStatus RefundStatus
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets if deposit payment is voided.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(8)]
+        public bool IsVoided
+        {
+            get;set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -9933,6 +9965,14 @@ namespace GizmoDALV2.Entities
         public virtual Register Register
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets voids.
+        /// </summary>
+        public virtual ISet<Gizmo.DAL.Entities.VoidDepositPayment> Voids
+        {
+            get;set;
         }
 
         #endregion
@@ -11040,7 +11080,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(3)]
-        public int? DepositTransactionId
+        public virtual int? DepositTransactionId
         {
             get; set;
         }
@@ -11050,7 +11090,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(4)]
-        public int? PointTransactionId
+        public virtual int? PointTransactionId
         {
             get; set;
         }
