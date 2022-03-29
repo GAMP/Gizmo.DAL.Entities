@@ -4912,7 +4912,7 @@ namespace GizmoDALV2.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class Host : ModifiableByOperatorBase, IDeletable , IReplicatable
+    public class Host : ModifiableByOperatorBase, IDeletable, IReplicatable
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -4987,7 +4987,7 @@ namespace GizmoDALV2.Entities
         /// <inheritdoc/>
         public Guid Guid
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -9239,6 +9239,7 @@ namespace GizmoDALV2.Entities
             InvoicePayments = new HashSet<InvoicePayment>();
             InvoiceLines = new HashSet<InvoiceLine>();
             Voids = new HashSet<VoidInvoice>();
+            FiscalReceipts = new HashSet<InvoiceFiscalReceipt>();
         }
         #endregion
 
@@ -9419,6 +9420,15 @@ namespace GizmoDALV2.Entities
         /// Gets or sets register.
         /// </summary>
         public virtual Register Register
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets fiscal receipts.
+        /// </summary>
+        [ProtoMember(17)]
+        public ISet<InvoiceFiscalReceipt> FiscalReceipts
         {
             get; set;
         }
@@ -9927,7 +9937,17 @@ namespace GizmoDALV2.Entities
         [ProtoMember(8)]
         public bool IsVoided
         {
-            get;set;
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets (optional) fiscal receipt id.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(9)]
+        public int? FiscalReceiptId
+        {
+            get; set;
         }
 
         #endregion
@@ -9970,9 +9990,17 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets or sets voids.
         /// </summary>
-        public virtual ISet<Gizmo.DAL.Entities.VoidDepositPayment> Voids
+        public virtual ISet<VoidDepositPayment> Voids
         {
-            get;set;
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets (optional) fiscal receipt.
+        /// </summary>
+        public virtual FiscalReceipt FiscalReceipt
+        {
+            get; set;
         }
 
         #endregion
@@ -11060,7 +11088,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(1)]
-        public int PaymentId
+        public int? PaymentId
         {
             get; set;
         }

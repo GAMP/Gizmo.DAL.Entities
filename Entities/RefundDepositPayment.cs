@@ -10,32 +10,33 @@ namespace Gizmo.DAL.Entities
     [ProtoContract()]
     public class RefundDepositPayment : GizmoDALV2.Entities.Refund
     {
+        #region CONSTRUCTOR
+        /// <summary>
+        /// Creates new instance.
+        /// </summary>
+        public RefundDepositPayment() : base()
+        { } 
+        #endregion
+
         #region PROPERTIES
 
         /// <summary>
         /// Gets or sets deposit payment id.
         /// </summary>
         [ProtoMember(1)]
-        public int DepositPaymentId
+        public int? DepositPaymentId
         {
             get; set;
         }
 
-        /// <inheritdoc/>
-        /// <remarks>
-        /// The record pointed by this value will be to the transaction that withdrew the amount from deposits.
-        /// </remarks>
-        [ProtoMember(2)]
-        public override int? DepositTransactionId { get => base.DepositTransactionId; set => base.DepositTransactionId = value; }
-
         /// <summary>
-        /// Points transaction id.
+        /// Gets or sets (optional) fiscal receipt id.
         /// </summary>
-        /// <remarks>
-        /// This value should never be set since we never refund deposit payment with points.
-        /// </remarks>
-        [ProtoMember(3)]
-        public override int? PointTransactionId { get => base.PointTransactionId; set => base.PointTransactionId = value; }
+        [ProtoMember(2)]
+        public int? FiscalReceiptId
+        {
+            get;set;
+        }
 
         #endregion
 
@@ -45,6 +46,14 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets deposit payment.
         /// </summary>
         public virtual GizmoDALV2.Entities.DepositPayment DepositPayment
+        {
+            get;set;
+        }
+
+        /// <summary>
+        /// Gets or sets (optional) fiscal receipt.
+        /// </summary>
+        public virtual FiscalReceipt FiscalReceipt
         {
             get;set;
         }

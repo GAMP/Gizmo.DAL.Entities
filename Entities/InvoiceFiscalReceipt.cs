@@ -1,19 +1,19 @@
 ﻿namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Fiscal receipt relation base.
+    /// Invoice fiscal receipt relation type.
     /// </summary>
-    public abstract class FiscalReceiptBase : GizmoDALV2.Entities.EntityWithShift
+    public class InvoiceFiscalReceipt : GizmoDALV2.Entities.EntityWithShift
     {
-        #region CONSTRUCTOR
-        /// <summary>
-        /// Creates new instance.
-        /// </summary>
-        public FiscalReceiptBase() : base()
-        { }
-        #endregion
-
         #region PROPERTIES
+        
+        /// <summary>
+        /// Gets or sets invoice id.
+        /// </summary>
+        public int InvoiceId
+        {
+            get; set;
+        }
 
         /// <summary>
         /// Gets or sets fiscal receipt id.
@@ -22,18 +22,26 @@
         {
             get; set;
         }
-        
+
         #endregion
 
-        #region NAVIGATION PROPERTIES
-        
+        #region NAVIGATIONAL PROPERTIES
+
+        /// <summary>
+        /// Gets or sets invoice.
+        /// </summary>
+        public virtual GizmoDALV2.Entities.Invoice Invoice
+        {
+            get; set;
+        }
+
         /// <summary>
         /// Gets or sets fiscal receipt.
         /// </summary>
         public virtual FiscalReceipt FiscalReceipt
         {
             get; set;
-        } 
+        }
 
         #endregion
     }

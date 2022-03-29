@@ -5,7 +5,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Fiscal receipt entity.
     /// </summary>
-    public class FiscalReceipt : FiscalReceiptBase
+    public class FiscalReceipt : EntityWithShift
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -16,6 +16,17 @@ namespace Gizmo.DAL.Entities
         #endregion
 
         #region PROPERTIES
+
+        /// <summary>
+        /// Gets or sets receipt type.
+        /// </summary>
+        /// <remarks>
+        /// Indicates fiscal receipt type. For example pay or return (still in cosnideration).
+        /// </remarks>
+        public int Type
+        {
+            get;set;
+        }
         
         /// <summary>
         /// Gets or sets receipt status.
@@ -28,7 +39,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets document id.
         /// </summary>
-        public int DocumentId
+        public int? DocumentId
         {
             get; set;
         }
@@ -40,19 +51,6 @@ namespace Gizmo.DAL.Entities
         {
             get; set;
         } 
-
-        #endregion
-
-        #region NAVIGATION PROPERTIES
-
-        /// <summary>
-        /// Gets or sets associated invocie.
-        /// </summary>
-        public virtual Invoice Invoice
-        {
-            get;
-            set;
-        }
 
         #endregion
     }
