@@ -9864,7 +9864,6 @@ namespace GizmoDALV2.Entities
         /// </summary>
         public DepositPayment() : base()
         {
-            Voids = new HashSet<Gizmo.DAL.Entities.VoidDepositPayment>();
         }
         #endregion
 
@@ -9990,7 +9989,7 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets or sets voids.
         /// </summary>
-        public virtual ISet<VoidDepositPayment> Voids
+        public virtual VoidDepositPayment Void
         {
             get; set;
         }
