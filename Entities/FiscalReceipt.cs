@@ -1,11 +1,13 @@
 ﻿using GizmoDALV2.Entities;
 using ProtoBuf;
+using System;
 
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Fiscal receipt entity.
     /// </summary>
+    [Serializable()]
     [ProtoContract()]
     public class FiscalReceipt : EntityWithShift
     {
