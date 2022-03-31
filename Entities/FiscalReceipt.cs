@@ -1,10 +1,12 @@
 ﻿using GizmoDALV2.Entities;
+using ProtoBuf;
 
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Fiscal receipt entity.
     /// </summary>
+    [ProtoContract()]
     public class FiscalReceipt : EntityWithShift
     {
         #region CONSTRUCTOR
@@ -23,14 +25,16 @@ namespace Gizmo.DAL.Entities
         /// <remarks>
         /// Indicates fiscal receipt type. For example pay or return (still in cosnideration).
         /// </remarks>
+        [ProtoMember(1)]
         public int Type
         {
             get;set;
         }
-        
+
         /// <summary>
         /// Gets or sets receipt status.
         /// </summary>
+        [ProtoMember(2)]
         public int Status
         {
             get; set;
@@ -39,6 +43,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets document id.
         /// </summary>
+        [ProtoMember(3)]
         public int? DocumentId
         {
             get; set;
@@ -47,6 +52,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets signature.
         /// </summary>
+        [ProtoMember(4)]
         public string Signature
         {
             get; set;
