@@ -4,7 +4,7 @@ using System;
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Refund deposit payment entity.
+    /// Refund deposit entity.
     /// </summary>
     [Serializable()]
     [ProtoContract()]

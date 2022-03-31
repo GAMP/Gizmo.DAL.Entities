@@ -9949,6 +9949,16 @@ namespace GizmoDALV2.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets void id.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(10)]
+        public int? VoidId
+        {
+            get;set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
