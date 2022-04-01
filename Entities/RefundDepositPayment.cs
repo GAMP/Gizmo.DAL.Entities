@@ -30,13 +30,22 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets (optional) fiscal receipt id.
+        /// Gets or sets fiscal receipt status.
         /// </summary>
         [ProtoMember(2)]
+        public int FiscalReceiptStatus
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets (optional) fiscal receipt id.
+        /// </summary>
+        [ProtoMember(3)]
         public int? FiscalReceiptId
         {
             get;set;
-        }
+        }   
 
         #endregion
 

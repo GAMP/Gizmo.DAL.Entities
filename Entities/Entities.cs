@@ -9361,6 +9361,26 @@ namespace GizmoDALV2.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets sale fiscal receipt status.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(18)]
+        public int SaleFiscalReceiptStatus
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets return fiscal receipt status.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(19)]
+        public int ReturnFiscalReceiptStatus
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -9930,11 +9950,11 @@ namespace GizmoDALV2.Entities
         }
 
         /// <summary>
-        /// Gets or sets if deposit payment is voided.
+        /// Gets or sets fiscal receipt status.
         /// </summary>
         [DataMember()]
         [ProtoMember(8)]
-        public bool IsVoided
+        public int FiscalReceiptStatus
         {
             get; set;
         }
@@ -9950,13 +9970,13 @@ namespace GizmoDALV2.Entities
         }
 
         /// <summary>
-        /// Gets or sets void id.
+        /// Gets or sets if deposit payment is voided.
         /// </summary>
         [DataMember()]
         [ProtoMember(10)]
-        public int? VoidId
+        public bool IsVoided
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -9999,7 +10019,7 @@ namespace GizmoDALV2.Entities
         /// <summary>
         /// Gets or sets voids.
         /// </summary>
-        public virtual VoidDepositPayment Void
+        public virtual ISet<VoidDepositPayment> Voids
         {
             get; set;
         }

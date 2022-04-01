@@ -34,19 +34,19 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets receipt status.
+        /// Gets or sets receipt tax system.
         /// </summary>
         [ProtoMember(2)]
-        public int Status
+        public int TaxSystem
         {
-            get; set;
+            get;set;
         }
 
         /// <summary>
         /// Gets or sets document id.
         /// </summary>
         [ProtoMember(3)]
-        public int? DocumentId
+        public int DocumentId
         {
             get; set;
         }
