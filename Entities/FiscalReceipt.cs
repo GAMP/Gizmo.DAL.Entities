@@ -43,10 +43,10 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets document id.
+        /// Gets or sets document number.
         /// </summary>
         [ProtoMember(3)]
-        public int DocumentId
+        public int DocumentNumber
         {
             get; set;
         }
@@ -54,6 +54,9 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets signature.
         /// </summary>
+        /// <remarks>
+        /// This value is optional.
+        /// </remarks>
         [ProtoMember(4)]
         public string Signature
         {
