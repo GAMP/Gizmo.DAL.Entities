@@ -1,4 +1,5 @@
 ﻿using ProtoBuf;
+using System;
 
 namespace Gizmo.DAL.Entities
 {
@@ -6,6 +7,7 @@ namespace Gizmo.DAL.Entities
     /// Invoice fiscal receipt relation type.
     /// </summary>
     [ProtoContract()]
+    [Serializable()]
     public class InvoiceFiscalReceipt : GizmoDALV2.Entities.EntityWithShift
     {
         #region PROPERTIES
