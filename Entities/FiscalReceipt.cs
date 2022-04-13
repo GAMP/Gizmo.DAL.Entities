@@ -37,7 +37,7 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets receipt tax system.
         /// </summary>
         [ProtoMember(2)]
-        public int TaxSystem
+        public int? TaxSystem
         {
             get;set;
         }
@@ -46,7 +46,7 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets document number.
         /// </summary>
         [ProtoMember(3)]
-        public int DocumentNumber
+        public int? DocumentNumber
         {
             get; set;
         }
