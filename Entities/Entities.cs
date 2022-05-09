@@ -8113,6 +8113,14 @@ namespace GizmoDALV2.Entities
             get; protected set;
         }
 
+        /// <summary>
+        /// Gets invoice lines.
+        /// </summary>
+        public virtual ISet<InvoiceLineSession> InvoiceLines
+        {
+            get;set;
+        }
+
         #endregion
     }
     #endregion
