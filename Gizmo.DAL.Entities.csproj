@@ -1,11 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-
 		<TargetFrameworks>net6.0;net461</TargetFrameworks>
-		<Configurations>Debug;Release;NET_5_DEBUG;NET_5_RELEASE</Configurations>
-		<!--<RuntimeIdentifiers>win-x64;win-x86</RuntimeIdentifiers>-->
-		
+		<Configurations>Debug;Release;</Configurations>	
 		<LangVersion>latest</LangVersion>
 		<Product>GizmoDALEntities</Product>
 		<Description>GizmoDALEntities</Description>
@@ -14,29 +11,16 @@
 		<Company>NETProjects</Company>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<NoWarn>1591</NoWarn>
-		<Optimize>true</Optimize>
-		
+		<Optimize>true</Optimize>		
 		<!-- !IMPORTANT! will break compatibility with older builds if name is changed-->
-		<AssemblyName>GizmoDALEntities</AssemblyName>
-		
+		<AssemblyName>GizmoDALEntities</AssemblyName>		
 	</PropertyGroup>
 
-	<!--net461-->
-	<PropertyGroup Condition="'$(Configuration)'=='Debug' or '$(Configuration)'=='Release'">
-	</PropertyGroup>
-
-	<!--net5.0-->
-	<PropertyGroup Condition="'$(Configuration)'=='NET_5_DEBUG' or '$(Configuration)'=='NET_5_RELEASE'">
-	</PropertyGroup>
-
-	<!--release-all-->
-	<PropertyGroup Condition="'$(Configuration)'=='NET_5_RELEASE' or '$(Configuration)'=='Release'">
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
 		<Optimize>true</Optimize>
 	</PropertyGroup>
 
-	<!--debug-all-->
-	<PropertyGroup Condition="'$(Configuration)'=='NET_5_DEBUG' or '$(Configuration)'=='Debug'">
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
 		<Optimize>false</Optimize>
 		<DefineConstants>DEBUG;TRACE</DefineConstants>
 	</PropertyGroup>
@@ -49,16 +33,12 @@
 		<Reference Include="System.ComponentModel.DataAnnotations" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)'=='net5.0' or '$(TargetFramework)'=='net5.0-windows'">
+	<ItemGroup Condition="'$(TargetFramework)'=='net6.0' or '$(TargetFramework)'=='net6.0-windows'">
 		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\DataInterfaces\DataInterfaces\DataInterfaces.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Properties\" />
 	</ItemGroup>
 
 </Project>
