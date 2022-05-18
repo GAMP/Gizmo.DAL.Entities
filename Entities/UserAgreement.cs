@@ -21,7 +21,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets agreement.
         /// </summary>
-        public string Aggrement
+        public string Agreement
         {
             get; set;
         }
