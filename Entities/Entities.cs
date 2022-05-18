@@ -3666,6 +3666,7 @@ namespace GizmoDALV2.Entities
             Attributes = new HashSet<UserAttribute>();
             Tokens = new HashSet<Token>();
             Verifications = new HashSet<Verification>();
+            UserAgreementStates = new HashSet<UserAgreementState>();
         }
         #endregion
 
@@ -3916,6 +3917,14 @@ namespace GizmoDALV2.Entities
         /// Gets or sets verifications.
         /// </summary>
         public virtual ISet<Verification> Verifications
+        {
+            get; protected set;
+        }
+
+        /// <summary>
+        /// Gets or sets user agreement states.
+        /// </summary>
+        public virtual ISet<UserAgreementState> UserAgreementStates
         {
             get; protected set;
         }
@@ -4738,6 +4747,36 @@ namespace GizmoDALV2.Entities
         public double PauseSpanTotal
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets sessions last grace time.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(14)]
+        public DateTime? GraceTime
+        {
+            get;set;
+        }
+
+        /// <summary>
+        /// Gets or sets grace span.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(15)]
+        public double GraceSpan
+        {
+            get;set;
+        }
+
+        /// <summary>
+        /// Gets or sets total grace span.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(16)]
+        public double GraceSpanTotal
+        {
+            get;set;
         }
 
         #endregion
