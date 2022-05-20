@@ -17,6 +17,14 @@ namespace Gizmo.DAL.Entities
         #endregion
 
         #region PROPERTIES
+
+        /// <summary>
+        /// Gets or sets user agreement name.
+        /// </summary>
+        public string Name
+        {
+            get;set;
+        }
         
         /// <summary>
         /// Gets agreement.
@@ -48,6 +56,14 @@ namespace Gizmo.DAL.Entities
         public int DisplayOrder
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets if agreement is enabled.
+        /// </summary>
+        public bool IsEnabled
+        {
+            get;set;
         }
 
         #endregion
