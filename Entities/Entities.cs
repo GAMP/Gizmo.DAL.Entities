@@ -2997,6 +2997,16 @@ namespace GizmoDALV2.Entities
             set;
         }
 
+        /// <summary>
+        /// Gets or sets optional assigned host computer id.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(6)]
+        public int? AssignedHostId
+        {
+            get;set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -3008,6 +3018,14 @@ namespace GizmoDALV2.Entities
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// Gets or sets assigned computer host.
+        /// </summary>
+        public virtual HostComputer AssignedHost
+        {
+            get;set;
         }
 
         #endregion
