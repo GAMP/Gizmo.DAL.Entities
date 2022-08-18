@@ -3,7 +3,7 @@
     /// <summary>
     /// User agreement accept state.
     /// </summary>
-    public enum UserAgreemntAcceptState
+    public enum UserAgreementAcceptState
     {
         /// <summary>
         /// None.

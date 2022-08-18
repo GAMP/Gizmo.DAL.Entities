@@ -4106,6 +4106,7 @@ namespace GizmoDALV2.Entities
             AssetTransactions = new HashSet<AssetTransaction>();
 
             Reservations = new HashSet<Reservation>();
+            DepositIntents = new HashSet<DepositIntent>();
         }
         #endregion
 
@@ -4361,6 +4362,14 @@ namespace GizmoDALV2.Entities
         public virtual ISet<Reservation> Reservations
         {
             get; protected set;
+        }
+
+        /// <summary>
+        /// Gets deposit intents.
+        /// </summary>
+        public virtual ISet<DepositIntent> DepositIntents
+        {
+            get;protected set;
         }
 
         #endregion

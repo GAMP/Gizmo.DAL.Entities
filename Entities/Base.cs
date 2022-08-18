@@ -196,7 +196,7 @@ namespace GizmoDALV2.Entities
 
     #region CREATEDBYUSER
     /// <summary>
-    /// Base class where entity is creared by user.
+    /// Base class where entity is created by user.
     /// </summary>
     [DataContract()]
     [Serializable()]
