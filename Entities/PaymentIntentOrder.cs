@@ -23,6 +23,14 @@
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets invoice payment id.
+        /// </summary>
+        public int? InvoicePaymentId
+        {
+            get;set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -33,6 +41,14 @@
         public virtual GizmoDALV2.Entities.ProductOrder ProductOrder
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets associated invoice payment.
+        /// </summary>
+        public virtual GizmoDALV2.Entities.InvoicePayment InvoicePayment
+        {
+            get;set;
         }
 
         #endregion

@@ -8911,6 +8911,7 @@ namespace GizmoDALV2.Entities
         {
             OrderLines = new HashSet<ProductOL>();
             Invoices = new HashSet<Invoice>();
+            PaymentIntents = new HashSet<PaymentIntentOrder>();
         }
         #endregion
 
@@ -9128,6 +9129,14 @@ namespace GizmoDALV2.Entities
         public virtual PaymentMethod PreferedPaymentMethod
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets payment intents.
+        /// </summary>
+        public virtual ISet<PaymentIntentOrder> PaymentIntents
+        {
+            get;protected set;
         }
 
         #endregion

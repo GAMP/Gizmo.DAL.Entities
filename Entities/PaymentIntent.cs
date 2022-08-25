@@ -16,19 +16,19 @@ namespace Gizmo.DAL.Entities
         public PaymentIntent() : base()
         {
             Guid = Guid.NewGuid();
-        } 
+        }
         #endregion
 
         #region PROPERTIES
 
         /// <summary>
-        /// Gets or sets unique id.
+        /// Gets or sets target user id.
         /// </summary>
-        public Guid Guid
+        public int UserId
         {
-            get;set;
+            get; set;
         }
-        
+
         /// <summary>
         /// Gets or sets payment intent amount.
         /// </summary>
@@ -41,14 +41,6 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets intent state.
         /// </summary>
         public PaymentIntentState State
-        {
-            get;set;
-        }
-
-        /// <summary>
-        /// Gets or sets payment intent provider.
-        /// </summary>
-        public Guid Provider
         {
             get;set;
         }
@@ -70,11 +62,19 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets target user id.
+        /// Gets or sets unique id.
         /// </summary>
-        public int UserId
+        public Guid Guid
         {
-            get;set;
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets payment intent provider.
+        /// </summary>
+        public Guid Provider
+        {
+            get; set;
         }
 
         #endregion
