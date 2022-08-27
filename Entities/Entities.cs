@@ -6198,6 +6198,16 @@ namespace GizmoDALV2.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets payment proider guid.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(11)]
+        public Guid? PaymentProvider
+        {
+            get;set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
