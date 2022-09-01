@@ -6084,6 +6084,7 @@ namespace GizmoDALV2.Entities
         public PaymentMethod() : base()
         {
             Payments = new HashSet<Payment>();
+            PaymentIntents = new HashSet<PaymentIntent>();
         }
         #endregion
 
@@ -6216,6 +6217,11 @@ namespace GizmoDALV2.Entities
         /// Gets payments done with this method.
         /// </summary>
         public virtual ISet<Payment> Payments { get; protected set; }
+
+        /// <summary>
+        /// Gets payment intents.
+        /// </summary>
+        public virtual ISet<PaymentIntent> PaymentIntents { get; protected set; }
 
         #endregion
     }

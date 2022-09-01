@@ -30,6 +30,14 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
+        /// Gets or sets payment method id.
+        /// </summary>
+        public int PaymentMethodId
+        {
+            get;set;
+        }
+
+        /// <summary>
         /// Gets or sets payment intent amount.
         /// </summary>
         public decimal Amount
@@ -79,12 +87,24 @@ namespace Gizmo.DAL.Entities
 
         #endregion
 
+        #region NAVIGATION PROPERTIES
+        
         /// <summary>
         /// Gets or set target user.
         /// </summary>
         public virtual UserMember User
         {
-            get;set;
+            get; set;
         }
+
+        /// <summary>
+        /// Gets or sets payment method.
+        /// </summary>
+        public virtual PaymentMethod PaymentMethod
+        {
+            get; set;
+        } 
+
+        #endregion
     }
 }
