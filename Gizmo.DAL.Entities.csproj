@@ -34,12 +34,13 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)'=='net6.0' or '$(TargetFramework)'=='net6.0-windows'">
-		<None Remove="App.config"/>
+		<None Remove="App.config" />
 		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\DataInterfaces\DataInterfaces\DataInterfaces.csproj" />
+		<ProjectReference Include="..\Gizmo.Server.Shared\Gizmo.Server.Shared\Gizmo.Server.Shared.csproj" />
 	</ItemGroup>
 
 </Project>
