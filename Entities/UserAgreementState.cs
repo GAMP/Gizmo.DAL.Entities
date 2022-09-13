@@ -28,7 +28,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets accept state.
         /// </summary>
-        public UserAgreemntAcceptState AcceptState
+        public UserAgreementAcceptState AcceptState
         {
             get; set;
         }
