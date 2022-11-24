@@ -4106,6 +4106,8 @@ namespace GizmoDALV2.Entities
             AssetTransactions = new HashSet<AssetTransaction>();
 
             Reservations = new HashSet<Reservation>();
+
+            PaymentIntents = new HashSet<PaymentIntent>();
         }
         #endregion
 
@@ -4361,6 +4363,14 @@ namespace GizmoDALV2.Entities
         public virtual ISet<Reservation> Reservations
         {
             get; protected set;
+        }
+
+        /// <summary>
+        /// Gets payment intents.
+        /// </summary>
+        public virtual ISet<PaymentIntent> PaymentIntents
+        {
+            get;protected set;
         }
 
         #endregion
@@ -6074,6 +6084,7 @@ namespace GizmoDALV2.Entities
         public PaymentMethod() : base()
         {
             Payments = new HashSet<Payment>();
+            PaymentIntents = new HashSet<PaymentIntent>();
         }
         #endregion
 
@@ -6188,6 +6199,16 @@ namespace GizmoDALV2.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets payment proider guid.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(11)]
+        public Guid? PaymentProvider
+        {
+            get;set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -6196,6 +6217,11 @@ namespace GizmoDALV2.Entities
         /// Gets payments done with this method.
         /// </summary>
         public virtual ISet<Payment> Payments { get; protected set; }
+
+        /// <summary>
+        /// Gets payment intents.
+        /// </summary>
+        public virtual ISet<PaymentIntent> PaymentIntents { get; protected set; }
 
         #endregion
     }
@@ -8901,6 +8927,7 @@ namespace GizmoDALV2.Entities
         {
             OrderLines = new HashSet<ProductOL>();
             Invoices = new HashSet<Invoice>();
+            PaymentIntents = new HashSet<PaymentIntentOrder>();
         }
         #endregion
 
@@ -9118,6 +9145,14 @@ namespace GizmoDALV2.Entities
         public virtual PaymentMethod PreferedPaymentMethod
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets payment intents.
+        /// </summary>
+        public virtual ISet<PaymentIntentOrder> PaymentIntents
+        {
+            get;protected set;
         }
 
         #endregion
