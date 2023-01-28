@@ -1,6 +1,4 @@
-﻿using GizmoDALV2;
-using GizmoDALV2.Entities;
-using ProtoBuf;
+﻿using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;

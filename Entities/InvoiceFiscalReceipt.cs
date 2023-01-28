@@ -8,7 +8,7 @@ namespace Gizmo.DAL.Entities
     /// </summary>
     [ProtoContract()]
     [Serializable()]
-    public class InvoiceFiscalReceipt : GizmoDALV2.Entities.EntityWithShift
+    public class InvoiceFiscalReceipt : EntityWithShift
     {
         #region PROPERTIES
 
@@ -37,7 +37,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets invoice.
         /// </summary>
-        public virtual GizmoDALV2.Entities.Invoice Invoice
+        public virtual Invoice Invoice
         {
             get; set;
         }

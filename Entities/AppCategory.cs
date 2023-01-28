@@ -1,10 +1,11 @@
+using GizmoDALV2;
 using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace GizmoDALV2.Entities
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// App category entity.

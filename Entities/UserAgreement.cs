@@ -5,7 +5,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// User agreement entity.
     /// </summary>
-    public class UserAgreement : GizmoDALV2.Entities.ModifiableByOperatorBase
+    public class UserAgreement : ModifiableByOperatorBase
     {
         #region CONSTRUCTOR
         /// <summary>

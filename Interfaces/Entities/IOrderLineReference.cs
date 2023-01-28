@@ -1,4 +1,4 @@
-﻿namespace GizmoDALV2
+﻿namespace Gizmo.DAL
 {
     /// <summary>
     /// Interface for entities referencing order line.

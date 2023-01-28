@@ -2,7 +2,7 @@
 using System;
 using System.Security.Claims;
 
-namespace GizmoDALV2
+namespace Gizmo.DAL
 {
     /// <summary>
     /// Generic extensions.

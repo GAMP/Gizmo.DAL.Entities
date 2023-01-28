@@ -1,4 +1,4 @@
-﻿namespace GizmoDALV2
+﻿namespace Gizmo.DAL
 {
     /// <summary>
     /// Represents an entity that can be disabled or enabled.

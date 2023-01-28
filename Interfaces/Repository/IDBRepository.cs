@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using SharedLib;
 using System.Threading.Tasks;
 
-namespace GizmoDALV2
+namespace Gizmo.DAL
 {
     #region IDBRepository
 

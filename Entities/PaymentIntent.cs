@@ -1,6 +1,4 @@
-﻿using GizmoDALV2;
-using GizmoDALV2.Entities;
-using System;
+﻿using System;
 
 namespace Gizmo.DAL.Entities
 {

@@ -1,6 +1,6 @@
 ﻿using SharedLib;
 
-namespace GizmoDALV2
+namespace Gizmo.DAL
 {
     /// <summary>
     /// Represents an entity that can be refunded.

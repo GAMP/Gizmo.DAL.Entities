@@ -1,4 +1,4 @@
-﻿namespace GizmoDALV2
+﻿namespace Gizmo.DAL
 {
     /// <summary>
     /// Base implementation for entities that support modification by user.

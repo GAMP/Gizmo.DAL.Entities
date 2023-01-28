@@ -5,7 +5,7 @@ namespace Gizmo.DAL.Entities
 {
     [Serializable()]
     [ProtoContract()]
-    public class VoidDepositPayment : GizmoDALV2.Entities.Void
+    public class VoidDepositPayment : Void
     {
         #region PROPERTIES
         
@@ -25,7 +25,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets deposit payment.
         /// </summary>
-        public virtual GizmoDALV2.Entities.DepositPayment DepositPayment
+        public virtual DepositPayment DepositPayment
         {
             get;set;
         }

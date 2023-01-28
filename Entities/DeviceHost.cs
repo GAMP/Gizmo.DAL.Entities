@@ -10,7 +10,7 @@ namespace Gizmo.DAL.Entities
     [DataContract()]
     [Serializable()]
     [ProtoContract()]
-    public class DeviceHost : GizmoDALV2.Entities.ModifiableByOperatorBase
+    public class DeviceHost : ModifiableByOperatorBase
     {
         #region CONSTRUCTOR
         
@@ -59,7 +59,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets host.
         /// </summary>
-        public virtual GizmoDALV2.Entities.Host Host
+        public virtual Host Host
         {
             get; protected set;
         } 

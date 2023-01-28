@@ -2,7 +2,7 @@ using ProtoBuf;
 using System;
 using System.Runtime.Serialization;
 
-namespace GizmoDALV2.Entities
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Base class where entity can be created by operator and modified by operator.

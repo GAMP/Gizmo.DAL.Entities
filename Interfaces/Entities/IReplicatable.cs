@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GizmoDALV2
+namespace Gizmo.DAL
 {
     /// <summary>
     /// Represents an entity that support replication by exposing a unique GUID.

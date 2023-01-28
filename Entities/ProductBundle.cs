@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace GizmoDALV2.Entities
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Product bundle entity.

@@ -1,6 +1,4 @@
-﻿using GizmoDALV2.Entities;
-
-namespace Gizmo.DAL.Entities
+﻿namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Deposit payment intent.

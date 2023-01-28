@@ -8,7 +8,7 @@ namespace Gizmo.DAL.Entities
     /// </summary>
     [Serializable()]
     [ProtoContract()]
-    public class RefundDepositPayment : GizmoDALV2.Entities.Refund
+    public class RefundDepositPayment : Refund
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -54,7 +54,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets deposit payment.
         /// </summary>
-        public virtual GizmoDALV2.Entities.DepositPayment DepositPayment
+        public virtual DepositPayment DepositPayment
         {
             get;set;
         }

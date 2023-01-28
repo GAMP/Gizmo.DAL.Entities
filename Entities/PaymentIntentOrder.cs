@@ -38,7 +38,7 @@
         /// <summary>
         /// Gets or sets associated product order.
         /// </summary>
-        public virtual GizmoDALV2.Entities.ProductOrder ProductOrder
+        public virtual ProductOrder ProductOrder
         {
             get; set;
         }
@@ -46,7 +46,7 @@
         /// <summary>
         /// Gets or sets associated invoice payment.
         /// </summary>
-        public virtual GizmoDALV2.Entities.InvoicePayment InvoicePayment
+        public virtual InvoicePayment InvoicePayment
         {
             get;set;
         }

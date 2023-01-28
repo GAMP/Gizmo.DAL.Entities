@@ -1,4 +1,5 @@
-﻿using ProtoBuf;
+﻿using Gizmo.DAL.Entities;
+using ProtoBuf;
 using ServerService;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,10 @@ namespace GizmoDALV2.DTO
     public class AppEntityContainer
     {
         #region FIELDS
-        private IEnumerable<Entities.AppEnterprise> enterprises;
-        private IEnumerable<Entities.AppCategory> categories;
-        private IEnumerable<Entities.App> apps;
-        private IEnumerable<Entities.AppExe> executables;
+        private IEnumerable<AppEnterprise> enterprises;
+        private IEnumerable<AppCategory> categories;
+        private IEnumerable<App> apps;
+        private IEnumerable<AppExe> executables;
         #endregion
 
         #region PROPERTIES
@@ -29,12 +30,12 @@ namespace GizmoDALV2.DTO
         /// </summary>
         [ProtoMember(1, AsReference = true)]
         [DataMember()]
-        public IEnumerable<Entities.AppEnterprise> Enterprises
+        public IEnumerable<AppEnterprise> Enterprises
         {
             get
             {
                 if (enterprises == null)
-                    enterprises = new List<Entities.AppEnterprise>();
+                    enterprises = new List<AppEnterprise>();
                 return enterprises;
             }
             set
@@ -48,12 +49,12 @@ namespace GizmoDALV2.DTO
         /// </summary>
         [ProtoMember(2, AsReference = true)]
         [DataMember()]
-        public IEnumerable<Entities.AppCategory> Categories
+        public IEnumerable<AppCategory> Categories
         {
             get
             {
                 if (categories == null)
-                    categories = new List<Entities.AppCategory>();
+                    categories = new List<AppCategory>();
                 return categories;
             }
             set
@@ -67,12 +68,12 @@ namespace GizmoDALV2.DTO
         /// </summary>
         [ProtoMember(3, AsReference = true)]
         [DataMember()]
-        public IEnumerable<Entities.App> Apps
+        public IEnumerable<App> Apps
         {
             get
             {
                 if (apps == null)
-                    apps = new List<Entities.App>();
+                    apps = new List<App>();
                 return apps;
             }
             set
@@ -86,12 +87,12 @@ namespace GizmoDALV2.DTO
         /// </summary>
         [ProtoMember(4, AsReference = true)]
         [DataMember()]
-        public IEnumerable<Entities.AppExe> Executables
+        public IEnumerable<AppExe> Executables
         {
             get
             {
                 if (executables == null)
-                    executables = new List<Entities.AppExe>();
+                    executables = new List<AppExe>();
                 return executables;
             }
             set
@@ -114,8 +115,8 @@ namespace GizmoDALV2.DTO
     public class AppInfoContainer
     {
         #region FIELDS
-        private IEnumerable<AppRating> appRatings;
-        private IEnumerable<AppStat> appStats;
+        private IEnumerable<Gizmo.DAL.Entities.AppRating> appRatings;
+        private IEnumerable<Gizmo.DAL.Entities.AppStat> appStats;
         private IEnumerable<AppExeStat> appExe;
         #endregion
 
@@ -126,12 +127,12 @@ namespace GizmoDALV2.DTO
         /// </summary>
         [ProtoMember(1)]
         [DataMember()]
-        public IEnumerable<AppRating> AppRating
+        public IEnumerable<Gizmo.DAL.Entities.AppRating> AppRating
         {
             get
             {
                 if (appRatings == null)
-                    appRatings = new List<AppRating>();
+                    appRatings = new List<Gizmo.DAL.Entities.AppRating>();
                 return appRatings;
             }
             set
@@ -145,12 +146,12 @@ namespace GizmoDALV2.DTO
         /// </summary>
         [ProtoMember(2)]
         [DataMember()]
-        public IEnumerable<AppStat> AppStat
+        public IEnumerable<Gizmo.DAL.Entities.AppStat> AppStat
         {
             get
             {
                 if (appStats == null)
-                    appStats = new List<AppStat>();
+                    appStats = new List<Gizmo.DAL.Entities.AppStat>();
                 return appStats;
             }
             set
@@ -192,8 +193,8 @@ namespace GizmoDALV2.DTO
     public class NewsEntityContainer
     {
         #region FILEDS
-        IEnumerable<Entities.News> news;
-        IEnumerable<Entities.Feed> feeds;
+        IEnumerable<News> news;
+        IEnumerable<Feed> feeds;
         #endregion
 
         #region PROPERTIES
@@ -202,12 +203,12 @@ namespace GizmoDALV2.DTO
         /// Gets or sets news.
         /// </summary>
         [ProtoMember(1)]
-        public IEnumerable<Entities.News> News
+        public IEnumerable<News> News
         {
             get
             {
                 if (news == null)
-                    news = new List<Entities.News>();
+                    news = new List<News>();
                 return news;
             }
             set { news = value; }
@@ -217,12 +218,12 @@ namespace GizmoDALV2.DTO
         /// Gets or sets feeds.
         /// </summary>
         [ProtoMember(2)]
-        public IEnumerable<Entities.Feed> Feeds
+        public IEnumerable<Feed> Feeds
         {
             get
             {
                 if (feeds == null)
-                    feeds = new List<Entities.Feed>();
+                    feeds = new List<Feed>();
                 return feeds;
             }
             set { feeds = value; }

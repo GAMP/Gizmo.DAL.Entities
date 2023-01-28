@@ -1,8 +1,7 @@
 ﻿using Gizmo.DAL.Entities;
-using GizmoDALV2.Entities;
 using ProtoBuf.Meta;
 
-namespace GizmoDALV2
+namespace Gizmo.DAL
 {
     /// <summary>
     /// Proto buffer setup class.

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace GizmoDALV2
+namespace Gizmo.DAL
 {
     #region IDBRepositoryAsync
 
