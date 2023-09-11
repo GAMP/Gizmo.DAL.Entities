@@ -3,8 +3,19 @@
     /// <summary>
     /// Assistance request type entity.
     /// </summary>
-    public sealed class AssistanceRequestType : GizmoDALV2.Entities.ModifiableByOperatorBase
+    public class AssistanceRequestType : GizmoDALV2.Entities.ModifiableByOperatorBase
     {
+        #region CONSTRUCTOR
+        
+        /// <summary>
+        /// Creates new instance.
+        /// </summary>
+        public AssistanceRequestType() { } 
+
+        #endregion
+
+        #region PROPERTIES
+
         /// <summary>
         /// Gets or sets request type title.
         /// </summary>
@@ -18,6 +29,8 @@
         /// <summary>
         /// Gets or sets if request is deleted.
         /// </summary>
-        public bool IsDeleted { get; set; }
+        public bool IsDeleted { get; set; } 
+
+        #endregion
     }
 }

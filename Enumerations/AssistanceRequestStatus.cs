@@ -17,5 +17,9 @@
         /// Rejected.
         /// </summary>
         Rejected = 2,
+        /// <summary>
+        /// Canceled.
+        /// </summary>
+        CanceledByUser=3,
     }
 }
