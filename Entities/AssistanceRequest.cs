@@ -22,7 +22,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets request type id.
         /// </summary>
-        public int AssitanceRequestTypeId { get; set; }
+        public int AssistanceRequestTypeId { get; set; }
 
         /// <summary>
         /// Gets or sets user id.
