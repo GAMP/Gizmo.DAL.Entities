@@ -9196,6 +9196,16 @@ namespace GizmoDALV2.Entities
             set;
         }
 
+        /// <summary>
+        /// Gets or sets product order line mark.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(2)]
+        public string Mark
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
