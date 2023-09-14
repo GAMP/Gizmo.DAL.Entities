@@ -2026,7 +2026,7 @@ namespace GizmoDALV2.Entities
         [DataMember()]
         [ProtoMember(1)]
         [Required()]
-        [StringLength(255)]
+        [StringLength(SQLStringSize.TINY)]
         public string Title
         {
             get;
@@ -2074,7 +2074,7 @@ namespace GizmoDALV2.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(5)]
-        [StringLength(255)]
+        [StringLength(SQLStringSize.TINY)]
         public string Url
         {
             get;
@@ -2086,8 +2086,29 @@ namespace GizmoDALV2.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(6)]
-        [StringLength(255)]
+        [StringLength(SQLStringSize.TINY)]
         public string MediaUrl
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets background url string.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(7)]
+        [StringLength(SQLStringSize.TINY)]
+        public string BackgroundUrl
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets options.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(8)]
+        public NewsOptions Options
         {
             get; set;
         }
