@@ -1,4 +1,6 @@
-﻿namespace Gizmo.DAL.Entities
+﻿using System.Collections.Generic;
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Assistance request type entity.
@@ -29,7 +31,16 @@
         /// <summary>
         /// Gets or sets if request is deleted.
         /// </summary>
-        public bool IsDeleted { get; set; } 
+        public bool IsDeleted { get; set; }
+
+        #endregion
+
+        #region NAVIGATION PROPERTIES
+        
+        /// <summary>
+        /// Gets assistance requests.
+        /// </summary>
+        public virtual ISet<AssistanceRequest> AssistanceRequests { get; set; } 
 
         #endregion
     }

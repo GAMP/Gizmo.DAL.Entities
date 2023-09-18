@@ -61,6 +61,11 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public virtual UserMember User { get; set; }
 
+        /// <summary>
+        /// Gets or sets assistance request type.
+        /// </summary>
+        public virtual AssistanceRequestType AssistanceRequestType { get; set; }
+
         #endregion
     }
 }
