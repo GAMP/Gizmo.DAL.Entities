@@ -1,19 +1,21 @@
-﻿using GizmoDALV2.Entities;
+﻿using System;
+using GizmoDALV2.Entities;
 
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Assistance request entity.
     /// </summary>
+    [Serializable()]
     public class AssistanceRequest : ModifiedByBase<User, User>
     {
         #region CONSTRUCTOR
-        
+
         /// <summary>
         /// Creates new instance.
         /// </summary>
         public AssistanceRequest()
-        { } 
+        { }
 
         #endregion
 
@@ -45,7 +47,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets note.
         /// </summary>
-        public string Note { get; set; } 
+        public string Note { get; set; }
 
         #endregion
 
