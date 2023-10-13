@@ -38,6 +38,8 @@ namespace Gizmo.DAL.Entities
         /// <inheritdoc/>
         public bool IsDeleted { get; set; }
 
+        //TODO : add time zone
+
         #endregion
     }
 }
