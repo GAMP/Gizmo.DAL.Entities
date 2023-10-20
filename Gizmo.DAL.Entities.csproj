@@ -40,7 +40,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\DataInterfaces\DataInterfaces\DataInterfaces.csproj" />
-		<ProjectReference Include="..\Gizmo.Server.Shared\Gizmo.Server.Shared\Gizmo.Server.Shared.csproj" />
 	</ItemGroup>
 
 </Project>

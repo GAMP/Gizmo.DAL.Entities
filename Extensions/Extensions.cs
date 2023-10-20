@@ -108,7 +108,7 @@ namespace Gizmo.DAL
             if (principal?.Identity is IUserIdentity identity)
             {
                 //ensure if the current user is operator
-                if (identity.Role != SharedLib.UserRoles.Operator)
+                if (identity.Role != Gizmo.UserRoles.Operator)
                     return null;
 
                 //return user id

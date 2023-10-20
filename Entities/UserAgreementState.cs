@@ -1,5 +1,4 @@
-﻿
-namespace Gizmo.DAL.Entities
+﻿namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// User agreement state.
