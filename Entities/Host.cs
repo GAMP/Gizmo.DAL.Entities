@@ -1,6 +1,7 @@
-using Gizmo.DAL.Entities;
 using ProtoBuf;
+
 using SharedLib;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

@@ -6,11 +6,11 @@
     public interface ITimeDepletable
     {
         #region PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets depleted state.
         /// </summary>
-        bool IsDepleted { get; set; } 
+        bool IsDepleted { get; set; }
 
         #endregion
     }

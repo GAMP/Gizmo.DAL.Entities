@@ -1,5 +1,5 @@
 ﻿using GizmoDALV2;
-using GizmoDALV2.Entities;
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -16,7 +16,7 @@ namespace Gizmo.DAL.Entities
         /// Creates new instance.
         /// </summary>
         public Branch() : base()
-        { } 
+        { }
         #endregion
 
         #region PROPERTIES

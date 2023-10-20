@@ -1,5 +1,5 @@
 using ProtoBuf;
-using SharedLib;
+
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
@@ -12,7 +12,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class ProductOL : ModifiableByWithRequiredUserMemberBase, IDeletable, IVoidable , IDeliverable
+    public class ProductOL : ModifiableByWithRequiredUserMemberBase, IDeletable, IVoidable, IDeliverable
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -263,7 +263,7 @@ namespace Gizmo.DAL.Entities
         [ProtoMember(23)]
         public decimal DeliveredQuantity
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>

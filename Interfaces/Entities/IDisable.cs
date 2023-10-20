@@ -6,11 +6,11 @@
     public interface IDisable
     {
         #region PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets if entity is marked as disabled.
         /// </summary>
-        bool IsDisabled { get; set; } 
+        bool IsDisabled { get; set; }
 
         #endregion
     }

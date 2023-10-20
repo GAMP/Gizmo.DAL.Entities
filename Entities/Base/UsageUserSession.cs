@@ -1,4 +1,5 @@
 using ProtoBuf;
+
 using System;
 using System.Runtime.Serialization;
 
@@ -13,13 +14,13 @@ namespace Gizmo.DAL.Entities
     public class UsageUserSession : Usage
     {
         #region CONSTRUCTOR
-    
+
         /// <summary>
         /// Creates new instance.
         /// </summary>
         public UsageUserSession() : base()
         { }
-      
+
         #endregion
 
         #region PROPERTIES

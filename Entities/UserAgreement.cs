@@ -23,9 +23,9 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public string Name
         {
-            get;set;
+            get; set;
         }
-        
+
         /// <summary>
         /// Gets agreement.
         /// </summary>
@@ -63,7 +63,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public bool IsEnabled
         {
-            get;set;
+            get; set;
         }
 
         #endregion

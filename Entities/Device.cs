@@ -1,4 +1,5 @@
 ﻿using ProtoBuf;
+
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -54,7 +55,7 @@ namespace Gizmo.DAL.Entities
         {
             get; protected set;
         }
-        
+
         #endregion
     }
 }

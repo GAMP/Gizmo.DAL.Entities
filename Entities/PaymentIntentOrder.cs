@@ -28,7 +28,7 @@
         /// </summary>
         public int? InvoicePaymentId
         {
-            get;set;
+            get; set;
         }
 
         #endregion
@@ -48,7 +48,7 @@
         /// </summary>
         public virtual InvoicePayment InvoicePayment
         {
-            get;set;
+            get; set;
         }
 
         #endregion

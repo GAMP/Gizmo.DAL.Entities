@@ -7,14 +7,14 @@ namespace Gizmo.DAL.Entities
     /// Assistance request type entity.
     /// </summary>
     [Serializable()]
-    public class AssistanceRequestType : GizmoDALV2.Entities.ModifiableByOperatorBase
+    public class AssistanceRequestType : ModifiableByOperatorBase
     {
         #region CONSTRUCTOR
 
         /// <summary>
         /// Creates new instance.
         /// </summary>
-        public AssistanceRequestType() 
+        public AssistanceRequestType()
         {
             AssistanceRequests = new HashSet<AssistanceRequest>();
         }
@@ -41,11 +41,11 @@ namespace Gizmo.DAL.Entities
         #endregion
 
         #region NAVIGATION PROPERTIES
-        
+
         /// <summary>
         /// Gets assistance requests.
         /// </summary>
-        public virtual ISet<AssistanceRequest> AssistanceRequests { get; set; } 
+        public virtual ISet<AssistanceRequest> AssistanceRequests { get; set; }
 
         #endregion
     }

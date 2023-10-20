@@ -12,7 +12,7 @@
         /// </summary>
         public int UserId
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -20,9 +20,9 @@
         /// </summary>
         public int UserAgreementId
         {
-            get;set;
+            get; set;
         }
-        
+
         /// <summary>
         /// Gets or sets accept state.
         /// </summary>
@@ -40,7 +40,7 @@
         /// </summary>
         public virtual UserAgreement UserAgreement
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -48,9 +48,9 @@
         /// </summary>
         public virtual User User
         {
-            get;set;
+            get; set;
         }
 
         #endregion
-    } 
+    }
 }

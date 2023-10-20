@@ -1,6 +1,9 @@
 ﻿using Gizmo.DAL.Entities;
+
 using ProtoBuf;
+
 using ServerService;
+
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -230,6 +233,6 @@ namespace GizmoDALV2.DTO
         }
 
         #endregion
-    } 
+    }
     #endregion
 }

@@ -1,4 +1,5 @@
 ﻿using Gizmo.DAL.Entities;
+
 using ProtoBuf.Meta;
 
 namespace Gizmo.DAL
@@ -68,18 +69,18 @@ namespace Gizmo.DAL
                   .AddSubType(500, typeof(CreatedByUserBase));
 
             RuntimeTypeModel.Default[typeof(CreatedByBase<User>)]
-                .AddSubType(501, typeof(ModifiedByBase<User,User>));
+                .AddSubType(501, typeof(ModifiedByBase<User, User>));
 
             #endregion
 
             #region MODIFIEDBYBASE<USEROPERATOR,USER>
             RuntimeTypeModel.Default[typeof(ModifiedByBase<UserOperator, User>)]
-                    .AddSubType(500, typeof(HostGroupWaitingLineEntry)); 
+                    .AddSubType(500, typeof(HostGroupWaitingLineEntry));
             #endregion
 
             #region MODIFIEDBYBASE<USER,USER>
 
-            RuntimeTypeModel.Default[typeof(ModifiedByBase<User,User>)]
+            RuntimeTypeModel.Default[typeof(ModifiedByBase<User, User>)]
                 .AddSubType(500, typeof(ModifiableByUserCreatedByUserBase));
 
             #endregion
@@ -359,7 +360,7 @@ namespace Gizmo.DAL
             RuntimeTypeModel.Default[typeof(ModifiableByWithRequiredUserMemberBase)].AddSubType(505, typeof(DepositPayment));
             RuntimeTypeModel.Default[typeof(ModifiableByWithRequiredUserMemberBase)].AddSubType(506, typeof(DepositTransaction));
             RuntimeTypeModel.Default[typeof(ModifiableByWithRequiredUserMemberBase)].AddSubType(507, typeof(ProductOrder));
-            RuntimeTypeModel.Default[typeof(ModifiableByWithRequiredUserMemberBase)].AddSubType(561, typeof(AssetTransaction));            
+            RuntimeTypeModel.Default[typeof(ModifiableByWithRequiredUserMemberBase)].AddSubType(561, typeof(AssetTransaction));
 
             RuntimeTypeModel.Default[typeof(Refund)].AddSubType(501, typeof(RefundInvoicePayment));
 

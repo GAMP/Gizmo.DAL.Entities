@@ -8,18 +8,18 @@
         /// <summary>
         /// The intent is pending.
         /// </summary>
-        Pending=0,
+        Pending = 0,
         /// <summary>
         /// The intent was processed.
         /// </summary>
-        Processed=1,
+        Processed = 1,
         /// <summary>
         /// The intent was canceled.
         /// </summary>
-        Canceled=2,
+        Canceled = 2,
         /// <summary>
         /// The intent has failed.
         /// </summary>
-        Failed=3,
+        Failed = 3,
     }
 }

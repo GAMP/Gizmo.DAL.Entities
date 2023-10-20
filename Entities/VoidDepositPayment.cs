@@ -1,4 +1,5 @@
 ﻿using ProtoBuf;
+
 using System;
 
 namespace Gizmo.DAL.Entities
@@ -8,7 +9,7 @@ namespace Gizmo.DAL.Entities
     public class VoidDepositPayment : Void
     {
         #region PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets deposit payment id.
         /// </summary>
@@ -16,7 +17,7 @@ namespace Gizmo.DAL.Entities
         public int DepositPaymentId
         {
             get; set;
-        } 
+        }
 
         #endregion
 
@@ -27,7 +28,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public virtual DepositPayment DepositPayment
         {
-            get;set;
+            get; set;
         }
 
         #endregion

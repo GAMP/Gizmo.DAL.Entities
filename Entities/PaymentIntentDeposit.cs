@@ -14,7 +14,7 @@
         #endregion
 
         #region PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets deposit payment id.
         /// </summary>
@@ -26,14 +26,14 @@
         #endregion
 
         #region NAVIGATION PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets associated deposit payment.
         /// </summary>
         public virtual DepositPayment DepositPayment
         {
             get; set;
-        } 
+        }
 
         #endregion
     }

@@ -1,5 +1,4 @@
 ﻿using System;
-using GizmoDALV2.Entities;
 
 namespace Gizmo.DAL.Entities
 {

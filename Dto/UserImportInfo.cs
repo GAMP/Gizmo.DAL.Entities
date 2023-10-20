@@ -1,4 +1,5 @@
 ﻿using SharedLib;
+
 using System;
 using System.Runtime.Serialization;
 
@@ -84,7 +85,7 @@ namespace GizmoDALV2.DTO
         [DataMember(IsRequired = false)]
         public string City
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -102,7 +103,7 @@ namespace GizmoDALV2.DTO
         [DataMember(IsRequired = false)]
         public string PostCode
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>

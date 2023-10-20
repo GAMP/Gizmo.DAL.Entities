@@ -10,7 +10,7 @@ namespace Gizmo.DAL
     public interface IEntityLocator<T> where T : Entities.EntityBase
     {
         #region FUNCTIONS
-        
+
         /// <summary>
         /// Gets all entites.
         /// </summary>

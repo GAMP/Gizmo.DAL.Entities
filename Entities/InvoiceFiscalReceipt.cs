@@ -1,4 +1,5 @@
 ﻿using ProtoBuf;
+
 using System;
 
 namespace Gizmo.DAL.Entities

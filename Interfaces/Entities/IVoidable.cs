@@ -7,7 +7,7 @@
     public interface IVoidable
     {
         #region PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets if entity is voided.
         /// </summary>
@@ -15,7 +15,7 @@
         {
             get;
             set;
-        } 
+        }
 
         #endregion
     }

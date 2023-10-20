@@ -8,7 +8,7 @@ namespace Gizmo.DAL
     public interface IReplicatable
     {
         #region PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets item guid.
         /// </summary>
@@ -16,7 +16,7 @@ namespace Gizmo.DAL
         {
             get;
             set;
-        } 
+        }
 
         #endregion
     }

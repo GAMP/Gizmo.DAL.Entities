@@ -8,14 +8,14 @@
         /// <summary>
         /// The intent is pending.
         /// </summary>
-        Pending=0,
+        Pending = 0,
         /// <summary>
         /// The intent is completed.
         /// </summary>
-        Completed=1,
+        Completed = 1,
         /// <summary>
         /// The intent is failed.
         /// </summary>
-        Failed=2,
+        Failed = 2,
     }
 }

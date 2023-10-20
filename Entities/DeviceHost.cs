@@ -1,4 +1,5 @@
 ﻿using ProtoBuf;
+
 using System;
 using System.Runtime.Serialization;
 
@@ -13,7 +14,7 @@ namespace Gizmo.DAL.Entities
     public class DeviceHost : ModifiableByOperatorBase
     {
         #region CONSTRUCTOR
-        
+
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -42,7 +43,7 @@ namespace Gizmo.DAL.Entities
         public int DeviceId
         {
             get; set;
-        } 
+        }
 
         #endregion
 
@@ -62,7 +63,7 @@ namespace Gizmo.DAL.Entities
         public virtual Host Host
         {
             get; protected set;
-        } 
+        }
 
         #endregion
     }

@@ -8,7 +8,7 @@ namespace Gizmo.DAL
     public interface IModifiable : ICreatable
     {
         #region PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets modification time.
         /// </summary>
@@ -21,7 +21,7 @@ namespace Gizmo.DAL
         /// <summary>
         /// Indicates that when entity is saved update time and user shouldnt be set automatically.
         /// </summary>
-        bool IgnoreUpdatedUpdate { get; set; } 
+        bool IgnoreUpdatedUpdate { get; set; }
 
         #endregion
     }

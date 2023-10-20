@@ -6,7 +6,7 @@
     public interface IDeletable
     {
         #region PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets if entity is marked as deleted.
         /// </summary>
@@ -14,7 +14,7 @@
         {
             get;
             set;
-        } 
+        }
 
         #endregion
     }

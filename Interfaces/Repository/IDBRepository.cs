@@ -1095,7 +1095,7 @@ namespace Gizmo.DAL
         /// Gets users balance values.
         /// </summary>
         /// <returns>User balances.</returns>
-        Dictionary<int,UserBalance> UserBalanceGet();
+        Dictionary<int, UserBalance> UserBalanceGet();
 
         /// <summary>
         /// Gets monetary amount for minutes.
@@ -1497,7 +1497,7 @@ namespace Gizmo.DAL
         /// The dictionary might not contain all user ids, it will only contain users that have deposti transactions and thus have a deposit balance.
         /// If dictionary does not contain user it means that his deposit balance equals to zero.
         /// </remarks>
-        Dictionary<int,decimal> DepositBalanceGet();
+        Dictionary<int, decimal> DepositBalanceGet();
 
         #endregion
 

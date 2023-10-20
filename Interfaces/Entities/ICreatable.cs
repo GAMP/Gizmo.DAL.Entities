@@ -8,7 +8,7 @@ namespace Gizmo.DAL
     public interface ICreatable
     {
         #region PROPERTIES
-        
+
         /// <summary>
         /// Gets or sets creation time.
         /// </summary>
@@ -21,7 +21,7 @@ namespace Gizmo.DAL
         /// <summary>
         /// Indicates that when entity is saved creation time and user shouldnt be set automatically.
         /// </summary>
-        bool IgnoreCreatedUpdate { get; set; } 
+        bool IgnoreCreatedUpdate { get; set; }
 
         #endregion
     }

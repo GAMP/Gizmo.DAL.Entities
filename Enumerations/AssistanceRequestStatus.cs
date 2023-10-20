@@ -20,6 +20,6 @@
         /// <summary>
         /// Canceled.
         /// </summary>
-        CanceledByUser=3,
+        CanceledByUser = 3,
     }
 }

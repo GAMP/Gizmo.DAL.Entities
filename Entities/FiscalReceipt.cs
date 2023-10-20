@@ -1,4 +1,5 @@
 ﻿using ProtoBuf;
+
 using System;
 
 namespace Gizmo.DAL.Entities
@@ -29,7 +30,7 @@ namespace Gizmo.DAL.Entities
         [ProtoMember(1)]
         public int Type
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -38,7 +39,7 @@ namespace Gizmo.DAL.Entities
         [ProtoMember(2)]
         public int? TaxSystem
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -60,7 +61,7 @@ namespace Gizmo.DAL.Entities
         public string Signature
         {
             get; set;
-        } 
+        }
 
         #endregion
     }

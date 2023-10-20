@@ -1,4 +1,5 @@
 ﻿using ProtoBuf;
+
 using System;
 
 namespace Gizmo.DAL.Entities
@@ -15,7 +16,7 @@ namespace Gizmo.DAL.Entities
         /// Creates new instance.
         /// </summary>
         public RefundDepositPayment() : base()
-        { } 
+        { }
         #endregion
 
         #region PROPERTIES
@@ -44,8 +45,8 @@ namespace Gizmo.DAL.Entities
         [ProtoMember(3)]
         public int? FiscalReceiptId
         {
-            get;set;
-        }   
+            get; set;
+        }
 
         #endregion
 
@@ -56,7 +57,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public virtual DepositPayment DepositPayment
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -64,7 +65,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public virtual FiscalReceipt FiscalReceipt
         {
-            get;set;
+            get; set;
         }
 
         #endregion

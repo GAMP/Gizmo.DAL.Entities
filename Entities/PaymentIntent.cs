@@ -32,7 +32,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public int PaymentMethodId
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -41,14 +41,14 @@ namespace Gizmo.DAL.Entities
         public decimal Amount
         {
             get; set;
-        } 
+        }
 
         /// <summary>
         /// Gets or sets intent state.
         /// </summary>
         public PaymentIntentState State
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public string TransactionId
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public DateTime? TransactionTime
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Gizmo.DAL.Entities
         #endregion
 
         #region NAVIGATION PROPERTIES
-        
+
         /// <summary>
         /// Gets or set target user.
         /// </summary>
@@ -101,7 +101,7 @@ namespace Gizmo.DAL.Entities
         public virtual PaymentMethod PaymentMethod
         {
             get; set;
-        } 
+        }
 
         #endregion
     }
