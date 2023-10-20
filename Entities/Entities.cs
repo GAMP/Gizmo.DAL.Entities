@@ -1,5 +1,7 @@
 ﻿using CoreLib;
 using CyClone;
+
+using Gizmo.DAL;
 using Gizmo.DAL.Entities;
 using ProtoBuf;
 using SharedLib;

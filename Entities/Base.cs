@@ -1,4 +1,6 @@
-﻿using ProtoBuf;
+﻿using Gizmo.DAL;
+
+using ProtoBuf;
 using SharedLib;
 using System;
 using System.Collections.Generic;
