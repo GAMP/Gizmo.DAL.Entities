@@ -30,6 +30,7 @@ namespace Gizmo.DAL.Entities
             ReservedGuests = new HashSet<UserGuest>();
             ProductOrders = new HashSet<ProductOrder>();
             Devices = new HashSet<DeviceHost>();
+            AssitanceRequests = new HashSet<AssistanceRequest>();
             Guid = Guid.NewGuid(); // always create a new GUID for the host
         }
         #endregion
@@ -146,6 +147,11 @@ namespace Gizmo.DAL.Entities
         {
             get; protected set;
         }
+
+        /// <summary>
+        /// Gets associated assistance requests.
+        /// </summary>
+        public virtual ISet<AssistanceRequest> AssitanceRequests { get; protected set; }
 
         #endregion
     }
