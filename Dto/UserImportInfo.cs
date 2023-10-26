@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace GizmoDALV2.DTO
+namespace Gizmo.DAL.DTO
 {
     /// <summary>
     /// Generic user import information class.

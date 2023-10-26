@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace GizmoDALV2.DTO
+namespace Gizmo.DAL.DTO
 {
     #region AppEntityContainer
     /// <summary>
