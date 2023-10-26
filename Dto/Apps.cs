@@ -118,8 +118,8 @@ namespace GizmoDALV2.DTO
     public class AppInfoContainer
     {
         #region FIELDS
-        private IEnumerable<Gizmo.DAL.Entities.AppRating> appRatings;
-        private IEnumerable<Gizmo.DAL.Entities.AppStat> appStats;
+        private IEnumerable<ServerService.AppRating> appRatings;
+        private IEnumerable<ServerService.AppStat> appStats;
         private IEnumerable<AppExeStat> appExe;
         #endregion
 
@@ -130,12 +130,12 @@ namespace GizmoDALV2.DTO
         /// </summary>
         [ProtoMember(1)]
         [DataMember()]
-        public IEnumerable<Gizmo.DAL.Entities.AppRating> AppRating
+        public IEnumerable<ServerService.AppRating> AppRating
         {
             get
             {
                 if (appRatings == null)
-                    appRatings = new List<Gizmo.DAL.Entities.AppRating>();
+                    appRatings = new List<ServerService.AppRating>();
                 return appRatings;
             }
             set
@@ -149,12 +149,12 @@ namespace GizmoDALV2.DTO
         /// </summary>
         [ProtoMember(2)]
         [DataMember()]
-        public IEnumerable<Gizmo.DAL.Entities.AppStat> AppStat
+        public IEnumerable<ServerService.AppStat> AppStat
         {
             get
             {
                 if (appStats == null)
-                    appStats = new List<Gizmo.DAL.Entities.AppStat>();
+                    appStats = new List<ServerService.AppStat>();
                 return appStats;
             }
             set
