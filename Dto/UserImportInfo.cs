@@ -1,6 +1,4 @@
-﻿using SharedLib;
-
-using System;
+﻿using System;
 using System.Runtime.Serialization;
 
 namespace Gizmo.DAL.DTO
