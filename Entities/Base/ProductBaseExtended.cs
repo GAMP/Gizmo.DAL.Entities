@@ -21,8 +21,8 @@ namespace Gizmo.DAL.Entities
         public ProductBaseExtended()
             : base()
         {
-            this.OrderLines = new HashSet<ProductOLProduct>();
-            this.InvoiceLines = new HashSet<InvoiceLineProduct>();
+            OrderLines = new HashSet<ProductOLProduct>();
+            InvoiceLines = new HashSet<InvoiceLineProduct>();
         }
         #endregion
 

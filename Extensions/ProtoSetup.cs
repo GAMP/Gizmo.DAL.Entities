@@ -111,7 +111,7 @@ namespace Gizmo.DAL
                 .AddSubType(501, typeof(Refund));
 
             RuntimeTypeModel.Default[typeof(EntityWithShift)]
-                .AddSubType(502, typeof(Entities.Void));
+                .AddSubType(502, typeof(Void));
 
             #endregion
 
@@ -298,7 +298,7 @@ namespace Gizmo.DAL
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(513, typeof(ProductTimeHostDisallowed));
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(514, typeof(FileListEntityBase));
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(515, typeof(BillProfile));
-            RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(516, typeof(Entities.Attribute));
+            RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(516, typeof(Attribute));
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(517, typeof(HostLayoutGroup));
 
             RuntimeTypeModel.Default[typeof(ModifiableByOperatorBase)].AddSubType(519, typeof(HostLayoutGroupLayout));

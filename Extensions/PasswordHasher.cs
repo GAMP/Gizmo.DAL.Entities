@@ -16,7 +16,7 @@ namespace Gizmo.DAL
         public static byte[] GetNewSalt()
         {
             byte[] salt = new byte[100];
-            RNGCryptoServiceProvider.Create().GetNonZeroBytes(salt);
+            RandomNumberGenerator.Create().GetNonZeroBytes(salt);
             return salt;
         }
 
@@ -38,7 +38,7 @@ namespace Gizmo.DAL
 
             List<byte> bytes = new List<byte>(System.Text.Encoding.Default.GetBytes(pwd));
             bytes.AddRange(salt);
-            using (SHA512 hasher = SHA512Managed.Create())
+            using (SHA512 hasher = SHA512.Create())
             {
                 return hasher.ComputeHash(bytes.ToArray());
             }

@@ -21,9 +21,9 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public TaskBase() : base()
         {
-            this.Guid = Guid.NewGuid();
-            this.UsedByTask = new HashSet<ClientTask>();
-            this.UsedByAppExe = new HashSet<AppExeTask>();
+            Guid = Guid.NewGuid();
+            UsedByTask = new HashSet<ClientTask>();
+            UsedByAppExe = new HashSet<AppExeTask>();
         }
         #endregion
 

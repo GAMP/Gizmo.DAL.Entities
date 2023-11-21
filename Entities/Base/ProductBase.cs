@@ -25,14 +25,14 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public ProductBase() : base()
         {
-            this.Guid = Guid.NewGuid();
-            this.Taxes = new HashSet<ProductTax>();
-            this.DisallowedUserGroups = new HashSet<ProductUserDisallowed>();
-            this.UserGroupPrices = new HashSet<ProductUserPrice>();
-            this.StockTransactions = new HashSet<StockTransaction>();
-            this.StockTransactionsSource = new HashSet<StockTransaction>();
-            this.Images = new HashSet<ProductImage>();
-            this.HiddenHostGroups = new HashSet<ProductHostHidden>();
+            Guid = Guid.NewGuid();
+            Taxes = new HashSet<ProductTax>();
+            DisallowedUserGroups = new HashSet<ProductUserDisallowed>();
+            UserGroupPrices = new HashSet<ProductUserPrice>();
+            StockTransactions = new HashSet<StockTransaction>();
+            StockTransactionsSource = new HashSet<StockTransaction>();
+            Images = new HashSet<ProductImage>();
+            HiddenHostGroups = new HashSet<ProductHostHidden>();
         }
         #endregion
 
