@@ -4,6 +4,7 @@ using ServerService;
 using System.Linq.Expressions;
 using SharedLib;
 using System.Threading.Tasks;
+using Gizmo.DAL.Entities;
 
 namespace Gizmo.DAL
 {
@@ -1537,7 +1538,7 @@ namespace Gizmo.DAL
         /// <exception cref="EntityNotFoundException">
         /// Thrown if specified entity <paramref name="entity"/> not found.
         /// </exception>
-        bool MarkDeleted(IDeletable entity);
+        bool MarkDeleted<T>(T entity) where T : class, IDeletable;
 
         #endregion
 

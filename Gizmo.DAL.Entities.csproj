@@ -4,8 +4,8 @@
 		<TargetFrameworks>net6.0;net461</TargetFrameworks>
 		<Configurations>Debug;Release;</Configurations>	
 		<LangVersion>latest</LangVersion>
-		<Product>GizmoDALEntities</Product>
-		<Description>GizmoDALEntities</Description>
+		<Product>Gizmo.DAL.Entities</Product>
+		<Description>Gizmo.DAL.Entities</Description>
 		<Copyright>Copyright ©  2014</Copyright>
 		<Authors />
 		<Company>NETProjects</Company>
@@ -13,7 +13,7 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Optimize>true</Optimize>		
 		<!-- !IMPORTANT! will break compatibility with older builds if name is changed-->
-		<AssemblyName>GizmoDALEntities</AssemblyName>		
+		<AssemblyName>Gizmo.DAL.Entities</AssemblyName>		
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)'=='Release'">
