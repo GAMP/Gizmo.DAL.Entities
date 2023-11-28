@@ -4,7 +4,6 @@ using ServerService;
 using System.Linq.Expressions;
 using SharedLib;
 using System.Threading.Tasks;
-using Gizmo.DAL.Entities;
 
 namespace Gizmo.DAL
 {

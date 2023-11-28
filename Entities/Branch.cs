@@ -1,6 +1,4 @@
-﻿using GizmoDALV2;
-
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Gizmo.DAL.Entities
