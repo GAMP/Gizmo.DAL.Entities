@@ -65,7 +65,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(4)]
-        public ProductSortOptionType SortOption
+        public SharedLib.ProductSortOptionType SortOption
         {
             get; set;
         }

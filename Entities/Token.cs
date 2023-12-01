@@ -63,7 +63,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(4)]
-        public TokenType Type
+        public SharedLib.TokenType Type
         {
             get; set;
         }

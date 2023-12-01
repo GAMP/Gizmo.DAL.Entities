@@ -150,7 +150,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(10)]
-        public Sex Sex
+        public SharedLib.Sex Sex
         {
             get;
             set;

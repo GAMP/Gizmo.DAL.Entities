@@ -53,7 +53,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(3)]
-        public NoteSeverity Sevirity
+        public SharedLib.NoteSeverity Sevirity
         {
             get; set;
         }

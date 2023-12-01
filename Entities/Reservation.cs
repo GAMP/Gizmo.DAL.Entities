@@ -108,7 +108,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(8)]
-        public ReservationStatus Status
+        public SharedLib.ReservationStatus Status
         {
             get; set;
         }

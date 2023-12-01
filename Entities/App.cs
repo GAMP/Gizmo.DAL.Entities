@@ -142,23 +142,23 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoIgnore()]
-        public AgeRatingType AgeRatingType
+        public SharedLib.AgeRatingType AgeRatingType
         {
             get
             {
                 if (AgeRating > 0)
                 {
-                    return AgeRatingType.Manual;
+                    return SharedLib.AgeRatingType.Manual;
                 }
                 else if (AgeRating < 0 & AgeRating >= -20)
                 {
-                    return AgeRatingType.PEGI;
+                    return SharedLib.AgeRatingType.PEGI;
                 }
                 else if (AgeRating < -20 & AgeRating >= -40)
                 {
-                    return AgeRatingType.ESRB;
+                    return SharedLib.AgeRatingType.ESRB;
                 }
-                return AgeRatingType.None;
+                return SharedLib.AgeRatingType.None;
             }
         }
 

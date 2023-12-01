@@ -91,7 +91,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(5)]
-        public ApplicationModes Modes
+        public SharedLib.ApplicationModes Modes
         {
             get;
             set;
@@ -139,7 +139,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(9)]
-        public RunMode RunMode
+        public SharedLib.RunMode RunMode
         {
             get;
             set;
@@ -150,7 +150,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(10)]
-        public LicenseReservationType ReservationType
+        public SharedLib.LicenseReservationType ReservationType
         {
             get;
             set;
@@ -161,7 +161,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(11)]
-        public ExecutableOptionType Options
+        public SharedLib.ExecutableOptionType Options
         {
             get;
             set;

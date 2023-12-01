@@ -44,7 +44,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(2)]
-        public InvoiceStatus Status
+        public SharedLib.InvoiceStatus Status
         {
             get;
             set;

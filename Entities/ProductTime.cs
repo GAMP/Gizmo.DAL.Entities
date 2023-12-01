@@ -93,7 +93,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(6)]
-        public ProductTimeExpirationOptionType ExpirationOptions
+        public SharedLib.ProductTimeExpirationOptionType ExpirationOptions
         {
             get;
             set;
@@ -104,7 +104,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(7)]
-        public ExpireFromOptionType ExpireFromOptions
+        public SharedLib.ExpireFromOptionType ExpireFromOptions
         {
             get; set;
         }
@@ -135,7 +135,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(12)]
-        public ExpireAfterType ExpireAfterType
+        public SharedLib.ExpireAfterType ExpireAfterType
         {
             get; set;
         }

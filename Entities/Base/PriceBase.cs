@@ -50,7 +50,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(3)]
-        public PurchaseOptionType PurchaseOptions { get; set; }
+        public SharedLib.PurchaseOptionType PurchaseOptions { get; set; }
 
         #endregion
     }

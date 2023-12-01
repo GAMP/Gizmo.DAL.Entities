@@ -40,7 +40,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(2)]
-        public ApplicationModes Mode
+        public SharedLib.ApplicationModes Mode
         {
             get;
             set;

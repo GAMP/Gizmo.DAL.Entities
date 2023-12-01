@@ -97,7 +97,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(8)]
-        public WaitingLineState State
+        public SharedLib.WaitingLineState State
         {
             get; set;
         }

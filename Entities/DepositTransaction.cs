@@ -28,7 +28,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(1)]
-        public DepositTransactionType Type
+        public SharedLib.DepositTransactionType Type
         {
             get;
             set;

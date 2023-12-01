@@ -96,7 +96,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(6)]
-        public PersonalFileActivationType Activation
+        public SharedLib.PersonalFileActivationType Activation
         {
             get;
             set;
@@ -153,7 +153,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(11)]
-        public PersonalUserFileType Type
+        public SharedLib.PersonalUserFileType Type
         {
             get;
             set;

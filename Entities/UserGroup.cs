@@ -95,7 +95,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(6)]
-        public UserInfoTypes RequiredUserInfo
+        public SharedLib.UserInfoTypes RequiredUserInfo
         {
             get;
             set;
@@ -160,7 +160,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(12)]
-        public TimePointAwardOptionType PointsAwardOptions
+        public SharedLib.TimePointAwardOptionType PointsAwardOptions
         {
             get; set;
         }
