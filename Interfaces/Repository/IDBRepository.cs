@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using ServerService;
 using System.Linq.Expressions;
-using SharedLib;
 using System.Threading.Tasks;
+using SharedLib;
 
 namespace Gizmo.DAL
 {
