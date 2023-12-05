@@ -1620,7 +1620,7 @@ namespace Gizmo.DAL
         /// <param name="entityId">Reservation entity id.</param>
         /// <param name="status">New status.</param>
         /// <exception cref="EntityNotFoundException">Thrown when entity specified by <paramref name="entityId"/> not found.</exception>
-        Task ReservationStatusSetAsync(int entityId, ReservationStatus status);
+        Task ReservationStatusSetAsync(int entityId, SharedLib.ReservationStatus status);
 
         /// <summary>
         /// Gets status of specified reservation.
@@ -1628,7 +1628,7 @@ namespace Gizmo.DAL
         /// <param name="entityId">Reservation entiity id.</param>
         /// <returns>Reservation status.</returns>
         /// <exception cref="EntityNotFoundException">Thrown when entity specified by <paramref name="entityId"/> not found.</exception>
-        Task<ReservationStatus> ReservationStatusGetAsync(int entityId);
+        Task<SharedLib.ReservationStatus> ReservationStatusGetAsync(int entityId);
 
         /// <summary>
         /// Adds new reservation.
