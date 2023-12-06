@@ -660,7 +660,7 @@ namespace Gizmo.DAL
         /// <exception cref="EntityNotFoundException">
         /// Thrown if specified entity <paramref name="entity"/> not found.
         /// </exception>
-        Task<bool> MarkDeletedAsync(IDeletable entity);
+        Task<bool> MarkDeletedAsync<T>(T entity) where T : class, IDeletable;
 
         #endregion
 
