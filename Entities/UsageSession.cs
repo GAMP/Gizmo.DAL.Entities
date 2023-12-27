@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
@@ -19,6 +19,7 @@ namespace Gizmo.DAL.Entities
         public UsageSession() : base()
         {
             Usage = new HashSet<Usage>();
+            InvoiceLines = new HashSet<InvoiceLineSession>();
         }
         #endregion
 

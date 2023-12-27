@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Collections.Generic;
@@ -232,7 +232,7 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets fiscal receipts.
         /// </summary>
         [ProtoMember(17)]
-        public ISet<InvoiceFiscalReceipt> FiscalReceipts
+        public virtual ISet<InvoiceFiscalReceipt> FiscalReceipts
         {
             get; set;
         }
