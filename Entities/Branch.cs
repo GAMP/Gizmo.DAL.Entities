@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿#nullable enable
+
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Gizmo.DAL.Entities
@@ -36,7 +38,10 @@ namespace Gizmo.DAL.Entities
         /// <inheritdoc/>
         public bool IsDeleted { get; set; }
 
-        //TODO : add time zone
+        /// <summary>
+        /// Gets or sets time zone.
+        /// </summary>
+        public string? TimeZone { get; set; }
 
         #endregion
     }
