@@ -23,6 +23,6 @@
         /// <summary>
         /// Year.
         /// </summary>
-        Yearly = 4,
+        Year = 4,
     }
 }
