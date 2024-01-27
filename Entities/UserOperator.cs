@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -114,6 +114,11 @@ namespace Gizmo.DAL.Entities
         {
             get; protected set;
         }
+
+        /// <summary>
+        /// Gets operator branches.
+        /// </summary>
+        public virtual ISet<UserOperatorBranch> Branches { get; protected set; }
 
         #endregion
     }

@@ -1,18 +1,16 @@
 ﻿#nullable enable
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Branch entity.
     /// </summary>
-    [NotMapped()]
-    public class Branch : ModifiableByOperatorBase, IEnabled, IDeletable, IReplicatable
+    public sealed class Branch : ModifiableByOperatorBase, IEnabled, IDeletable, IReplicatable
     {
-        #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -20,9 +18,6 @@ namespace Gizmo.DAL.Entities
         {
             Guid = Guid.NewGuid();
         }
-        #endregion
-
-        #region PROPERTIES
 
         /// <summary>
         /// Gets or sets branch name.
@@ -43,7 +38,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets contact phone.
         /// </summary>
-        public string? ContactPhone { get; set; }
+        public string? Phone { get; set; }
 
         /// <summary>
         /// Gets or sets email.
@@ -70,17 +65,13 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public string? Info { get; set; }
 
+        /// <summary>
+        /// Gets or sets time zone.
+        /// </summary>
+        public string? TimeZone { get; set; }
 
-        //Guid add guid
-        //City add city (45 char)
-        //Address add address (255 char)
-        //ContactPhone phone ? contact phone mobile or landline (45 char)
-        //Email email contact
-        //ZipCode zip code ? (alphanumeric)
-        //Region region (255 chars)
-        //GeoLocation geo location
-        //WebSite url
-        //Info (255 char)
+        /// <inheritdoc/>
+        public Guid Guid { get; set; }
 
         /// <inheritdoc/>
         public bool IsEnabled { get; set; }
@@ -89,15 +80,8 @@ namespace Gizmo.DAL.Entities
         public bool IsDeleted { get; set; }
 
         /// <summary>
-        /// Gets or sets time zone.
+        /// Gets operators assigned to this branch.
         /// </summary>
-        public string? TimeZone { get; set; }
-
-        /// <summary>
-        /// Gets or sets replication guid.
-        /// </summary>
-        public Guid Guid { get; set; }
-
-        #endregion
+        public ISet<UserOperatorBranch> Operators { get; set; }
     }
 }

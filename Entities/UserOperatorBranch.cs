@@ -6,6 +6,12 @@
     public sealed class UserOperatorBranch : ModifiableByOperatorBase
     {
         /// <summary>
+        /// Creates new instance.
+        /// </summary>
+        public UserOperatorBranch() : base()
+        { }
+
+        /// <summary>
         /// Gets or sets operator id.
         /// </summary>
         public int OperatorId { get; set; }

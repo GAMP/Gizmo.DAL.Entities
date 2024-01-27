@@ -10,6 +10,12 @@ namespace Gizmo.DAL.Entities
     public sealed class ReportPreset : ModifiableByOperatorBase
     {
         /// <summary>
+        /// Creates new instance.
+        /// </summary>
+        public ReportPreset() : base()
+        { }
+
+        /// <summary>
         /// Gets or sets preset name.
         /// </summary>
         public string Name { get; set; } = string.Empty;
