@@ -17,6 +17,7 @@ namespace Gizmo.DAL.Entities
         public Branch() : base()
         {
             Guid = Guid.NewGuid();
+            Operators = new HashSet<UserOperatorBranch>();
         }
 
         /// <summary>
