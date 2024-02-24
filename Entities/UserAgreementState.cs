@@ -1,8 +1,11 @@
-﻿namespace Gizmo.DAL.Entities
+﻿using System;
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// User agreement state.
     /// </summary>
+    [Serializable()]
     public class UserAgreementState : ModifiableByUserCreatedByUserBase
     {
         #region PROPERTIES
