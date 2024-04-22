@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Waiting line entitiy.
+    /// Waiting line entity.
     /// </summary>
     [Serializable()]
     [DataContract()]
