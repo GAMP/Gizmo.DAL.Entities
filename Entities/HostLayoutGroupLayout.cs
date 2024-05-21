@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -36,7 +36,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets y postion.
+        /// Gets or sets y position.
         /// </summary>
         [DataMember()]
         [ProtoMember(2)]
@@ -99,6 +99,26 @@ namespace Gizmo.DAL.Entities
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// Gets or sets host row.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(8)]
+        public int Row
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets host column.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(9)]
+        public int Column
+        {
+            get; set;
         }
 
         #endregion

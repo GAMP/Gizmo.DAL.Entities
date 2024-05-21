@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -102,6 +102,26 @@ namespace Gizmo.DAL.Entities
         public decimal StartCash
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets payment terminal number.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(8)]
+        public int? PaymentTerminalNumber
+        {
+            get;set;
+        }
+
+        /// <summary>
+        /// Gets or sets fiscal receipt printer number.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(9)]
+        public int? FiscalReceiptPrinterNumber
+        {
+            get;set;
         }
 
         #endregion
