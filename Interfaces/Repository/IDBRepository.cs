@@ -1646,7 +1646,7 @@ namespace Gizmo.DAL
         /// <returns>Reservation entity.</returns>
         /// <exception cref="HostReservationException">Thrown in case of an error.</exception>
         /// <exception cref="EntityNotFoundException">Thrown if one of the entities related to reservation is not found.</exception>
-        Task ReservationUpdateAync(Entities.Reservation entity);
+        Task ReservationUpdateAsync(Entities.Reservation entity);
 
         /// <summary>
         /// Gets reservation infos.
