@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class HostLayoutGroup : ModifiableByOperatorBase
+    public class HostLayoutGroup : ModifiableByOperatorBase , IBranchedEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -24,6 +24,11 @@ namespace Gizmo.DAL.Entities
         {
             Layouts = new HashSet<HostLayoutGroupLayout>();
         }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch _branch; 
         #endregion
 
         #region PROPERTIES
@@ -52,6 +57,12 @@ namespace Gizmo.DAL.Entities
             set;
         }
 
+        /// <inheritdoc/>        
+        public int BranchId
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -73,6 +84,13 @@ namespace Gizmo.DAL.Entities
         {
             get;
             protected set;
+        }
+
+        /// <inheritdoc/>  
+        public virtual Branch Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
         }
 
         #endregion

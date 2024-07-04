@@ -15,7 +15,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class Register : ModifiableByOperatorBase, IDeletable
+    public class Register : ModifiableByOperatorBase, IDeletable, IBranchedEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -26,6 +26,11 @@ namespace Gizmo.DAL.Entities
             Shifts = new HashSet<Shift>();
             Transactions = new HashSet<RegisterTransaction>();
         }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch _branch; 
         #endregion
 
         #region PROPERTIES
@@ -111,7 +116,7 @@ namespace Gizmo.DAL.Entities
         [ProtoMember(8)]
         public int? PaymentTerminalNumber
         {
-            get;set;
+            get; set;
         }
 
         /// <summary>
@@ -121,7 +126,13 @@ namespace Gizmo.DAL.Entities
         [ProtoMember(9)]
         public int? FiscalReceiptPrinterNumber
         {
-            get;set;
+            get; set;
+        }
+
+        /// <inheritdoc/>        
+        public int BranchId
+        {
+            get; set;
         }
 
         #endregion
@@ -142,6 +153,13 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<RegisterTransaction> Transactions
         {
             get; protected set;
+        }
+
+        /// <inheritdoc/>  
+        public virtual Branch Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
         }
 
         #endregion

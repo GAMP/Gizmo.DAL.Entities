@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -11,7 +11,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class StockTransaction : ModifiableByOperatorBase, IVoidable
+    public class StockTransaction : ModifiableByOperatorBase, IVoidable , IBranchedEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -20,6 +20,11 @@ namespace Gizmo.DAL.Entities
         public StockTransaction()
             : base()
         { }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch _branch; 
         #endregion
 
         #region PROPERTIES
@@ -129,6 +134,12 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <inheritdoc/>        
+        public int BranchId
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -148,6 +159,13 @@ namespace Gizmo.DAL.Entities
         public virtual ProductBase SourceProduct
         {
             get; set;
+        }
+
+        /// <inheritdoc/>  
+        public virtual Branch Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
         }
 
         #endregion

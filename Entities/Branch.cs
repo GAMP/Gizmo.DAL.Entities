@@ -9,7 +9,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Branch entity.
     /// </summary>
-    public sealed class Branch : ModifiableByOperatorBase, IEnabled, IDeletable, IReplicatable
+    public class Branch : ModifiableByOperatorBase, IEnabled, IDeletable, IReplicatable
     {
         /// <summary>
         /// Creates new instance.
@@ -18,6 +18,7 @@ namespace Gizmo.DAL.Entities
         {
             Guid = Guid.NewGuid();
             Operators = new HashSet<UserOperatorBranch>();
+            Shifts = new HashSet<Shift>();
         }
 
         /// <summary>
@@ -83,6 +84,11 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets operators assigned to this branch.
         /// </summary>
-        public ISet<UserOperatorBranch> Operators { get; set; }
+        public virtual ISet<UserOperatorBranch> Operators { get; private set; }
+
+        /// <summary>
+        /// Gets branch shifts.
+        /// </summary>
+        public virtual ISet<Shift> Shifts { get; private set; }
     }
 }

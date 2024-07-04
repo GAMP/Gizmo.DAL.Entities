@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class Shift : ModifiableByOperatorBase
+    public class Shift : ModifiableByOperatorBase , IBranchedEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -28,6 +28,11 @@ namespace Gizmo.DAL.Entities
             Payments = new HashSet<Payment>();
             Refunds = new HashSet<Refund>();
         }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch _branch; 
         #endregion
 
         #region PROPERTIES
@@ -108,6 +113,12 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [ProtoMember(8)]
         public DateTime? EndTime
+        {
+            get; set;
+        }
+
+        /// <inheritdoc/>        
+        public int BranchId
         {
             get; set;
         }
@@ -194,6 +205,13 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<Refund> Refunds
         {
             get; protected set;
+        }
+
+        /// <inheritdoc/>  
+        public virtual Branch Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
         }
 
         #endregion

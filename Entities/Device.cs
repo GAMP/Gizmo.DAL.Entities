@@ -12,7 +12,7 @@ namespace Gizmo.DAL.Entities
     [DataContract()]
     [Serializable()]
     [ProtoContract()]
-    public class Device : ModifiableByOperatorBase, IEnabled
+    public class Device : ModifiableByOperatorBase, IEnabled , IBranchedEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -22,6 +22,11 @@ namespace Gizmo.DAL.Entities
         {
             Hosts = new HashSet<DeviceHost>();
         }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch _branch; 
         #endregion
 
         #region PROPERTIES
@@ -44,6 +49,12 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <inheritdoc/>        
+        public int BranchId
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -54,6 +65,13 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<DeviceHost> Hosts
         {
             get; protected set;
+        }
+
+        /// <inheritdoc/>  
+        public virtual Branch Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
         }
 
         #endregion

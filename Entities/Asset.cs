@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace Gizmo.DAL.Entities
     [DataContract()]
     [Serializable()]
     [ProtoContract()]
-    public class Asset : ModifiableByOperatorBase, IEnabled
+    public class Asset : ModifiableByOperatorBase, IEnabled , IBranchedEntity
     {
         #region CONSTRUCTOR
 
@@ -24,6 +24,11 @@ namespace Gizmo.DAL.Entities
             Transactions = new HashSet<AssetTransaction>();
         }
 
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch _branch; 
         #endregion
 
         #region PROPERTIES
@@ -98,6 +103,10 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+
+        /// <inheritdoc/>
+        public int BranchId { get; set; }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -116,6 +125,13 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<AssetTransaction> Transactions
         {
             get; protected set;
+        }
+
+        /// <inheritdoc/>  
+        public virtual Branch Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
         }
 
         #endregion

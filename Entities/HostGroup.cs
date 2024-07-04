@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -15,7 +15,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class HostGroup : ModifiableByOperatorBase
+    public class HostGroup : ModifiableByOperatorBase , IBranchedEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -31,6 +31,11 @@ namespace Gizmo.DAL.Entities
             WaitingLineEntries = new HashSet<HostGroupWaitingLineEntry>();
             HiddenProducts = new HashSet<ProductHostHidden>();
         }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch _branch; 
         #endregion
 
         #region PROPERTIES
@@ -103,6 +108,9 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <inheritdoc/>
+        public int BranchId { get; set; }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -152,7 +160,7 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<ProductTimeHostDisallowed> DisallowedTimeOffers { get; protected set; }
 
         /// <summary>
-        /// Gets or sets dissalowed user groups.
+        /// Gets or sets disavowed user groups.
         /// </summary>
         public virtual ISet<UserGroupHostDisallowed> DisallowedUserGroups { get; protected set; }
 
@@ -163,7 +171,7 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<HostGroupUserBillProfile> UserBillProfiles { get; protected set; }
 
         /// <summary>
-        /// Gets or sets dissalowed user groups.
+        /// Gets or sets disavowed user groups.
         /// </summary>
         public virtual ISet<ProductHostHidden> HiddenProducts { get; protected set; }
 
@@ -173,6 +181,13 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<HostGroupWaitingLineEntry> WaitingLineEntries
         {
             get; protected set;
+        }
+
+        /// <inheritdoc/>  
+        public virtual Branch Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
         }
 
         #endregion
