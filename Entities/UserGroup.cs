@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -128,7 +128,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(9)]
-        public CreditLimitOptionType CreditLimitOptions
+        public SharedLib.CreditLimitOptionType CreditLimitOptions
         {
             get;
             set;
