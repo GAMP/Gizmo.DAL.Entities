@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0;net461</TargetFrameworks>
+		<TargetFrameworks>net8.0</TargetFrameworks>
 		<Configurations>Debug;Release;</Configurations>	
 		<LangVersion>latest</LangVersion>
 		<Product>Gizmo.DAL.Entities</Product>
@@ -13,7 +13,10 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Optimize>true</Optimize>		
 		<!-- !IMPORTANT! will break compatibility with older builds if name is changed-->
-		<AssemblyName>Gizmo.DAL.Entities</AssemblyName>		
+		<AssemblyName>Gizmo.DAL.Entities</AssemblyName>
+
+    <!-- !IMPORTANT! will break compatibility with migration generation, needs carefull consideration-->
+    <Nullable>disable</Nullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)'=='Release'">
