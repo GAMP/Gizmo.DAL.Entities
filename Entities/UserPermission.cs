@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Premission entity.
+    /// Permission entity.
     /// </summary>
     [Serializable()]
     [DataContract()]

@@ -25,7 +25,7 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets receipt type.
         /// </summary>
         /// <remarks>
-        /// Indicates fiscal receipt type. For example pay or return (still in cosnideration).
+        /// Indicates fiscal receipt type. For example pay or return (still in consideration).
         /// </remarks>
         [ProtoMember(1)]
         public int Type

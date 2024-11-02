@@ -4,6 +4,9 @@ using System;
 
 namespace Gizmo.DAL.Entities
 {
+    /// <summary>
+    /// Void deposit payment entity.
+    /// </summary>
     [Serializable()]
     [ProtoContract()]
     public class VoidDepositPayment : Void

@@ -1,4 +1,4 @@
-using CyClone;
+﻿using CyClone;
 
 using ProtoBuf;
 
@@ -89,7 +89,7 @@ namespace Gizmo.DAL.Entities
 
         /// <summary>
         /// Gets or sets items guid.
-        /// <remarks>This property is required to globaly identify the object. In case of exporting or importing applications it gives us ability to have unique objects.</remarks>
+        /// <remarks>This property is required to globally identify the object. In case of exporting or importing applications it gives us ability to have unique objects.</remarks>
         /// </summary>
         [DataMember()]
         [Required()]

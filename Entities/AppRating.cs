@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Runtime.Serialization;
 
 namespace Gizmo.DAL.Entities
@@ -28,7 +28,7 @@ namespace Gizmo.DAL.Entities
         public int Value { get; set; }
 
         /// <summary>
-        /// Gets or sets last vote time.
+        /// Gets or sets last rate time.
         /// </summary>
         [DataMember()]
         public DateTime Date { get; set; }

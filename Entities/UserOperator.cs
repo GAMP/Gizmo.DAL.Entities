@@ -100,7 +100,7 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<ProductOrder> ModifiedOrders { get; protected set; }
 
         /// <summary>
-        /// Gets or sets opeator shifts.
+        /// Gets or sets operator shifts.
         /// </summary>
         public virtual ISet<Shift> Shifts
         {

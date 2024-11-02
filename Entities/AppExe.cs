@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Collections.Generic;
@@ -73,7 +73,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets items guid.
         /// <remarks>
-        /// This property is required to globaly identify the object.
+        /// This property is required to globally identify the object.
         /// In case of exporting or importing applications it gives us ability to have unique objects.
         /// </remarks>
         /// </summary>
@@ -135,7 +135,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or Sets the runmode of the executable.
+        /// Gets or Sets the run mode of the executable.
         /// </summary>
         [DataMember()]
         [ProtoMember(9)]
@@ -226,7 +226,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets defualt deployment profile.
+        /// Gets or sets default deployment profile.
         /// </summary>        
         [ProtoMember(22, AsReference = true)]
         public virtual Deployment DefaultDeployment

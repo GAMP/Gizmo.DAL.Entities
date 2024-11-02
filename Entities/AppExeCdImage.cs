@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -64,7 +64,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or Sets the cehck exit code value.
+        /// Gets or Sets the check exit code value.
         /// <remarks >
         /// When this set Mount() call will check the mounter process exit code when it exits.
         /// </remarks>
@@ -79,7 +79,7 @@ namespace Gizmo.DAL.Entities
 
         /// <summary>
         /// Gets or sets items guid.
-        /// <remarks>This property is required to globaly identify the object. In case of exporting or importing applications it gives us ability to have unique objects.</remarks>
+        /// <remarks>This property is required to globally identify the object. In case of exporting or importing applications it gives us ability to have unique objects.</remarks>
         /// </summary>
         [DataMember()]
         [Required()]

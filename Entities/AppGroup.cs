@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Collections.Generic;
@@ -62,7 +62,7 @@ namespace Gizmo.DAL.Entities
         #region NAVIGATION PROPERTIES
 
         /// <summary>
-        /// Gets beloning applications.
+        /// Gets belonging applications.
         /// </summary>
         [ProtoMember(3)]
         public virtual ISet<AppGroupApp> Apps

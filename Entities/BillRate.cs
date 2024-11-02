@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -42,7 +42,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets mimum fee.
+        /// Gets or sets minimum fee.
         /// </summary>
         [DataMember()]
         [ProtoMember(2)]

@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -44,8 +44,10 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        // TODO : Fix typo
+
         /// <summary>
-        /// Gets or sets prefered user id.
+        /// Gets or sets preferred user id.
         /// </summary>        
         [DataMember()]
         [ProtoMember(3)]

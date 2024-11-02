@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Plugin libarary entity.
+    /// Plugin library entity.
     /// </summary>
     [DataContract()]
     [Serializable()]

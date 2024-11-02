@@ -11,6 +11,8 @@ namespace Gizmo.DAL.Entities
     /// </summary>
     public class Branch : ModifiableByOperatorBase, IEnabled, IDeletable, IReplicatable
     {
+        #region CONSTRUCTOR
+        
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -20,7 +22,11 @@ namespace Gizmo.DAL.Entities
             Operators = new HashSet<UserOperatorBranch>();
             Shifts = new HashSet<Shift>();
             AssetTransactions = new HashSet<AssetTransaction>();
-        }
+        } 
+
+        #endregion
+
+        #region PROPERTIES
 
         /// <summary>
         /// Gets or sets branch name.
@@ -80,7 +86,11 @@ namespace Gizmo.DAL.Entities
         public bool IsEnabled { get; set; }
 
         /// <inheritdoc/>
-        public bool IsDeleted { get; set; }
+        public bool IsDeleted { get; set; } 
+
+        #endregion
+
+        #region NAVIGATION PROPERTIES
 
         /// <summary>
         /// Gets operators assigned to this branch.
@@ -95,6 +105,8 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets branch asset transactions.
         /// </summary>
-        public virtual ISet<AssetTransaction> AssetTransactions { get; private set; }
+        public virtual ISet<AssetTransaction> AssetTransactions { get; private set; } 
+
+        #endregion
     }
 }

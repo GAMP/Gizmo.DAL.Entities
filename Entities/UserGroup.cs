@@ -26,8 +26,8 @@ namespace Gizmo.DAL.Entities
         {
             Users = new HashSet<UserMember>();
             ProductPrices = new HashSet<ProductUserPrice>();
-            DissalowedProducts = new HashSet<ProductUserDisallowed>();
-            DissalowedHostGroups = new HashSet<UserGroupHostDisallowed>();
+            DisallowedProducts = new HashSet<ProductUserDisallowed>();
+            DisallowedHostGroups = new HashSet<UserGroupHostDisallowed>();
         }
         #endregion
 
@@ -102,7 +102,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets ovverides.
+        /// Gets or sets overrides.
         /// </summary>
         [DataMember()]
         [ProtoMember(7)]
@@ -286,15 +286,15 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<ProductUserPrice> ProductPrices { get; protected set; }
 
         /// <summary>
-        /// Gets or sets dissalowed products.
+        /// Gets or sets disallowed products.
         /// </summary>
-        public virtual ISet<ProductUserDisallowed> DissalowedProducts { get; protected set; }
+        public virtual ISet<ProductUserDisallowed> DisallowedProducts { get; protected set; }
 
         /// <summary>
-        /// Gets dissalowed host groups.
+        /// Gets disallowed host groups.
         /// </summary>
         [ProtoMember(18)]
-        public virtual ISet<UserGroupHostDisallowed> DissalowedHostGroups { get; protected set; }
+        public virtual ISet<UserGroupHostDisallowed> DisallowedHostGroups { get; protected set; }
 
         #endregion
     }

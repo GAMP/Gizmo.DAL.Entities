@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -19,10 +19,6 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public ProductOLTimeFixed() : base()
         { }
-        #endregion
-
-        #region PROPERTIES
-
         #endregion
     }
 }

@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -32,7 +32,7 @@ namespace Gizmo.DAL.Entities
             AppStats = new HashSet<AppStat>();
             Payments = new HashSet<Payment>();
             Deposits = new HashSet<DepositTransaction>();
-            LoayalityPoints = new HashSet<PointTransaction>();
+            LoyaltyPoints = new HashSet<PointTransaction>();
 
             ProductOrders = new HashSet<ProductOrder>();
             ProductOrdersLines = new HashSet<ProductOL>();
@@ -211,9 +211,9 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets loyality points.
+        /// Gets or sets loyalty points.
         /// </summary>
-        public virtual ISet<PointTransaction> LoayalityPoints
+        public virtual ISet<PointTransaction> LoyaltyPoints
         {
             get;
             protected set;

@@ -20,7 +20,8 @@ namespace Gizmo.DAL.Entities
         /// Creates new payment instance.
         /// </summary>
         public Payment() : base()
-        { }
+        {
+        }
         #endregion
 
         #region FIELDS

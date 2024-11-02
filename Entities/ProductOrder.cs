@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -137,8 +137,10 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        //TODO : Fix typo
+
         /// <summary>
-        /// Gets or sets prefered payment method id.
+        /// Gets or sets preferred payment method id.
         /// </summary>
         [DataMember()]
         [ProtoMember(13)]

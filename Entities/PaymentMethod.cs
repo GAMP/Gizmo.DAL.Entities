@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -140,7 +140,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets payment proider guid.
+        /// Gets or sets payment provider guid.
         /// </summary>
         [DataMember()]
         [ProtoMember(11)]

@@ -111,6 +111,8 @@ namespace Gizmo.DAL.Entities
             set;
         }
 
+        // TODO : Fix typo
+
         /// <summary>
         /// Gets or sets outstanding points.
         /// </summary>

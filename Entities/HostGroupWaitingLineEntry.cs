@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -117,7 +117,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets waiting line.
         /// </summary>
-        public virtual HostGroupWaitingLine WatingLine
+        public virtual HostGroupWaitingLine WaitingLine
         {
             get; set;
         }

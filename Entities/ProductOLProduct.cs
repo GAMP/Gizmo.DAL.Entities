@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Product orderline product entity.
+    /// Product order line product entity.
     /// </summary>
     [Serializable()]
     [DataContract()]
