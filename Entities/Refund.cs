@@ -1,3 +1,5 @@
+﻿#nullable enable
+
 using ProtoBuf;
 
 using System;
@@ -11,7 +13,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public abstract class Refund : EntityWithShift
+    public abstract class Refund : EntityWithShift , IBranchedOptionalEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -19,6 +21,11 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public Refund() : base()
         { }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch? _branch;
         #endregion
 
         #region PROPERTIES
@@ -73,6 +80,13 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <inheritdoc/>
+        public int? BranchId
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -107,6 +121,13 @@ namespace Gizmo.DAL.Entities
         public virtual PaymentMethod RefundMethod
         {
             get; set;
+        }
+
+        /// <inheritdoc/>
+        public Branch? Branch
+        {
+            get { return _branch; }
+            set { _branch = value; }
         }
 
         #endregion

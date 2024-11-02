@@ -1,7 +1,7 @@
+﻿#nullable enable
+
 using ProtoBuf;
-
 using SharedLib;
-
 using System;
 using System.Runtime.Serialization;
 
@@ -13,7 +13,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class Payment : ModifiableByWithRequiredUserMemberBase, IDeletable, IRefundable, IVoidable
+    public class Payment : ModifiableByWithRequiredUserMemberBase, IDeletable, IRefundable, IVoidable , IBranchedOptionalEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -21,6 +21,11 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public Payment() : base()
         { }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch? _branch;
         #endregion
 
         #region PROPERTIES
@@ -91,7 +96,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets loaylity transaction id.
+        /// Gets or sets loyalty transaction id.
         /// </summary>
         [DataMember()]
         [ProtoMember(8)]
@@ -141,6 +146,13 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <inheritdoc/>
+        public int? BranchId
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -155,7 +167,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets loyality transaction for this payment.
+        /// Gets or sets loyalty transaction for this payment.
         /// </summary>
         public virtual PointTransaction PointTransaction
         {
@@ -186,6 +198,13 @@ namespace Gizmo.DAL.Entities
         public virtual Register Register
         {
             get; set;
+        }
+
+        /// <inheritdoc/>
+        public Branch? Branch
+        {
+            get { return _branch; }
+            set { _branch = value; }
         }
 
         #endregion

@@ -19,6 +19,7 @@ namespace Gizmo.DAL.Entities
             Guid = Guid.NewGuid();
             Operators = new HashSet<UserOperatorBranch>();
             Shifts = new HashSet<Shift>();
+            AssetTransactions = new HashSet<AssetTransaction>();
         }
 
         /// <summary>
@@ -90,5 +91,10 @@ namespace Gizmo.DAL.Entities
         /// Gets branch shifts.
         /// </summary>
         public virtual ISet<Shift> Shifts { get; private set; }
+
+        /// <summary>
+        /// Gets branch asset transactions.
+        /// </summary>
+        public virtual ISet<AssetTransaction> AssetTransactions { get; private set; }
     }
 }

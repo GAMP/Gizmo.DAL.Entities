@@ -6,7 +6,7 @@ namespace Gizmo.DAL.Entities
     /// Assistance request entity.
     /// </summary>
     [Serializable()]
-    public class AssistanceRequest : ModifiedByBase<User, User>
+    public class AssistanceRequest : ModifiedByBase<User, User>, IBranchedEntity
     {
         #region CONSTRUCTOR
 
@@ -16,6 +16,11 @@ namespace Gizmo.DAL.Entities
         public AssistanceRequest()
         { }
 
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch _branch;
         #endregion
 
         #region PROPERTIES
@@ -48,6 +53,12 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public string Note { get; set; }
 
+        /// <inheritdoc/>        
+        public int BranchId
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -66,6 +77,13 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets assistance request type.
         /// </summary>
         public virtual AssistanceRequestType AssistanceRequestType { get; set; }
+
+        /// <inheritdoc/>  
+        public virtual Branch Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
+        }
 
         #endregion
     }

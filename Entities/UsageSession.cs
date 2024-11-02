@@ -10,7 +10,7 @@ namespace Gizmo.DAL.Entities
     /// </summary>
     [Serializable()]
     [DataContract()]
-    public class UsageSession : EntityBase, IModifiable
+    public class UsageSession : EntityBase, IModifiable, IBranchedEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -21,6 +21,11 @@ namespace Gizmo.DAL.Entities
             Usage = new HashSet<Usage>();
             InvoiceLines = new HashSet<InvoiceLineSession>();
         }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch _branch;
         #endregion
 
         #region PROPERTIES
@@ -131,6 +136,12 @@ namespace Gizmo.DAL.Entities
         [NotMapped()]
         public bool IgnoreUpdatedUpdate { get; set; }
 
+        /// <inheritdoc/>        
+        public int BranchId
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -165,6 +176,13 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<InvoiceLineSession> InvoiceLines
         {
             get; set;
+        }
+
+        /// <inheritdoc/>  
+        public virtual Branch Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
         }
 
         #endregion

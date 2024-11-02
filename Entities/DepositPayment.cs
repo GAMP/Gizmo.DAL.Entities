@@ -1,7 +1,7 @@
+﻿#nullable enable
+
 using ProtoBuf;
-
 using SharedLib;
-
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -14,7 +14,7 @@ namespace Gizmo.DAL.Entities
     [DataContract()]
     [Serializable()]
     [ProtoContract()]
-    public class DepositPayment : ModifiableByWithRequiredUserMemberBase
+    public class DepositPayment : ModifiableByWithRequiredUserMemberBase, IBranchedOptionalEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -23,6 +23,11 @@ namespace Gizmo.DAL.Entities
         public DepositPayment() : base()
         {
         }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch? _branch;
         #endregion
 
         #region PROPERTIES
@@ -117,6 +122,13 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <inheritdoc/>
+        public int? BranchId
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -168,6 +180,13 @@ namespace Gizmo.DAL.Entities
         public virtual FiscalReceipt FiscalReceipt
         {
             get; set;
+        }
+
+        /// <inheritdoc/>
+        public Branch? Branch
+        {
+            get { return _branch; }
+            set { _branch = value; }
         }
 
         #endregion

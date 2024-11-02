@@ -1,11 +1,13 @@
-﻿using System;
+﻿#nullable enable
+
+using System;
 
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Payment intent base entity. 
     /// </summary>
-    public abstract class PaymentIntent : ModifiableByUserCreatedByUserBase, IReplicatable
+    public abstract class PaymentIntent : ModifiableByUserCreatedByUserBase, IReplicatable , IBranchedOptionalEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -15,6 +17,11 @@ namespace Gizmo.DAL.Entities
         {
             Guid = Guid.NewGuid();
         }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch? _branch;
         #endregion
 
         #region PROPERTIES
@@ -83,6 +90,13 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <inheritdoc/>
+        public int? BranchId
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -103,6 +117,14 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <inheritdoc/>
+        public Branch? Branch
+        {
+            get { return _branch; }
+            set { _branch = value; }
+        }
+
         #endregion
+
     }
 }

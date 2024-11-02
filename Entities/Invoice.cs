@@ -1,5 +1,6 @@
-﻿using ProtoBuf;
+﻿#nullable enable
 
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -12,7 +13,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class Invoice : ModifiableByWithRequiredUserMemberBase, IVoidable
+    public class Invoice : ModifiableByWithRequiredUserMemberBase, IVoidable, IBranchedOptionalEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -25,6 +26,11 @@ namespace Gizmo.DAL.Entities
             Voids = new HashSet<VoidInvoice>();
             FiscalReceipts = new HashSet<InvoiceFiscalReceipt>();
         }
+        #endregion
+
+        #region FIELDS
+        [NonSerialized()]
+        private Branch? _branch;
         #endregion
 
         #region PROPERTIES
@@ -165,6 +171,13 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <inheritdoc/>
+        public int? BranchId
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -235,6 +248,13 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<InvoiceFiscalReceipt> FiscalReceipts
         {
             get; set;
+        }
+
+        /// <inheritdoc/>
+        public Branch? Branch
+        {
+            get { return _branch; }
+            set { _branch = value; }
         }
 
         #endregion
