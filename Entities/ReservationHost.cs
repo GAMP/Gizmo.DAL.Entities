@@ -44,14 +44,12 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
-        // TODO : Fix typo
-
         /// <summary>
         /// Gets or sets preferred user id.
         /// </summary>        
         [DataMember()]
         [ProtoMember(3)]
-        public int? PreferedUserId
+        public int? PreferredUserId
         {
             get; set;
         }
@@ -77,9 +75,9 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets prefered user.
+        /// Gets or sets preferred user.
         /// </summary>
-        public virtual UserMember PreferedUser
+        public virtual UserMember PreferredUser
         {
             get; set;
         }

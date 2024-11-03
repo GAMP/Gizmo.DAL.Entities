@@ -111,14 +111,12 @@ namespace Gizmo.DAL.Entities
             set;
         }
 
-        // TODO : Fix typo
-
         /// <summary>
         /// Gets or sets outstanding points.
         /// </summary>
         [DataMember()]
         [ProtoMember(8)]
-        public int OutstandngPoints
+        public int OutstandingPoints
         {
             get; set;
         }

@@ -137,14 +137,12 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
-        //TODO : Fix typo
-
         /// <summary>
         /// Gets or sets preferred payment method id.
         /// </summary>
         [DataMember()]
         [ProtoMember(13)]
-        public int? PreferedPaymentMethodId
+        public int? PreferredPaymentMethodId
         {
             get; set;
         }
@@ -240,9 +238,9 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets prefered payment method.
+        /// Gets or sets preferred payment method.
         /// </summary>
-        public virtual PaymentMethod PreferedPaymentMethod
+        public virtual PaymentMethod PreferredPaymentMethod
         {
             get; set;
         }
