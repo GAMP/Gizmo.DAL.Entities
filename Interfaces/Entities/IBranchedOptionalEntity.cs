@@ -1,4 +1,6 @@
-﻿namespace Gizmo.DAL.Entities
+﻿#nullable enable
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Optional branch entity.
@@ -9,7 +11,7 @@
     public interface IBranchedOptionalEntity
     {
         /// <summary>
-        /// Gets or sets branch id.
+        /// Gets or sets optional branch id.
         /// </summary>
         public int? BranchId { get; set; }
 
