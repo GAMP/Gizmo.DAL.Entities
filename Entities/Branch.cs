@@ -19,6 +19,12 @@ namespace Gizmo.DAL.Entities
         public Branch() : base()
         {
             Guid = Guid.NewGuid();
+
+            Executables = new HashSet<AppExeBranch>();
+            Products = new HashSet<ProductBranch>();
+            Feeds = new HashSet<FeedBranch>();
+            News = new HashSet<NewsBranch>();
+
             Operators = new HashSet<UserOperatorBranch>();
             Shifts = new HashSet<Shift>();
             AssetTransactions = new HashSet<AssetTransaction>();
@@ -31,7 +37,6 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets branch name.
         /// </summary>
-        [StringLength(SQLStringSize.TINY)]
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
@@ -106,6 +111,26 @@ namespace Gizmo.DAL.Entities
         /// Gets branch asset transactions.
         /// </summary>
         public virtual ISet<AssetTransaction> AssetTransactions { get; private set; } 
+
+        /// <summary>
+        /// Gets branch executables.
+        /// </summary>
+        public virtual ISet<AppExeBranch> Executables { get; private set; }
+
+        /// <summary>
+        /// Gets branch products.
+        /// </summary>
+        public virtual ISet<ProductBranch> Products { get; private set; }
+
+        /// <summary>
+        /// Gets branch feeds.
+        /// </summary>
+        public virtual ISet<FeedBranch> Feeds { get; private set; }
+
+        /// <summary>
+        /// Gets branch news.
+        /// </summary>
+        public virtual ISet<NewsBranch> News { get; private set; }
 
         #endregion
     }

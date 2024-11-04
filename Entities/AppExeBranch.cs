@@ -23,7 +23,7 @@
         /// <summary>
         /// Indicates that AppExe is enabled for the Branch.
         /// </summary>
-        public bool IsEnabled { get; protected set; }
+        public bool IsEnabled { get; set; }
 
         /// <summary>
         /// Branch.
