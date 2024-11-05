@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Created by base calss.
+    /// Created by base class.
     /// </summary>
     /// <typeparam name="TCreated">Created type.</typeparam>
     [Serializable()]
