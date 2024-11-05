@@ -33,6 +33,8 @@ namespace Gizmo.DAL.Entities
             ModifiedOrders = new HashSet<ProductOrder>();
             Shifts = new HashSet<Shift>();
             RegisterTransactions = new HashSet<RegisterTransaction>();
+            CreatedBranches = new HashSet<Branch>();
+            ModifiedBranches = new HashSet<Branch>();
         }
         #endregion
 
@@ -119,6 +121,16 @@ namespace Gizmo.DAL.Entities
         /// Gets operator branches.
         /// </summary>
         public virtual ISet<UserOperatorBranch> Branches { get; protected set; }
+
+        /// <summary>
+        /// Get branches created by this operator.
+        /// </summary>
+        public virtual ISet<Branch> CreatedBranches { get; protected set; }
+
+        /// <summary>
+        /// Get branches modified by this operator.
+        /// </summary>
+        public virtual ISet<Branch> ModifiedBranches { get; protected set; }
 
         #endregion
     }

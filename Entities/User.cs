@@ -1,3 +1,5 @@
+﻿#nullable enable
+
 using ProtoBuf;
 
 using System;
@@ -16,9 +18,10 @@ namespace Gizmo.DAL.Entities
     public class User : ModifiableByUserBase,
         IDeletable,
         IDisable,
-        IReplicatable
+        IReplicatable,
+        IBranchedOptionalEntity
     {
-        #region CONSTRUCTOR
+
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -34,17 +37,17 @@ namespace Gizmo.DAL.Entities
             Verifications = new HashSet<Verification>();
             UserAgreementStates = new HashSet<UserAgreementState>();
         }
-        #endregion
 
-        #region PROPERTIES
-
+        [NonSerialized()]
+        private Branch? _branch;
+ 
         /// <summary>
         /// Gets or sets first name.
         /// </summary>
         [DataMember()]
         [StringLength(45)]
         [ProtoMember(1)]
-        public string FirstName
+        public string? FirstName
         {
             get;
             set;
@@ -56,7 +59,7 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [StringLength(45)]
         [ProtoMember(2)]
-        public string LastName
+        public string? LastName
         {
             get;
             set;
@@ -79,7 +82,7 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [StringLength(255)]
         [ProtoMember(4)]
-        public string Address
+        public string? Address
         {
             get;
             set;
@@ -91,7 +94,7 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [StringLength(45)]
         [ProtoMember(5)]
-        public string City
+        public string? City
         {
             get;
             set;
@@ -103,7 +106,7 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [StringLength(45)]
         [ProtoMember(6)]
-        public string Country
+        public string? Country
         {
             get;
             set;
@@ -115,7 +118,7 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [StringLength(20)]
         [ProtoMember(7)]
-        public string PostCode
+        public string? PostCode
         {
             get;
             set;
@@ -127,7 +130,7 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [StringLength(20)]
         [ProtoMember(8)]
-        public string Phone
+        public string? Phone
         {
             get;
             set;
@@ -139,7 +142,7 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [StringLength(20)]
         [ProtoMember(9)]
-        public string MobilePhone
+        public string? MobilePhone
         {
             get;
             set;
@@ -196,7 +199,7 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [StringLength(255)]
         [ProtoMember(14)]
-        public string SmartCardUID
+        public string? SmartCardUID
         {
             get; set;
         }
@@ -207,19 +210,24 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [StringLength(255)]
         [ProtoMember(15)]
-        public string Identification
+        public string? Identification
         {
             get; set;
         }
 
-        #endregion
-
-        #region NAVIGATION PROPERTIES
+        /// <inheritdoc/>  
+        /// <remarks>
+        /// This value optionally identifies at which branch user where created.
+        /// </remarks>
+        public int? BranchId
+        {
+            get; set;
+        }
 
         /// <summary>
         /// Gets user credentials.
         /// </summary>
-        public virtual UserCredential UserCredential
+        public virtual UserCredential? UserCredential
         {
             get;
             set;
@@ -228,7 +236,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets user picture.
         /// </summary>
-        public virtual UserPicture UserPicture
+        public virtual UserPicture? UserPicture
         {
             get;
             set;
@@ -294,8 +302,12 @@ namespace Gizmo.DAL.Entities
         {
             get; protected set;
         }
-
-
-        #endregion
+ 
+        /// <inheritdoc/>  
+        public virtual Branch? Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
+        }
     }
 }
