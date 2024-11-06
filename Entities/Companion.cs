@@ -6,7 +6,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Companion entity.
     /// </summary>
-    public sealed class Companion : CreatedByOperatorBase , IReplicatable
+    public sealed class Companion : ModifiableByOperatorBase , IReplicatable
     {
         /// <summary>
         /// Creates new instance.
