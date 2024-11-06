@@ -14,7 +14,7 @@ namespace Gizmo.DAL.Entities
     [DataContract()]
     [Serializable()]
     [ProtoContract()]
-    public class BillRate : EntityBase
+    public class BillRate : EntityBase , IDeletable
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -117,6 +117,9 @@ namespace Gizmo.DAL.Entities
             set;
         }
 
+        /// <inheritdoc/>
+        public bool IsDeleted { get; set; }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -157,7 +160,7 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<UsageRate> Usage
         {
             get; protected set;
-        }
+        }  
 
         #endregion
     }

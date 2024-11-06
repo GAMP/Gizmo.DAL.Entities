@@ -98,6 +98,16 @@ namespace Gizmo.DAL.Entities
         public bool IsDeleted { get; set; } 
 
         /// <summary>
+        /// Gets or sets companion id.
+        /// </summary>
+        public int? CompanionId { get; set; }
+
+        /// <summary>
+        /// Gets companion assigned to this branch.
+        /// </summary>
+        public virtual Companion? Companion { get; private set; }
+
+        /// <summary>
         /// Gets operators assigned to this branch.
         /// </summary>
         public virtual ISet<UserOperatorBranch> Operators { get; private set; }
@@ -141,6 +151,6 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets news assigned to this branch.
         /// </summary>
-        public virtual ISet<NewsBranch> News { get; private set; }
+        public virtual ISet<NewsBranch> News { get; private set; }      
     }
 }

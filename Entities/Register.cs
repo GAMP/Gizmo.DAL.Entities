@@ -1,4 +1,6 @@
-﻿using ProtoBuf;
+﻿#nullable enable
+
+using ProtoBuf;
 
 using SharedLib;
 
@@ -30,7 +32,7 @@ namespace Gizmo.DAL.Entities
 
         #region FIELDS
         [NonSerialized()]
-        private Branch _branch; 
+        private Branch _branch = new();
         #endregion
 
         #region PROPERTIES
@@ -54,7 +56,7 @@ namespace Gizmo.DAL.Entities
         public string Name
         {
             get; set;
-        }
+        } = string.Empty;
 
         /// <summary>
         /// Gets or sets register mac address.
@@ -62,7 +64,7 @@ namespace Gizmo.DAL.Entities
         [DataMember()]
         [ProtoMember(3)]
         [StringLength(255)]
-        public string MacAddress
+        public string? MacAddress
         {
             get;
             set;
@@ -135,9 +137,22 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets companion id.
+        /// </summary>
+        public int? CompanionId
+        {
+            get; set;
+        }
+
         #endregion
 
         #region VIRTUAL PROPERTIES
+
+        /// <summary>
+        /// Gets companion assigned to this branch.
+        /// </summary>
+        public virtual Companion? Companion { get; private set; }
 
         /// <summary>
         /// Gets or sets shifts.
