@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -25,7 +25,7 @@ namespace Gizmo.DAL.Entities
 
         /// <summary>
         /// Gets or sets list of files that should be excluded.
-        /// <remarks>Each entry should be seperated by ; character.</remarks>
+        /// <remarks>Each entry should be separated by ; character.</remarks>
         /// </summary>
         [DataMember()]
         [ProtoMember(1)]
@@ -37,7 +37,7 @@ namespace Gizmo.DAL.Entities
 
         /// <summary>
         /// Gets or sets list of directories that should be excluded.
-        /// <remarks>Each entry should be seperated by ; character.</remarks>
+        /// <remarks>Each entry should be separated by ; character.</remarks>
         /// </summary>
         [DataMember()]
         [ProtoMember(2)]
@@ -49,7 +49,7 @@ namespace Gizmo.DAL.Entities
 
         /// <summary>
         /// Gets or sets list of files that should be included.
-        /// <remarks>Each entry should be seperated by ; character.</remarks>
+        /// <remarks>Each entry should be separated by ; character.</remarks>
         /// </summary>
         [DataMember()]
         [ProtoMember(3)]
@@ -61,7 +61,7 @@ namespace Gizmo.DAL.Entities
 
         /// <summary>
         /// Gets or sets list of directories that should be included.
-        /// <remarks>Each entry should be seperated by ; character.</remarks>
+        /// <remarks>Each entry should be separated by ; character.</remarks>
         /// </summary>
         [DataMember()]
         [ProtoMember(4)]
