@@ -10,9 +10,10 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Creates new instance.
         /// </summary>
-        public DiscountGroup() 
+        public DiscountGroup()
         {
             Discounts = new HashSet<DiscountGroupDiscount>();
+            UserGroups = new HashSet<UserGroup>();
         }
 
         /// <summary>
@@ -21,8 +22,13 @@ namespace Gizmo.DAL.Entities
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets discounts.
+        /// Gets associated discounts.
         /// </summary>
         public ISet<DiscountGroupDiscount> Discounts { get; private set; }
+
+        /// <summary>
+        /// Gets associated user groups.
+        /// </summary>
+        public ISet<UserGroup> UserGroups { get; private set; }
     }
 }

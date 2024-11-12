@@ -6,13 +6,13 @@
     public enum DiscountApplyType
     {
         /// <summary>
-        /// Discount is applied to an order.
-        /// </summary>
-        Order = 0,
-
-        /// <summary>
         /// Discount is applied to an order line.
         /// </summary>
-        OrderLine = 1,
+        OrderLine = 0,
+
+        /// <summary>
+        /// Discount is applied to an order.
+        /// </summary>
+        Order = 1,
     }
 }

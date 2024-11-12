@@ -3,7 +3,7 @@
     /// <summary>
     /// Promotion type.
     /// </summary>
-    public enum PromotionType
+    public enum PromotionCodeType
     {
         /// <summary>
         /// Public promotion.

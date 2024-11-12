@@ -31,6 +31,13 @@ namespace Gizmo.DAL.Entities
         }
         #endregion
 
+        #region FIELDS
+
+        [NonSerialized()]
+        private int? _discountGroupId;
+
+        #endregion
+
         #region PROPERTIES
 
         /// <summary>
@@ -245,6 +252,11 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets discount group.
+        /// </summary>
+        public int? DiscountGroupId { get; set; }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -295,6 +307,11 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [ProtoMember(18)]
         public virtual ISet<UserGroupHostDisallowed> DisallowedHostGroups { get; protected set; }
+
+        /// <summary>
+        /// Gets discount group.
+        /// </summary>
+        public DiscountGroup DiscountGroup { get; set; }
 
         #endregion
     }
