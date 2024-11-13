@@ -1,4 +1,5 @@
-﻿using ProtoBuf;
+﻿using Gizmo.DAL.Entities.Entities;
+using ProtoBuf;
 
 using SharedLib;
 
@@ -147,6 +148,11 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets assigned stock id.
+        /// </summary>
+        public int? StockId { get; set; }
+
         #endregion
 
         #region VIRTUAL PROPERTIES
@@ -182,6 +188,11 @@ namespace Gizmo.DAL.Entities
             get { return _branch; }
             protected set { _branch = value; }
         }
+
+        /// <summary>
+        /// Gets or sets assigned stock.
+        /// </summary>
+        public Stock Stock { get; set; }
 
         #endregion
     }

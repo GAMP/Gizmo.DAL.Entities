@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using Gizmo.DAL.Entities.Entities;
 
 namespace Gizmo.DAL.Entities
 {
@@ -9,7 +10,7 @@ namespace Gizmo.DAL.Entities
     /// Branch entity.
     /// </summary>
     public class Branch : ModifiableByOperatorBase, IEnabled, IDeletable, IReplicatable
-    {        
+    {
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -28,7 +29,8 @@ namespace Gizmo.DAL.Entities
             Users = new HashSet<User>();
             Promotions = new HashSet<PromotionBranch>();
             Discounts = new HashSet<DiscountBranch>();
-        } 
+            Stocks = new HashSet<Stock>();
+        }
 
         /// <summary>
         /// Gets or sets branch name.
@@ -97,7 +99,7 @@ namespace Gizmo.DAL.Entities
         public bool IsEnabled { get; set; }
 
         /// <inheritdoc/>
-        public bool IsDeleted { get; set; } 
+        public bool IsDeleted { get; set; }
 
         /// <summary>
         /// Gets or sets companion id.
@@ -133,7 +135,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets asset transactions assigned to this branch.
         /// </summary>
-        public virtual ISet<AssetTransaction> AssetTransactions { get; private set; } 
+        public virtual ISet<AssetTransaction> AssetTransactions { get; private set; }
 
         /// <summary>
         /// Gets executables assigned to this branch.
@@ -164,5 +166,10 @@ namespace Gizmo.DAL.Entities
         /// Gets discounts assigned to this branch.
         /// </summary>
         public virtual ISet<DiscountBranch> Discounts { get; private set; }
+
+        /// <summary>
+        /// Gets branch stocks.
+        /// </summary>
+        public ISet<Stock> Stocks { get; private set; }
     }
 }
