@@ -46,7 +46,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Indicates that when entity is saved creation time shouldnt be set automatically.
+        /// Indicates that when entity is saved creation time shouldn't be set automatically.
         /// </summary>
         [NotMapped()]
         public bool IgnoreCreatedUpdate
@@ -55,7 +55,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Indicates that when entity is saved update time and user shouldnt be set automatically.
+        /// Indicates that when entity is saved update time and user shouldn't be set automatically.
         /// </summary>
         [NotMapped()]
         public bool IgnoreUpdatedUpdate

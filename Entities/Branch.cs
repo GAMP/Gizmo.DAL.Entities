@@ -26,6 +26,8 @@ namespace Gizmo.DAL.Entities
             Shifts = new HashSet<Shift>();
             AssetTransactions = new HashSet<AssetTransaction>();
             Users = new HashSet<User>();
+            Promotions = new HashSet<PromotionBranch>();
+            Discounts = new HashSet<DiscountBranch>();
         } 
 
         /// <summary>
@@ -151,6 +153,16 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets news assigned to this branch.
         /// </summary>
-        public virtual ISet<NewsBranch> News { get; private set; }      
+        public virtual ISet<NewsBranch> News { get; private set; }
+
+        /// <summary>
+        /// Gets promotions assigned to this branch.
+        /// </summary>
+        public virtual ISet<PromotionBranch> Promotions { get; private set; }
+
+        /// <summary>
+        /// Gets discounts assigned to this branch.
+        /// </summary>
+        public virtual ISet<DiscountBranch> Discounts { get; private set; }
     }
 }

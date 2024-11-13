@@ -16,14 +16,15 @@
         public int BranchId { get; set; }
 
         /// <summary>
+        /// Indicates that AppExe is enabled for the Branch.
+        /// </summary>
+        public bool IsEnabled { get; set; }
+
+        /// <summary>
         /// AppExe.
         /// </summary>
         public AppExe AppExe { get; set; }
 
-        /// <summary>
-        /// Indicates that AppExe is enabled for the Branch.
-        /// </summary>
-        public bool IsEnabled { get; set; }
 
         /// <summary>
         /// Branch.

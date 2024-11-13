@@ -16,6 +16,7 @@ namespace Gizmo.DAL.Entities
         {
             Limits = new HashSet<PromotionLimit>();
             Codes = new HashSet<PromotionCode>();
+            Branches = new HashSet<PromotionBranch>();
         }
 
         /// <summary>
@@ -52,5 +53,10 @@ namespace Gizmo.DAL.Entities
         /// Gest use limits.
         /// </summary>
         public ISet<PromotionLimit> Limits { get; private set; }
+
+        /// <summary>
+        /// Gets or sets promotion branches.
+        /// </summary>
+        public ISet<PromotionBranch> Branches { get; private set; }
     }
 }
