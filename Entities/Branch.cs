@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using Gizmo.DAL.Entities.Entities;
 
 namespace Gizmo.DAL.Entities
 {

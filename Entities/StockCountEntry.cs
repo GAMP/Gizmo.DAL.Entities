@@ -26,6 +26,11 @@
         public decimal Actual { get; set; }
 
         /// <summary>
+        /// Count difference.
+        /// </summary>
+        public decimal Difference { get; set; }
+
+        /// <summary>
         /// Gets or sets stock count.
         /// </summary>
         public StockCount StockCount { get; set; }

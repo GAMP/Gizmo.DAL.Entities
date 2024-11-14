@@ -1,7 +1,6 @@
 ﻿#nullable enable
 
 using System.Collections.Generic;
-using Gizmo.DAL.Entities.Entities;
 
 namespace Gizmo.DAL.Entities
 {
@@ -27,6 +26,11 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets stock id.
         /// </summary>
         public int StockId { get; set; }
+
+        /// <summary>
+        /// Gets or sets stock count type.
+        /// </summary>
+        public StockCountType Type { get; set; }
 
         /// <summary>
         /// Gets count entries.

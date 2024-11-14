@@ -1,5 +1,4 @@
-﻿using Gizmo.DAL.Entities.Entities;
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 

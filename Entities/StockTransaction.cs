@@ -1,6 +1,7 @@
 ﻿using ProtoBuf;
 
 using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace Gizmo.DAL.Entities
@@ -19,7 +20,9 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public StockTransaction()
             : base()
-        { }
+        {
+            InventoryEntries = new HashSet<InventoryEntry>();
+        }
         #endregion
 
         #region FIELDS
@@ -167,6 +170,11 @@ namespace Gizmo.DAL.Entities
             get { return _branch; }
             protected set { _branch = value; }
         }
+
+        /// <summary>
+        /// Gets associated inventory entries.
+        /// </summary>
+        public ISet<InventoryEntry> InventoryEntries { get; private set; }
 
         #endregion
     }

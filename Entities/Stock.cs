@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 
-namespace Gizmo.DAL.Entities.Entities
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Stock entity.
@@ -16,6 +16,7 @@ namespace Gizmo.DAL.Entities.Entities
         {
             Counts = new HashSet<StockCount>();
             Registers = new HashSet<Register>();
+            InventoryEntries = new HashSet<InventoryEntry>();
         }
 
         /// <summary>
@@ -46,5 +47,10 @@ namespace Gizmo.DAL.Entities.Entities
         /// Gets associated registers.
         /// </summary>
         public ISet<Register> Registers { get; private set; }
+
+        /// <summary>
+        /// Gets associated inventory entries.
+        /// </summary>
+        public ISet<InventoryEntry> InventoryEntries { get; private set; }
     } 
 }

@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -33,6 +33,7 @@ namespace Gizmo.DAL.Entities
             StockTransactionsSource = new HashSet<StockTransaction>();
             Images = new HashSet<ProductImage>();
             HiddenHostGroups = new HashSet<ProductHostHidden>();
+            InventoryEntries = new HashSet<InventoryEntry>();
         }
         #endregion
 
@@ -219,7 +220,7 @@ namespace Gizmo.DAL.Entities
         public virtual ISet<ProductTax> Taxes { get; protected set; }
 
         /// <summary>
-        /// Gets dissalowed user groups.
+        /// Gets disallowed user groups.
         /// </summary>
         [ProtoMember(20)]
         public virtual ISet<ProductUserDisallowed> DisallowedUserGroups { get; protected set; }
@@ -251,6 +252,11 @@ namespace Gizmo.DAL.Entities
         /// Gets stock transactions where participating as source.
         /// </summary>
         public virtual ISet<StockTransaction> StockTransactionsSource { get; protected set; }
+
+        /// <summary>
+        /// Gets associated inventory entries.
+        /// </summary>
+        public ISet<InventoryEntry> InventoryEntries { get; private set; }
 
         #endregion
     }

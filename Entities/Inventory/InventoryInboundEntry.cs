@@ -1,0 +1,18 @@
+﻿namespace Gizmo.DAL.Entities
+{
+    /// <summary>
+    /// Inventory inbound entry entity.
+    /// </summary>
+    public sealed class InventoryInboundEntry : InventoryEntry
+    {
+        /// <summary>
+        /// Gets or sets unit cost.
+        /// </summary>
+        public decimal UnitCost { get; set; }
+
+        /// <summary>
+        /// Gets or sets total cost.
+        /// </summary>
+        public decimal TotalCost { get; set; }
+    }
+}
