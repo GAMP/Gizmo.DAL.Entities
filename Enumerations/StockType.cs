@@ -6,8 +6,13 @@
     public enum StockType
     {
         /// <summary>
-        /// Default.
+        /// Selling point.
         /// </summary>
-        Default = 0,
+        SellingPoint = 0,
+
+        /// <summary>
+        /// Warehouse.
+        /// </summary>
+        Warehouse = 1
     }
 }
