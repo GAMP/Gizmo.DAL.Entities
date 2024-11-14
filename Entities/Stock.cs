@@ -15,6 +15,7 @@ namespace Gizmo.DAL.Entities.Entities
         public Stock()
         {
             Counts = new HashSet<StockCount>();
+            Registers = new HashSet<Register>();
         }
 
         /// <summary>
@@ -40,5 +41,10 @@ namespace Gizmo.DAL.Entities.Entities
         /// Gets associated stock counts.
         /// </summary>
         public ISet<StockCount> Counts { get; private set; }
+
+        /// <summary>
+        /// Gets associated registers.
+        /// </summary>
+        public ISet<Register> Registers { get; private set; }
     } 
 }
