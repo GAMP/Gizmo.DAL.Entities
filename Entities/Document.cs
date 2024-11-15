@@ -8,7 +8,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Document entity.
     /// </summary>
-    public sealed class Document : ModifiableByOperatorBase , IDeletable
+    public sealed class Document : ModifiableByOperatorBase , IDeletable , IReplicatable
     {
         /// <summary>
         /// Creates new instance.
@@ -20,14 +20,22 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets description.
-        /// </summary>
-        public string? Description { get; set; }
-
-        /// <summary>
         /// Gets or sets document type id.
         /// </summary>
         public int DocumentTypeId { get; set; }
+
+        /// <summary>
+        /// Gets or sets file name.
+        /// </summary>
+        /// <remarks>
+        /// This field will be used to store original file name.
+        /// </remarks>
+        public string FileName { get; set; } = null!;
+
+        /// <summary>
+        /// Gets or sets description.
+        /// </summary>
+        public string? Description { get; set; }
 
         /// <summary>
         /// Gets or sets unique identifier.
