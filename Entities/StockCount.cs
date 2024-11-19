@@ -7,7 +7,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Stock count entity.
     /// </summary>
-    public sealed class StockCount : CreatedByOperatorBase
+    public sealed class StockCount : EntityWithShift
     {
         /// <summary>
         /// Creates new instance.
@@ -18,14 +18,19 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
+        /// Gets or sets stock id.
+        /// </summary>
+        public int StockId { get; set; }
+
+        /// <summary>
         /// Gets or sets count note.
         /// </summary>
         public string? Note { get; set; }
 
         /// <summary>
-        /// Gets or sets stock id.
+        /// Gets or sets different (unexpected) entries count.
         /// </summary>
-        public int StockId { get; set; }
+        public int UnexpectedEntries { get; set; }
 
         /// <summary>
         /// Gets or sets stock count type.

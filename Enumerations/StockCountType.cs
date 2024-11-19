@@ -5,7 +5,7 @@
     /// </summary>
     public enum StockCountType
     {
-        Default = 0,
+        Interval = 0,
         ShiftOpen = 1,
         ShiftClose = 2,
     }

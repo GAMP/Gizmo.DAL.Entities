@@ -5,7 +5,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Discount entity.
     /// </summary>
-    public sealed class DiscountBasic : DiscountPeriodic
+    public sealed class DiscountBasic : DiscountTargeted
     {
         /// <summary>
         /// Apply type, basically at what level discount is applied (order or order line)

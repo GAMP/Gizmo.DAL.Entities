@@ -14,7 +14,6 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public Discount()
         {
-            TargetGroups = new HashSet<TargetGroup>();
             Branches = new HashSet<DiscountBranch>();
         }
 
@@ -27,11 +26,6 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets description.
         /// </summary>
         public string? Description { get; set; }
-
-        /// <summary>
-        /// Gets target groups.
-        /// </summary>
-        public ISet<TargetGroup> TargetGroups { get; private set; }
 
         /// <summary>
         /// Gets or sets discount branches.
