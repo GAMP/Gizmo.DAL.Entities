@@ -11,8 +11,18 @@
         public int TransferStockId { get; set; }
 
         /// <summary>
+        /// Gets or sets the transfer stock transaction id.
+        /// </summary>
+        public int TransferStockTransactionId { get; set; }
+
+        /// <summary>
         /// Gets or sets the transfer stock.
         /// </summary>
         public Stock TransferStock { get; set; } = null!;
+
+        /// <summary>
+        /// Gets or sets the transfer stock transaction.
+        /// </summary>
+        public StockTransaction TransferStockTransaction { get; set; } = null!;
     }
 }

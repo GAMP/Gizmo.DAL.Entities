@@ -36,6 +36,6 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets discount.
         /// </summary>
-        public Discount Discount { get; private set; }
+        public DiscountTargeted Discount { get; private set; }
     }
 }
