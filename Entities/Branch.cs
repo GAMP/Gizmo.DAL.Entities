@@ -37,6 +37,11 @@ namespace Gizmo.DAL.Entities
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
+        /// Gets or sets branch country.
+        /// </summary>
+        public string? Country { get; set; }
+
+        /// <summary>
         /// Gets or sets branch city.
         /// </summary>
         public string? City { get; set; }
@@ -90,6 +95,31 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets time zone.
         /// </summary>
         public string? TimeZone { get; set; }
+
+        /// <summary>
+        /// Gets or sets if branch has working schedule.
+        /// </summary>
+        public bool HasWorkingSchedule { get; set; }
+
+        /// <summary>
+        /// Gets or sets business start week day.
+        /// </summary>
+        public int? BusinessStartWeekDay { get; set; }
+
+        /// <summary>
+        /// Gets or sets business end week day.
+        /// </summary>
+        public int? BusinessEndWeekDay { get; set; }
+
+        /// <summary>
+        /// Gets or sets business day start.
+        /// </summary>
+        public TimeOnly? BusinessDayStart { get; set; }
+
+        /// <summary>
+        /// Gets or sets business day end.
+        /// </summary>
+        public TimeOnly? BusinessDayEnd { get; set; }
 
         /// <inheritdoc/>
         public Guid Guid { get; set; }
