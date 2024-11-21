@@ -97,9 +97,9 @@ namespace Gizmo.DAL.Entities
         public string? TimeZone { get; set; }
 
         /// <summary>
-        /// Gets or sets if branch has working schedule.
+        /// Gets or sets if branch has business schedule.
         /// </summary>
-        public bool HasWorkingSchedule { get; set; }
+        public bool HasBusinessSchedule { get; set; }
 
         /// <summary>
         /// Gets or sets business start week day.
