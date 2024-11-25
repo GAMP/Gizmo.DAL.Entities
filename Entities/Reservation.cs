@@ -124,6 +124,9 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        //TODO : Add optional timeout timespan, this will hold timeout settings for reservation at the moment of creation
+
+
         #endregion
 
         #region NAVIGATION PROPERTIES
