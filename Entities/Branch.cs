@@ -8,7 +8,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Branch entity.
     /// </summary>
-    public class Branch : ModifiableByOperatorBase, IEnabled, IDeletable, IReplicatable
+    public class Branch : ModifiableByOperatorBase, IDisable, IDeletable, IReplicatable
     {
         /// <summary>
         /// Creates new instance.
@@ -121,19 +121,80 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public TimeOnly? BusinessDayEnd { get; set; }
 
-        /// <inheritdoc/>
-        public Guid Guid { get; set; }
+        /// <summary>
+        /// Gets or sets if fiscalization is enabled.
+        /// </summary>
+        public bool? IsFiscalizationEnabled { get; set; }
 
-        /// <inheritdoc/>
-        public bool IsEnabled { get; set; }
+        /// <summary>
+        /// Gets or sets business vat id.
+        /// </summary>
+        public string? BusinessVATId { get; init; }
 
-        /// <inheritdoc/>
-        public bool IsDeleted { get; set; }
+        /// <summary>
+        /// Gets or sets tax system.
+        /// </summary>
+        public TaxSystemCountry? TaxSystem { get; init; }
+
+        /// <summary>
+        /// Gets or sets goods tax system.
+        /// </summary>
+        public TaxSystems? GoodsTaxSystem { get; init; }
+
+        /// <summary>
+        /// Gets or sets services tax system.
+        /// </summary>
+        public TaxSystems? ServicesTaxSystem { get; init; }
+
+        /// <summary>
+        /// Gets or sets treat deposits as service.
+        /// </summary>
+        public bool? TreatDepositsAsService { get; init; }
+
+        /// <summary>
+        /// Gets or sets deposit service description.
+        /// </summary>
+        public string? DepositServiceDescription { get; init; }
+
+        /// <summary>
+        /// Gets or sets time based service vat rate.
+        /// </summary>
+        public decimal? TimeBasedServiceVATRate { get; init; }
+
+        /// <summary>
+        /// Gets or sets deposit vat rate.
+        /// </summary>
+        public VatRates? DepositVATRate
+        {
+            get; init;
+        }
+
+        /// <summary>
+        /// Gets or sets deposit advance payment type.
+        /// </summary>
+        public AdvancePaymentTypes? DepositAdvancePaymentType
+        {
+            get; init;
+        }
 
         /// <summary>
         /// Gets or sets companion id.
         /// </summary>
         public int? CompanionId { get; set; }
+
+        /// <inheritdoc/>
+        public Guid Guid { get; set; }
+
+        /// <inheritdoc/>
+        public bool IsDisabled { get; set; }
+
+        /// <summary>
+        /// Gets or sets disable time.
+        /// </summary>
+        public DateTime? DisableTime { get; set; }
+
+        /// <inheritdoc/>
+        public bool IsDeleted { get; set; }
 
         /// <summary>
         /// Gets companion assigned to this branch.
