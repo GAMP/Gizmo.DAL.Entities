@@ -21,7 +21,6 @@ namespace Gizmo.DAL.Entities
         IReplicatable,
         IBranchedOptionalEntity
     {
-
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -43,6 +42,9 @@ namespace Gizmo.DAL.Entities
 
         [NonSerialized()]
         private ISet<UserChannel> _channels = new HashSet<UserChannel>();
+
+        [NonSerialized()]
+        private UserPermissionSet? _permissionSet;
 
         /// <summary>
         /// Gets or sets first name.
@@ -223,6 +225,11 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public Guid? PreferredChannel { get; set; }
 
+        /// <summary>
+        /// Gets or sets user permission set id.
+        /// </summary>
+        public int? PermissionSetId { get; set; }
+
         /// <inheritdoc/>  
         /// <remarks>
         /// This value optionally identifies at which branch user where created.
@@ -325,6 +332,15 @@ namespace Gizmo.DAL.Entities
         {
             get { return _channels; }
             set { _channels = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets user permission set.
+        /// </summary>
+        public UserPermissionSet? PermissionSet
+        {
+            get { return _permissionSet; }
+            set { _permissionSet = value; }
         }
     }
 }
