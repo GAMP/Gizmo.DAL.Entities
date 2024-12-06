@@ -37,6 +37,11 @@ namespace Gizmo.DAL.Entities
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
+        /// Gets or sets business name.
+        /// </summary>
+        public string? BusinessName { get; set; }
+
+        /// <summary>
         /// Gets or sets branch country.
         /// </summary>
         public string? Country { get; set; }
