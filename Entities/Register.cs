@@ -17,7 +17,6 @@ namespace Gizmo.DAL.Entities
     [ProtoContract()]
     public class Register : ModifiableByOperatorBase, IDeletable, IBranchedEntity
     {
-        #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -26,14 +25,16 @@ namespace Gizmo.DAL.Entities
             Shifts = new HashSet<Shift>();
             Transactions = new HashSet<RegisterTransaction>();
         }
-        #endregion
 
-        #region FIELDS
         [NonSerialized()]
         private Branch _branch;
-        #endregion
 
-        #region PROPERTIES
+#nullable enable
+
+        [NonSerialized()]
+        private Companion? _companion;
+
+#nullable disable
 
         /// <summary>
         /// Gets or sets register number.
@@ -152,16 +153,19 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public int? StockId { get; set; }
 
-        #endregion
-
-        #region VIRTUAL PROPERTIES
-
 #nullable enable
 
         /// <summary>
         /// Gets companion assigned to this branch.
         /// </summary>
-        public virtual Companion? Companion { get; private set; }
+        public virtual Companion? Companion
+        {
+            get { return _companion; }
+            set
+            {
+                _companion = value;
+            }
+        }
 
 #nullable disable
 
@@ -193,6 +197,5 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public Stock Stock { get; set; }
 
-        #endregion
     }
 }

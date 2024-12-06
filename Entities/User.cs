@@ -40,7 +40,10 @@ namespace Gizmo.DAL.Entities
 
         [NonSerialized()]
         private Branch? _branch;
- 
+
+        [NonSerialized()]
+        private ISet<UserChannel> _channels = new HashSet<UserChannel>();
+
         /// <summary>
         /// Gets or sets first name.
         /// </summary>
@@ -215,6 +218,11 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets preferred channel.
+        /// </summary>
+        public Guid? PreferredChannel { get; set; }
+
         /// <inheritdoc/>  
         /// <remarks>
         /// This value optionally identifies at which branch user where created.
@@ -222,6 +230,13 @@ namespace Gizmo.DAL.Entities
         public int? BranchId
         {
             get; set;
+        }
+
+        /// <inheritdoc/>  
+        public virtual Branch? Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
         }
 
         /// <summary>
@@ -302,12 +317,14 @@ namespace Gizmo.DAL.Entities
         {
             get; protected set;
         }
- 
-        /// <inheritdoc/>  
-        public virtual Branch? Branch
+
+        /// <summary>
+        /// Gets or sets user channels.
+        /// </summary>
+        public virtual ISet<UserChannel> Channels
         {
-            get { return _branch; }
-            protected set { _branch = value; }
+            get { return _channels; }
+            set { _channels = value; }
         }
     }
 }
