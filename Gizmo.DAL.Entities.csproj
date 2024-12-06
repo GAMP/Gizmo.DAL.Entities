@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0</TargetFrameworks>
+		<TargetFrameworks>net9.0</TargetFrameworks>
 		<Configurations>Debug;Release;</Configurations>	
 		<LangVersion>latest</LangVersion>
 		<Product>Gizmo.DAL.Entities</Product>
@@ -30,15 +30,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="protobuf-net" Version="2.4.6" />
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)'=='net461'">
-		<Reference Include="System.ComponentModel.DataAnnotations" />
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)'=='net6.0' or '$(TargetFramework)'=='net6.0-windows'">
-		<None Remove="App.config" />
-		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
