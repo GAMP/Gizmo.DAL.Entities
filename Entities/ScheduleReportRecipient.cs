@@ -3,12 +3,12 @@
     /// <summary>
     /// Schedule report recipient entity.
     /// </summary>
-    public sealed class RecipientScheduleReport : CreatedByOperatorBase , IDisable
+    public sealed class ScheduleReportRecipient : CreatedByOperatorBase , IDisable
     {
         /// <summary>
         /// Creates new instance.
         /// </summary>
-        public RecipientScheduleReport() { }
+        public ScheduleReportRecipient() { }
 
         /// <summary>
         /// Schedule report id.

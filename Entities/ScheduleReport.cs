@@ -13,7 +13,7 @@ namespace Gizmo.DAL.Entities
         public ScheduleReport()
         {
             Entries = new HashSet<ScheduleReportEntry>();
-            Recipients = new HashSet<RecipientScheduleReport>();
+            Recipients = new HashSet<ScheduleReportRecipient>();
         }
 
         /// <summary>
@@ -24,6 +24,6 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets the recipients.
         /// </summary>
-        public ISet<RecipientScheduleReport> Recipients { get; set; }
+        public ISet<ScheduleReportRecipient> Recipients { get; set; }
     }
 }
