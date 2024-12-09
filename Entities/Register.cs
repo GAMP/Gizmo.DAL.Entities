@@ -196,6 +196,5 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets assigned stock.
         /// </summary>
         public Stock Stock { get; set; }
-
     }
 }
