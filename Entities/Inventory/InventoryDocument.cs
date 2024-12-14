@@ -13,7 +13,7 @@
         /// <summary>
         /// Gets or sets the document id.
         /// </summary>
-        public int DocumentId { get; set; }
+        public int FileDocumentId { get; set; }
 
         /// <summary>
         /// Gets or sets the inventory.
@@ -23,6 +23,6 @@
         /// <summary>
         /// Gets or sets the document.
         /// </summary>
-        public Document Document { get; set; }
+        public FileDocument Document { get; set; }
     }
 }

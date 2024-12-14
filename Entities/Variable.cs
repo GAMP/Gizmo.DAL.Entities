@@ -1,7 +1,5 @@
-using ProtoBuf;
-
+﻿using ProtoBuf;
 using SharedLib;
-
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;

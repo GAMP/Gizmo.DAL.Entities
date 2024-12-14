@@ -6,14 +6,14 @@ using System.Collections.Generic;
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Document entity.
+    /// File document entity.
     /// </summary>
-    public sealed class Document : ModifiableByOperatorBase , IDeletable , IReplicatable
+    public sealed class FileDocument : File
     {
         /// <summary>
         /// Creates new instance.
         /// </summary>
-        public Document()
+        public FileDocument()
         {
             Guid = Guid.NewGuid();
             InventoryDocuments = new HashSet<InventoryDocument>();
@@ -25,25 +25,9 @@ namespace Gizmo.DAL.Entities
         public int DocumentTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets file name.
-        /// </summary>
-        /// <remarks>
-        /// This field will be used to store original file name.
-        /// </remarks>
-        public string FileName { get; set; } = null!;
-
-        /// <summary>
         /// Gets or sets description.
         /// </summary>
         public string? Description { get; set; }
-
-        /// <summary>
-        /// Gets or sets unique identifier.
-        /// </summary>
-        public Guid Guid { get; set; }
-
-        ///<inheritdoc/>
-        public bool IsDeleted { get; set; }
 
         /// <summary>
         /// Document type.

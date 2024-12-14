@@ -12,7 +12,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public DocumentType()
         {
-            Documents = new HashSet<Document>();
+            Documents = new HashSet<FileDocument>();
         }
 
         /// <summary>
@@ -26,6 +26,6 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets documents.
         /// </summary>
-        public ISet<Document> Documents { get; set; }
+        public ISet<FileDocument> Documents { get; set; }
     }
 }
