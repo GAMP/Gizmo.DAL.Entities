@@ -1,5 +1,4 @@
 ﻿using IntegrationLib;
-
 using System;
 using System.Security.Claims;
 
@@ -8,10 +7,8 @@ namespace Gizmo.DAL
     /// <summary>
     /// Generic extensions.
     /// </summary>
-    public static class Extenstions
+    public static class EntityExtensions
     {
-        #region FUNCTIONS
-
         /// <summary>
         /// Sets created by.
         /// </summary>
@@ -36,7 +33,7 @@ namespace Gizmo.DAL
             if (entity == null)
                 throw new ArgumentNullException(nameof(entity));
 
-            entity.CreatedTime = SharedLib.InternalDate.Now;
+            entity.CreatedTime = DateTime.UtcNow;
         }
 
         /// <summary>
@@ -63,7 +60,7 @@ namespace Gizmo.DAL
             if (entity == null)
                 throw new ArgumentNullException(nameof(entity));
 
-            entity.ModifiedTime = SharedLib.InternalDate.Now;
+            entity.ModifiedTime = DateTime.UtcNow;
         }
 
         /// <summary>
@@ -129,7 +126,5 @@ namespace Gizmo.DAL
             //name id set parse it else return null
             return nameIdClaim != null ? int.Parse(nameIdClaim.Value) : (int?)null;
         }
-
-        #endregion
     }
 }
