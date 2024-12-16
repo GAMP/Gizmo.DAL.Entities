@@ -14,6 +14,7 @@ namespace Gizmo.DAL.Entities
             : base()
         {
             Permissions = new HashSet<UserPermissionSetPermission>();
+            Users = new HashSet<User>();
         }
 
         /// <summary>
@@ -25,5 +26,10 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets permissions.
         /// </summary>
         public ISet<UserPermissionSetPermission> Permissions { get; set; }
+
+        /// <summary>
+        /// Gets permission set users.
+        /// </summary>
+        public ISet<User> Users { get; set; }
     }
 }
