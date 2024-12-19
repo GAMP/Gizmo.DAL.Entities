@@ -1,7 +1,7 @@
 ﻿namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Report preste range.
+    /// Report preset range.
     /// </summary>
     public enum ReportPresetRange
     {
