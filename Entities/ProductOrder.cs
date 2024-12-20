@@ -1,7 +1,5 @@
 ﻿using ProtoBuf;
-
 using SharedLib;
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,9 +13,8 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class ProductOrder : ModifiableByWithRequiredUserMemberBase, IDeletable, IVoidable, IDeliverable
+    public class ProductOrder : ModifiableByWithRequiredUserMemberBase, IDeletable, IVoidable, IDeliverable, IPreparable
     {
-        #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -27,9 +24,13 @@ namespace Gizmo.DAL.Entities
             Invoices = new HashSet<Invoice>();
             PaymentIntents = new HashSet<PaymentIntentOrder>();
         }
-        #endregion
 
-        #region PROPERTIES
+        [NonSerialized()]
+        private bool? _isPrepared;
+        [NonSerialized()]
+        private DateTime? _prepareTime;
+        [NonSerialized()]
+        private decimal _preparedQuantity;
 
         /// <summary>
         /// Gets or sets order status.
@@ -188,9 +189,28 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
-        #endregion
+        /// <inheritdoc/>
+        public bool? IsPrepared
+        {
+            get { return _isPrepared; }
+            set { _isPrepared = value; }
+        }
 
-        #region NAVIGATION PROPERTIES
+        /// <summary>
+        /// Gets or sets prepared quantity.
+        /// </summary>
+        public decimal PreparedQuantity
+        {
+            get { return _preparedQuantity; }
+            set { _preparedQuantity = value; }
+        }
+
+        /// <inheritdoc/>
+        public DateTime? PrepareTime
+        {
+            get { return _prepareTime; }
+            set { _prepareTime = value; }
+        }
 
         /// <summary>
         /// Gets or sets host.
@@ -252,7 +272,5 @@ namespace Gizmo.DAL.Entities
         {
             get; protected set;
         }
-
-        #endregion
     }
 }

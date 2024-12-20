@@ -1,5 +1,4 @@
 ﻿using ProtoBuf;
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,7 +14,6 @@ namespace Gizmo.DAL.Entities
     [ProtoContract()]
     public class Reservation : ModifiableByUserCreatedByUserBase, IBranchedEntity
     {
-        #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -23,15 +21,15 @@ namespace Gizmo.DAL.Entities
         {
             Users = new HashSet<ReservationUser>();
             Hosts = new HashSet<ReservationHost>();
+            ReservationFees = new HashSet<InvoiceLineReservationFee>();
         }
-        #endregion
 
-        #region FIELDS
         [NonSerialized()]
-        private Branch _branch; 
-        #endregion
-
-        #region PROPERTIES
+        private Branch _branch;
+        [NonSerialized()]
+        private User _finalizedBy;
+        [NonSerialized()]
+        private int? _finalizedById;
 
         /// <summary>
         /// Gets or sets user id.
@@ -118,18 +116,63 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets expire after value.
+        /// </summary>
+        public int? ExpireAfter { get; set; }
+
+        /// <summary>
+        /// Gets or sets cancellation grace period.
+        /// </summary>
+        public int? CancellationGracePeriod { get; set; }
+
+        /// <summary>
+        /// Gets or sets cancellation refund percentage.
+        /// </summary>
+        public decimal CancellationRefundPercentage
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Gets or sets finalized by user id.
+        /// </summary>
+        public int? FinalizedById 
+        {
+            get { return _finalizedById; }
+            set { _finalizedById = value; }
+        }
+
         /// <inheritdoc/>        
         public int BranchId
         {
             get; set;
         }
 
-        //TODO : Add optional timeout timespan, this will hold timeout settings for reservation at the moment of creation
+        /// <summary>
+        /// Gets finalized by user.
+        /// </summary>
+        public User FinalizedBy 
+        {
+            get { return _finalizedBy; }
+            set { _finalizedBy = value; }
+        }
 
+        /// <summary>
+        /// Gets or sets reservation user.
+        /// </summary>
+        public virtual UserMember User
+        {
+            get; set;
+        }
 
-        #endregion
-
-        #region NAVIGATION PROPERTIES
+        /// <inheritdoc/>  
+        public virtual Branch Branch
+        {
+            get { return _branch; }
+            protected set { _branch = value; }
+        }
 
         /// <summary>
         /// Gets or sets users.
@@ -152,21 +195,12 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets reservation user.
+        /// Gets or sets reservation fees.
         /// </summary>
-        public virtual UserMember User
+        public virtual ISet<InvoiceLineReservationFee> ReservationFees 
         {
-            get; set;
+            get; 
+            protected set; 
         }
-
-
-        /// <inheritdoc/>  
-        public virtual Branch Branch
-        {
-            get { return _branch; }
-            protected set { _branch = value; }
-        }
-
-        #endregion
     }
 }

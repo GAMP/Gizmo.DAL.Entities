@@ -13,16 +13,19 @@ namespace Gizmo.DAL.Entities
     [ProtoContract()]
     public class ReservationHost : ModifiableByUserCreatedByUserBase
     {
-        #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
         public ReservationHost() : base()
         {
         }
-        #endregion
 
-        #region PROPERTIES
+        [NonSerialized()]
+        private SharedLib.ReservationStatus _status;
+        [NonSerialized()]
+        private int? _finalizedById;
+        [NonSerialized()]
+        private User _finalizedBy;
 
         /// <summary>
         /// Gets or sets reservation id.
@@ -54,9 +57,28 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
-        #endregion
+        /// <summary>
+        /// Get or sets reservation status.
+        /// </summary>
+        public SharedLib.ReservationStatus Status
+        {
+            get { return _status; }
+            set { _status = value; }
+        }
 
-        #region NAVIGATION PROPERTIES
+        /// <summary>
+        /// Gets host reservation activation time.
+        /// </summary>
+        public DateTime? ActivationTime {  get; set; }
+
+        /// <summary>
+        /// Gets or sets finalized by user id.
+        /// </summary>
+        public int? FinalizedById 
+        {
+            get { return _finalizedById; }
+            set { _finalizedById = value; }
+        }
 
         /// <summary>
         /// Gets or sets reservation.
@@ -82,6 +104,13 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
-        #endregion
+        /// <summary>
+        /// Gets finalized by user.
+        /// </summary>
+        public User FinalizedBy
+        {
+            get { return _finalizedBy; }
+            set { _finalizedBy = value; }
+        }
     }
 }

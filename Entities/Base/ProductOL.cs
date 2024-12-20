@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -12,17 +12,20 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class ProductOL : ModifiableByWithRequiredUserMemberBase, IDeletable, IVoidable, IDeliverable
+    public class ProductOL : ModifiableByWithRequiredUserMemberBase, IDeletable, IVoidable, IDeliverable, IPreparable
     {
-        #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
         public ProductOL() : base()
         { }
-        #endregion
 
-        #region PROPERTIES
+        [NonSerialized()]
+        private bool? _isPrepared;
+        [NonSerialized()]
+        private DateTime? _prepareTime;
+        [NonSerialized()]
+        private decimal _preparedQuantity;
 
         /// <summary>
         /// Gets or sets order id.
@@ -134,7 +137,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets points award for the order line.
         /// </summary>
-        /// <remarks>This value specifies total award user will recieve for this item.
+        /// <remarks>This value specifies total award user will receive for this item.
         /// The value can be zero in case such as when user pays with points.
         /// </remarks>
         [DataMember()]
@@ -276,9 +279,28 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
-        #endregion
+        /// <inheritdoc/>
+        public bool? IsPrepared
+        {
+            get { return _isPrepared; }
+            set { _isPrepared = value; }
+        }
 
-        #region NAVIGATION PROPERTIES
+        /// <summary>
+        /// Gets or sets prepared quantity.
+        /// </summary>
+        public decimal PreparedQuantity
+        {
+            get { return _preparedQuantity; }
+            set { _preparedQuantity = value; }
+        }
+
+        /// <inheritdoc/>
+        public DateTime? PrepareTime
+        {
+            get { return _prepareTime; }
+            set { _prepareTime = value; }
+        }
 
         /// <summary>
         /// Gets or sets order.
@@ -304,7 +326,5 @@ namespace Gizmo.DAL.Entities
         {
             get; set;
         }
-
-        #endregion
     }
 }

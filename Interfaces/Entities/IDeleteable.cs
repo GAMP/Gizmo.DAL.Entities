@@ -1,12 +1,10 @@
 ﻿namespace Gizmo.DAL
 {
     /// <summary>
-    /// Represents and item that can be marked as deleted.
+    /// Represents an entry that can be marked as deleted.
     /// </summary>
     public interface IDeletable
     {
-        #region PROPERTIES
-
         /// <summary>
         /// Gets or sets if entity is marked as deleted.
         /// </summary>
@@ -15,7 +13,5 @@
             get;
             set;
         }
-
-        #endregion
     }
 }

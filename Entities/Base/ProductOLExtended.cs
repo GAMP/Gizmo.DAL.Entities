@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -13,15 +13,16 @@ namespace Gizmo.DAL.Entities
     [ProtoContract()]
     public abstract class ProductOLExtended : ProductOL
     {
-        #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
         public ProductOLExtended() : base()
         { }
-        #endregion
 
-        #region PROPERTIES
+        [NonSerialized()]
+        private int? _reservationId;
+        [NonSerialized()]
+        private int? _reservationHostId;
 
         /// <summary>
         /// Gets or sets bundle id.
@@ -35,9 +36,23 @@ namespace Gizmo.DAL.Entities
             set;
         }
 
-        #endregion
+        /// <summary>
+        /// Gest or sets reservation id.
+        /// </summary>
+        public int? ReservationId
+        {
+            get { return _reservationId; }
+            set { _reservationId = value; }
+        }
 
-        #region NAVIGATION PROPERTIES
+        /// <summary>
+        /// Gets or sets reservation host id.
+        /// </summary>
+        public int? ReservationHostId
+        {
+            get { return _reservationHostId; }
+            set { _reservationHostId = value; }
+        }
 
         /// <summary>
         /// Gets or sets bundle.
@@ -48,6 +63,21 @@ namespace Gizmo.DAL.Entities
             set;
         }
 
-        #endregion
+        /// <summary>
+        /// Gets or sets reservation.
+        /// </summary>
+        public Reservation Reservation
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets reservation host.
+        /// </summary>
+        public ReservationHost ReservationHost
+        {
+            get;
+            set;
+        }
     }
 }

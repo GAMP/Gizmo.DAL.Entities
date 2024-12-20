@@ -3,14 +3,12 @@
 namespace Gizmo.DAL
 {
     /// <summary>
-    /// Represents an entity that can have deliverd status flags.
+    /// Represents an entry that can be marked as delivered.
     /// </summary>
     public interface IDeliverable
     {
-        #region PROPERTIES
-
         /// <summary>
-        /// Gets or sets if product is delivered.
+        /// Gets or sets if entry is delivered.
         /// </summary>
         bool IsDelivered
         {
@@ -26,7 +24,5 @@ namespace Gizmo.DAL
             get;
             set;
         }
-
-        #endregion
     }
 }

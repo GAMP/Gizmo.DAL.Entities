@@ -258,6 +258,11 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public ISet<InventoryEntry> InventoryEntries { get; private set; }
 
+        /// <summary>
+        /// Gets age restrictions.
+        /// </summary>
+        public ISet<AgeRestrictionProduct> AgeRestrictions { get; private set; }
+
         #endregion
     }
 }
