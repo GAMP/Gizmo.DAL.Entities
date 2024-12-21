@@ -8,9 +8,14 @@ namespace Gizmo.DAL
     public interface IPreparable
     {
         /// <summary>
-        /// Gets or sets if entry is prepared.
+        /// Gets or sets preparation status.
         /// </summary>
-        public bool? IsPrepared { get; set; }
+        public OrderPrepareStatus PrepareStatus { get; set; }
+
+        /// <summary>
+        /// Gets or sets prepared quantity.
+        /// </summary>
+        public decimal PreparedQuantity { get; set; }
 
         /// <summary>
         /// Gets or sets entry preparation time.

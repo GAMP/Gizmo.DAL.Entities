@@ -26,7 +26,7 @@ namespace Gizmo.DAL.Entities
         }
 
         [NonSerialized()]
-        private bool? _isPrepared;
+        private OrderPrepareStatus _prepareStatus;
         [NonSerialized()]
         private DateTime? _prepareTime;
         [NonSerialized()]
@@ -190,15 +190,13 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <inheritdoc/>
-        public bool? IsPrepared
+        public OrderPrepareStatus PrepareStatus
         {
-            get { return _isPrepared; }
-            set { _isPrepared = value; }
+            get { return _prepareStatus; }
+            set { _prepareStatus = value; }
         }
 
-        /// <summary>
-        /// Gets or sets prepared quantity.
-        /// </summary>
+        /// <inheritdoc/>
         public decimal PreparedQuantity
         {
             get { return _preparedQuantity; }
