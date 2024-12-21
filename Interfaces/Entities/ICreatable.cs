@@ -19,7 +19,7 @@ namespace Gizmo.DAL
         }
 
         /// <summary>
-        /// Indicates that when entity is saved creation time and user shouldnt be set automatically.
+        /// Indicates that when entity is saved creation time and user shouldn't be set automatically.
         /// </summary>
         bool IgnoreCreatedUpdate { get; set; }
 

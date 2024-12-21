@@ -3,7 +3,7 @@
 namespace Gizmo.DAL
 {
     /// <summary>
-    /// Represents an entity that can have modfication time.
+    /// Represents an entity that can have modification time.
     /// </summary>
     public interface IModifiable : ICreatable
     {
@@ -19,7 +19,7 @@ namespace Gizmo.DAL
         }
 
         /// <summary>
-        /// Indicates that when entity is saved update time and user shouldnt be set automatically.
+        /// Indicates that when entity is saved update time and user shouldn't be set automatically.
         /// </summary>
         bool IgnoreUpdatedUpdate { get; set; }
 
