@@ -1,6 +1,7 @@
 ﻿using ProtoBuf;
 
 using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace Gizmo.DAL.Entities
@@ -18,6 +19,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public ReservationHost() : base()
         {
+            InvoiceLines = new HashSet<InvoiceLine>();
         }
 
         [NonSerialized()]
@@ -112,5 +114,10 @@ namespace Gizmo.DAL.Entities
             get { return _finalizedBy; }
             set { _finalizedBy = value; }
         }
+
+        /// <summary>
+        /// Gets related invoice lines.
+        /// </summary>
+        public ISet<InvoiceLine> InvoiceLines { get; set; }
     }
 }

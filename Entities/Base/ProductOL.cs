@@ -26,6 +26,10 @@ namespace Gizmo.DAL.Entities
         private DateTime? _prepareTime;
         [NonSerialized()]
         private decimal _preparedQuantity;
+        [NonSerialized()]
+        private int? _reservationId;
+        [NonSerialized()]
+        private int? _reservationHostId;
 
         /// <summary>
         /// Gets or sets order id.
@@ -279,6 +283,24 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gest or sets reservation id.
+        /// </summary>
+        public int? ReservationId
+        {
+            get { return _reservationId; }
+            set { _reservationId = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets reservation host id.
+        /// </summary>
+        public int? ReservationHostId
+        {
+            get { return _reservationHostId; }
+            set { _reservationHostId = value; }
+        }
+
         /// <inheritdoc/>
         public OrderPrepareStatus PrepareStatus
         {
@@ -323,6 +345,23 @@ namespace Gizmo.DAL.Entities
         public virtual Register Register
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets reservation.
+        /// </summary>
+        public Reservation Reservation
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets reservation host.
+        /// </summary>
+        public ReservationHost ReservationHost
+        {
+            get;
+            set;
         }
     }
 }

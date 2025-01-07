@@ -14,5 +14,15 @@
         /// Gets or sets reservation id.
         /// </summary>
         public int ReservationId { get; set; }
+
+        /// <summary>
+        /// Gets or sets reservation.
+        /// </summary>
+        public Reservation Reservation { get; set; }
+
+        /// <summary>
+        /// Gets or sets product order.
+        /// </summary>
+        public ProductOrder ProductOrder { get; set; }
     }
 }

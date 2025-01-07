@@ -12,11 +12,6 @@
         }
 
         /// <summary>
-        /// Gets or sets reservation id.
-        /// </summary>
-        public int ReservationId { get; set; }
-
-        /// <summary>
         /// Gets or sets fee type.
         /// </summary>
         public FeeType Type { get; set; }
@@ -32,15 +27,6 @@
         public ProductOLReservationFee OrderLine
         {
             get; set;
-        }
-
-        /// <summary>
-        /// Gets or sets reservation.
-        /// </summary>
-        public Reservation Reservation 
-        { 
-            get; 
-            set;
         }
     }
 }

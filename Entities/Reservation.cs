@@ -21,7 +21,8 @@ namespace Gizmo.DAL.Entities
         {
             Users = new HashSet<ReservationUser>();
             Hosts = new HashSet<ReservationHost>();
-            ReservationFees = new HashSet<InvoiceLineReservationFee>();
+            InvoiceLines = new HashSet<InvoiceLine>();
+            Orders = new HashSet<ReservationProductOrder>();
         }
 
         [NonSerialized()]
@@ -195,12 +196,20 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets reservation fees.
+        /// Gets or sets related invoice lines.
         /// </summary>
-        public virtual ISet<InvoiceLineReservationFee> ReservationFees 
+        public virtual ISet<InvoiceLine> InvoiceLines
         {
             get; 
             protected set; 
+        }
+
+        /// <summary>
+        /// Gets or sets related orders.
+        /// </summary>
+        public virtual ISet<ReservationProductOrder> Orders
+        {
+            get;set;
         }
     }
 }
