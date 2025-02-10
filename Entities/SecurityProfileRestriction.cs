@@ -1,6 +1,4 @@
-using CoreLib;
-
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -45,7 +43,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(2)]
-        public RestrictionType Type
+        public CoreLib.RestrictionType Type
         {
             get;
             set;
