@@ -1,5 +1,4 @@
-using ProtoBuf;
-
+﻿using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -14,7 +13,6 @@ namespace Gizmo.DAL.Entities
     [ProtoContract()]
     public class InvoiceLineTime : InvoiceLineExtended, IOrderLineReference, ITimeDepletable
     {
-        #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -22,9 +20,10 @@ namespace Gizmo.DAL.Entities
         {
             Usages = new HashSet<UsageTime>();
         }
-        #endregion
 
-        #region PROPERTIES
+        [NonSerialized()]
+        private bool _isExpired;
+
 
         /// <summary>
         /// Gets or set order line.
@@ -57,9 +56,14 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
-        #endregion
-
-        #region NAVIGATION PROPERTIES
+        /// <summary>
+        /// Get or sets if purchase is expired.
+        /// </summary>
+        public bool IsExpired
+        {
+            get { return _isExpired; }
+            set { _isExpired = value; }
+        }
 
         /// <summary>
         /// Gets or sets order line.
@@ -84,7 +88,5 @@ namespace Gizmo.DAL.Entities
         {
             get; protected set;
         }
-
-        #endregion
     }
 }

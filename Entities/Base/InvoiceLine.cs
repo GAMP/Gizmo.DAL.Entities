@@ -23,6 +23,8 @@ namespace Gizmo.DAL.Entities
         private int? _reservationId;
         [NonSerialized()]
         private int? _reservationHostId;
+        [NonSerialized()]
+        private int? _reservationSlot;
 
         /// <summary>
         /// Gets or sets invoice id.
@@ -263,6 +265,15 @@ namespace Gizmo.DAL.Entities
         {
             get { return _reservationHostId; }
             set { _reservationHostId = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets reservation slot.
+        /// </summary>
+        public int? ReservationSlot
+        {
+            get { return _reservationSlot; }
+            set { _reservationSlot = value; }
         }
 
         /// <summary>
