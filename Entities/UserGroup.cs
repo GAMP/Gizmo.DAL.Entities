@@ -35,6 +35,8 @@ namespace Gizmo.DAL.Entities
 
         [NonSerialized()]
         private int? _discountGroupId;
+        [NonSerialized()]
+        private DiscountGroup _discountGroup;
 
         #endregion
 
@@ -255,7 +257,11 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets discount group.
         /// </summary>
-        public int? DiscountGroupId { get; set; }
+        public int? DiscountGroupId 
+        {
+            get { return _discountGroupId; }
+            set { _discountGroupId = value; }
+        }
 
         #endregion
 
@@ -311,7 +317,11 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets discount group.
         /// </summary>
-        public DiscountGroup DiscountGroup { get; set; }
+        public DiscountGroup DiscountGroup
+        {
+            get { return _discountGroup; }
+            set { _discountGroup = value; }
+        }
 
         #endregion
     }
