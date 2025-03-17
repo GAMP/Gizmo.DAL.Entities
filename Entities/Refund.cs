@@ -26,6 +26,8 @@ namespace Gizmo.DAL.Entities
         #region FIELDS
         [NonSerialized()]
         private Branch? _branch;
+        [NonSerialized()]
+        private RefundReceipt? _receipt;
         #endregion
 
         #region PROPERTIES
@@ -128,6 +130,15 @@ namespace Gizmo.DAL.Entities
         {
             get { return _branch; }
             set { _branch = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets receipt.
+        /// </summary>
+        public RefundReceipt? Receipt
+        {
+            get { return _receipt; }
+            set { _receipt = value; }
         }
 
         #endregion

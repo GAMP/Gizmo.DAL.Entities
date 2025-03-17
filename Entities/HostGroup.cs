@@ -15,7 +15,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class HostGroup : ModifiableByOperatorBase , IBranchedEntity
+    public class HostGroup : ModifiableByOperatorBase, IBranchedEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -35,7 +35,17 @@ namespace Gizmo.DAL.Entities
 
         #region FIELDS
         [NonSerialized()]
-        private Branch _branch; 
+        private Branch _branch;
+#nullable enable
+        [NonSerialized()]
+        private BillProfile? _billProfile;
+        [NonSerialized()]
+        private int? _billProfileId;
+        [NonSerialized()]
+        private int? _clientOptionsId;
+        [NonSerialized()]
+        private ClientOptions? _clientOptions;
+#nullable disable
         #endregion
 
         #region PROPERTIES
@@ -106,6 +116,24 @@ namespace Gizmo.DAL.Entities
         public int? DefaultGuestGroupId
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets billing profile id.
+        /// </summary>
+        public int? BillProfileId
+        {
+            get { return _billProfileId; }
+            set { _billProfileId = value; }
+        }
+
+        /// <summary>
+        /// Client options id.
+        /// </summary>
+        public int? ClientOptionsId
+        {
+            get { return _clientOptionsId; }
+            set { _clientOptionsId = value; }
         }
 
         /// <inheritdoc/>
@@ -182,6 +210,27 @@ namespace Gizmo.DAL.Entities
         {
             get; protected set;
         }
+
+#nullable enable
+        /// <summary>
+        /// Gets or sets billing profile.
+        /// </summary>
+        public virtual BillProfile? BillProfile
+        {
+            get { return _billProfile; }
+            set { _billProfile = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets client options.
+        /// </summary>
+        public virtual ClientOptions? ClientOptions
+        {
+            get { return _clientOptions; }
+            set { _clientOptions = value; }
+        }
+
+#nullable disable
 
         /// <inheritdoc/>  
         public virtual Branch Branch

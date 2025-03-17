@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,6 @@ namespace Gizmo.DAL.Entities
     [ProtoContract()]
     public class BillProfile : ModifiableByOperatorBase
     {
-        #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
@@ -23,10 +22,11 @@ namespace Gizmo.DAL.Entities
         {
             BillRates = new HashSet<BillRate>();
             UserGroups = new HashSet<UserGroup>();
+            HostGroups = new HashSet<HostGroup>();
         }
-        #endregion
 
-        #region PROPERTIES
+        [NonSerialized]
+        private ISet<HostGroup> _hostGroups;
 
         /// <summary>
         /// Gets or sets name.
@@ -41,9 +41,6 @@ namespace Gizmo.DAL.Entities
             set;
         }
 
-        #endregion
-
-        #region NAVIGATION PROPERTIES
 
         /// <summary>
         /// Gets rates.
@@ -63,6 +60,13 @@ namespace Gizmo.DAL.Entities
             get; protected set;
         }
 
-        #endregion
+        /// <summary>
+        /// Gets host groups.
+        /// </summary>
+        public virtual ISet<HostGroup> HostGroups
+        {
+            get { return _hostGroups; }
+            protected set { _hostGroups = value; }
+        }
     }
 }
