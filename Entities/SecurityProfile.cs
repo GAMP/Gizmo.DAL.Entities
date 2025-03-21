@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Collections.Generic;
@@ -29,6 +29,13 @@ namespace Gizmo.DAL.Entities
         }
         #endregion
 
+        [NonSerialized()]
+        private bool _hideStart;
+        [NonSerialized()]
+        private bool _stickyShell;
+        [NonSerialized()]
+        private bool _disableDesktopSwitching;
+
         #region PROPERTIES
 
         /// <summary>
@@ -53,6 +60,33 @@ namespace Gizmo.DAL.Entities
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// Gets or sets hide start.
+        /// </summary>
+        public bool HideStart
+        {
+            get { return _hideStart; }
+            set { _hideStart = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets disable desktop switching.
+        /// </summary>
+        public bool DisableDesktopSwitching
+        {
+            get { return _disableDesktopSwitching; }
+            set { _disableDesktopSwitching = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets sticky shell.
+        /// </summary>
+        public bool StickyShell
+        {
+            get { return _stickyShell; }
+            set { _stickyShell = value; }
         }
 
         #endregion
