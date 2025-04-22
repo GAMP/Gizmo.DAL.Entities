@@ -12,7 +12,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class StockTransaction : ModifiableByOperatorBase, IVoidable , IBranchedEntity
+    public class StockTransaction : ModifiableByOperatorBase, IVoidable
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -27,7 +27,7 @@ namespace Gizmo.DAL.Entities
 
         #region FIELDS
         [NonSerialized()]
-        private Branch _branch; 
+        private Stock _stock;        
         #endregion
 
         #region PROPERTIES
@@ -137,11 +137,11 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
-        /// <inheritdoc/>        
-        public int BranchId
-        {
-            get; set;
-        }
+
+        /// <summary>
+        /// Gets or sets stock id.
+        /// </summary>
+        public int StockId { get; set; }
 
         #endregion
 
@@ -164,11 +164,11 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
-        /// <inheritdoc/>  
-        public virtual Branch Branch
+        /// Gets or sets stock.
+        public virtual Stock Stock
         {
-            get { return _branch; }
-            protected set { _branch = value; }
+            get { return _stock; }
+            set { _stock = value; }
         }
 
         /// <summary>

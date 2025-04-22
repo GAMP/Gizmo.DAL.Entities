@@ -17,6 +17,7 @@ namespace Gizmo.DAL.Entities
             Counts = new HashSet<StockCount>();
             Registers = new HashSet<Register>();
             InventoryEntries = new HashSet<InventoryEntry>();
+            Transactions = new HashSet<StockTransaction>();
         }
 
         /// <summary>
@@ -52,5 +53,10 @@ namespace Gizmo.DAL.Entities
         /// Gets associated inventory entries.
         /// </summary>
         public ISet<InventoryEntry> InventoryEntries { get; private set; }
+
+        /// <summary>
+        /// Gets associated stock transactions.
+        /// </summary>
+        public ISet<StockTransaction> Transactions { get; private set; }
     } 
 }
