@@ -1,4 +1,6 @@
-﻿namespace Gizmo.DAL.Entities
+﻿#nullable enable
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Inventory inbound entry entity.
@@ -14,5 +16,15 @@
         /// Gets or sets total cost.
         /// </summary>
         public decimal TotalCost { get; set; }
+
+        /// <summary>
+        /// Gets or sets inventory transfer entry id.
+        /// </summary>
+        public int? InventoryTransferEntryId { get; set; }
+
+        /// <summary>
+        /// Gets or sets inventory transfer entry.
+        /// </summary>
+        public InventoryTransferEntry? InventoryTransferEntry { get; set; }
     }
 }

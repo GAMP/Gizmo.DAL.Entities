@@ -41,7 +41,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets the shift.
         /// </summary>
-        public Shift Shift { get; set; } = null!;
+        public Shift? Shift { get; set; } = null!;
 
         /// <summary>
         /// Gets or sets the inventory entries.

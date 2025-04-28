@@ -6,13 +6,18 @@
     public sealed class InventoryAdjustment : Inventory
     {
         /// <summary>
-        /// Gets or sets invoice id.
+        /// Gets or sets total cost.
         /// </summary>
-        public int? InvoiceId { get; set; }
+        public decimal Cost { get; set; }
 
         /// <summary>
         /// Gets or sets adjustment type.
         /// </summary>
         public InventoryAdjustmentType AdjustmentType { get; set; }
+
+        /// <summary>
+        /// Gets or sets invoice id.
+        /// </summary>
+        public int? InvoiceId { get; set; }   
     }
 }

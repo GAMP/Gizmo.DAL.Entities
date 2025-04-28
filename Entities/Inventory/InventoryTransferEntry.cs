@@ -1,28 +1,11 @@
-﻿namespace Gizmo.DAL.Entities
+﻿#nullable enable
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Inventory transfer entry entity.
     /// </summary>
     public sealed class InventoryTransferEntry : InventoryEntry
     {
-        /// <summary>
-        /// Gets or sets the transfer stock id.
-        /// </summary>
-        public int TransferStockId { get; set; }
-
-        /// <summary>
-        /// Gets or sets the transfer stock transaction id.
-        /// </summary>
-        public int TransferStockTransactionId { get; set; }
-
-        /// <summary>
-        /// Gets or sets the transfer stock.
-        /// </summary>
-        public Stock TransferStock { get; set; } = null!;
-
-        /// <summary>
-        /// Gets or sets the transfer stock transaction.
-        /// </summary>
-        public StockTransaction TransferStockTransaction { get; set; } = null!;
     }
 }
