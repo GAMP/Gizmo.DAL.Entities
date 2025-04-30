@@ -30,7 +30,7 @@ namespace Gizmo.DAL.Entities
         #endregion
 
         [NonSerialized()]
-        private bool _hideStart;
+        private bool _disableStartMenu;
         [NonSerialized()]
         private bool _stickyShell;
         [NonSerialized()]
@@ -63,12 +63,12 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets hide start.
+        /// Gets or sets disable start menu.
         /// </summary>
-        public bool HideStart
+        public bool DisableStartMenu
         {
-            get { return _hideStart; }
-            set { _hideStart = value; }
+            get { return _disableStartMenu; }
+            set { _disableStartMenu = value; }
         }
 
         /// <summary>

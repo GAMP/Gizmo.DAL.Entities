@@ -31,6 +31,10 @@ namespace Gizmo.DAL.Entities
         private User _finalizedBy;
         [NonSerialized()]
         private int? _finalizedById;
+        [NonSerialized()]
+        private int? _loginBlockBeforeTime;
+        [NonSerialized()]
+        private int? _loginBlockAfterTime;
 
         /// <summary>
         /// Gets or sets user id.
@@ -134,6 +138,24 @@ namespace Gizmo.DAL.Entities
         {
             get;
             set;
+        }
+
+        /// <summary>
+        /// Gets or sets login block before time.
+        /// </summary>
+        public int? LoginBlockBeforeTime
+        {
+            get { return _loginBlockBeforeTime; }
+            set { _loginBlockBeforeTime = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets login block after time.
+        /// </summary>
+        public int? LoginBlockAfterTime
+        {
+            get { return _loginBlockAfterTime; }
+            set { _loginBlockAfterTime = value; }
         }
 
         /// <summary>
