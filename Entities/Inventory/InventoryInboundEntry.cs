@@ -1,5 +1,7 @@
 ﻿#nullable enable
 
+using System;
+
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
@@ -16,6 +18,11 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets total cost.
         /// </summary>
         public decimal TotalCost { get; set; }
+
+        /// <summary>
+        /// Gets or sets expiration date.
+        /// </summary>
+        public DateTime? ExpirationDate { get; set; }
 
         /// <summary>
         /// Gets or sets inventory transfer entry id.
