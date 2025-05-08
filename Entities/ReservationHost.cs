@@ -1,5 +1,4 @@
 ﻿using ProtoBuf;
-
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -28,6 +27,13 @@ namespace Gizmo.DAL.Entities
         private int? _finalizedById;
         [NonSerialized()]
         private User _finalizedBy;
+        [NonSerialized()]
+        private int? _movedToReservationHostId;
+
+#nullable enable
+        [NonSerialized()]
+        private ReservationHost? _movedToReservationHost;
+#nullable disable
 
         /// <summary>
         /// Gets or sets reservation id.
@@ -57,6 +63,15 @@ namespace Gizmo.DAL.Entities
         public int? PreferredUserId
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Moved to reservation host id.
+        /// </summary>
+        public int? MovedToReservationHostId
+        {
+            get { return _movedToReservationHostId; }
+            set { _movedToReservationHostId = value; }
         }
 
         /// <summary>
@@ -119,5 +134,17 @@ namespace Gizmo.DAL.Entities
         /// Gets related invoice lines.
         /// </summary>
         public ISet<InvoiceLine> InvoiceLines { get; set; }
+
+#nullable enable
+        /// <summary>
+        /// Gets or sets moved to reservation host.
+        /// </summary>
+        public ReservationHost? MovedToReservationHost
+        {
+            get { return _movedToReservationHost; }
+            set { _movedToReservationHost = value; }
+        }
+#nullable disable
+
     }
 }

@@ -35,6 +35,10 @@ namespace Gizmo.DAL.Entities
         private int? _loginBlockBeforeTime;
         [NonSerialized()]
         private int? _loginBlockAfterTime;
+        [NonSerialized()]
+        private DateTime? _activationTime;
+        [NonSerialized()]
+        private ReservationPaymentStatus _paymentStatus;
 
         /// <summary>
         /// Gets or sets user id.
@@ -119,6 +123,24 @@ namespace Gizmo.DAL.Entities
         public SharedLib.ReservationStatus Status
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets payment status.
+        /// </summary>
+        public ReservationPaymentStatus PaymentStatus
+        {
+            get { return _paymentStatus; }
+            set { _paymentStatus = value; }
+        }
+
+        /// <summary>
+        /// Gets activation time.
+        /// </summary>
+        public DateTime? ActivationTime 
+        {
+            get { return _activationTime; }
+            set { _activationTime = value; }
         }
 
         /// <summary>
