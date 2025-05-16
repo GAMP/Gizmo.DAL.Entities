@@ -26,6 +26,7 @@ namespace Gizmo.DAL.Entities
         #region FIELDS
         [NonSerialized()]
         private Branch _branch;
+        private decimal _discountAmount;
         #endregion
 
         #region PROPERTIES
@@ -94,6 +95,15 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
+        /// Gets or sets total rate discount amount.
+        /// </summary>
+        public decimal DiscountAmount
+        {
+            get { return _discountAmount; }
+            set { _discountAmount = value; }
+        }
+
+        /// <summary>
         /// Gets or sets if session is active.
         /// </summary>
         [DataMember()]
@@ -121,7 +131,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Indicates that when entity is saved creation time shouldnt be set automatically.
+        /// Indicates that when entity is saved creation time shouldn't be set automatically.
         /// </summary>
         [NotMapped()]
         public bool IgnoreCreatedUpdate
@@ -131,7 +141,7 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Indicates that when entity is saved update time and user shouldnt be set automatically.
+        /// Indicates that when entity is saved update time and user shouldn't be set automatically.
         /// </summary>
         [NotMapped()]
         public bool IgnoreUpdatedUpdate { get; set; }

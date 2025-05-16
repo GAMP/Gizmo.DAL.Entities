@@ -30,9 +30,9 @@ namespace Gizmo.DAL.Entities
         public ReportPresetRange ReportRange { get; set; }
 
         /// <summary>
-        /// Gets or sets the report parameters.
+        /// Gets or sets the report filters.
         /// </summary>
-        public string? ReportParameters { get; set; } = null;
+        public string? Filters { get; set; } = null;
 
         /// <summary>
         /// Gets or sets the report preset id.

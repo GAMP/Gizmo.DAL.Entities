@@ -3,7 +3,7 @@
     /// <summary>
     /// Discount value type.
     /// </summary>
-    public enum DiscountValueType
+    public enum DiscountCalculationType
     {
         /// <summary>
         /// Percentage discount.
@@ -13,7 +13,7 @@
         /// <summary>
         /// Fixed discount.
         /// </summary>
-        FixedDiscount = 1,
+        Fixed = 1,
     
         // Fixed Price PerItem ?
         // Fixed discount total, total discount value irrelevant of items in order line ?

@@ -20,13 +20,13 @@ namespace Gizmo.DAL.Entities
         public Guid ChannelType { get; set; }
 
         /// <summary>
-        /// Gets or sets recipient channeled id.
+        /// Gets or sets recipient id.
         /// </summary>
-        public int RecipientChanneledId { get; set; }
+        public int RecipientId { get; set; }
 
         /// <summary>
         /// Gets or sets recipient channeled.
         /// </summary>
-        public RecipientChanneled RecipientChanneled { get; set; }
+        public Recipient Recipient { get; set; }
     }
 }

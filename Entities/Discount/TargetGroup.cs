@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Gizmo.DAL.Entities
+﻿namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Discount target base entity.
@@ -27,11 +25,6 @@ namespace Gizmo.DAL.Entities
         /// Requirement value. for example at least 3 items or at least 50 euro.
         /// </summary>
         public decimal? Value { get; set; }
-
-        /// <summary>
-        /// Targeted items.
-        /// </summary>
-        public ISet<Target> Targets { get; set; }
 
         /// <summary>
         /// Gets discount.

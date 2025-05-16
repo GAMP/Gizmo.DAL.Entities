@@ -3,7 +3,7 @@
     /// <summary>
     /// Schedule report recipient entity.
     /// </summary>
-    public sealed class ScheduleReportRecipient : CreatedByOperatorBase , IDisable
+    public sealed class ScheduleReportRecipient : Recipient
     {
         /// <summary>
         /// Creates new instance.
@@ -16,12 +16,9 @@
         public int ScheduleReportId { get; set; }
 
         /// <summary>
-        /// Recipient id.
+        /// Gets or sets the user id.
         /// </summary>
-        public int RecipientId { get; set; }
-
-        ///<inheritdoc/>
-        public bool IsDisabled { get; set; }
+        public int UserId { get; set; }
 
         /// <summary>
         /// Schedule report.
@@ -29,8 +26,8 @@
         public ScheduleReport ScheduleReport { get; set; }
 
         /// <summary>
-        /// Recipient.
+        /// Gets user.
         /// </summary>
-        public Recipient Recipient { get; set; }
+        public UserOperator User { get; set; }
     }
 }

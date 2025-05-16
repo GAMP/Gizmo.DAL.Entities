@@ -10,6 +10,6 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets targeted bill profiles.
         /// </summary>
-        public ISet<TargetBillProfile> BilliProfiles { get; set; }
+        public ISet<TargetBillProfile> BillProfiles { get; set; }
     }
 }

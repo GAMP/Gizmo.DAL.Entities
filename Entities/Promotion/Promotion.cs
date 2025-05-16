@@ -30,19 +30,14 @@ namespace Gizmo.DAL.Entities
         public string? Description { get; set; }
 
         /// <summary>
-        /// Gets or sets html template.
+        /// Gets or sets promotion code type.
         /// </summary>
-        public string? Template { get; set; }
+        public PromotionCodeType CodeType { get; set; }
 
         /// <summary>
         /// Gets or sets promotion period.
         /// </summary>
         public PromotionPeriod Period { get; set; } = null!;
-
-        /// <summary>
-        /// Gets or sets promotion code type.
-        /// </summary>
-        public PromotionCodeType CodeType { get; set; }
 
         /// <summary>
         /// Gets promotion codes.
