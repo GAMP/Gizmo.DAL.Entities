@@ -26,6 +26,11 @@ namespace Gizmo.DAL.Entities
         public DiscountCalculationType CalculationType { get; set; }
 
         /// <summary>
+        /// Target group requirement.
+        /// </summary>
+        public TargetGroupRequirement Requirement { get; set; }
+
+        /// <summary>
         /// Gets target groups.
         /// </summary>
         public ISet<TargetGroup> TargetGroups { get; private set; }

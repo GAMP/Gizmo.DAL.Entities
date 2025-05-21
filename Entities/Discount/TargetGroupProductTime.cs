@@ -8,6 +8,14 @@ namespace Gizmo.DAL.Entities
     public sealed class TargetGroupProductTime : TargetGroup
     {
         /// <summary>
+        /// Creates a new instance of <see cref="TargetGroupProductTime"/> class.
+        /// </summary>
+        public TargetGroupProductTime() : base()
+        {
+            ProductTimes = new HashSet<TargetProductTime>();
+        }
+
+        /// <summary>
         /// Gets targeted product times.
         /// </summary>
         public ISet<TargetProductTime> ProductTimes { get; set; }

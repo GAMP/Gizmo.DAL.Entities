@@ -6,23 +6,23 @@
     public sealed class TargetProductTime : Target
     {
         /// <summary>
-        /// Gets or sets product time id.
-        /// </summary>
-        public int ProductTimeId { get; set; }
-
-        /// <summary>
         /// Gets or sets target group product time id.
         /// </summary>
         public int TargetGroupProductTimeId { get; set; }
 
         /// <summary>
-        /// Gets targeted product time.
+        /// Gets or sets product time id.
         /// </summary>
-        public ProductTime ProductTime { get; set; }
+        public int ProductTimeId { get; set; }
 
         /// <summary>
         /// Gets or sets target group product time.
         /// </summary>
         public TargetGroupProductTime TargetGroupProductTime { get; set; }
+
+        /// <summary>
+        /// Gets targeted product time.
+        /// </summary>
+        public ProductTime ProductTime { get; set; }
     }
 }

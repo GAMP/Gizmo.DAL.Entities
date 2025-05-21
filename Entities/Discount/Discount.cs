@@ -7,7 +7,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Discount base entity.
     /// </summary>
-    public abstract class Discount : ModifiableByOperatorBase
+    public abstract class Discount : ModifiableByOperatorBase , IDeletable
     {
         /// <summary>
         /// Creates new instance.
@@ -27,9 +27,12 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public string? Description { get; set; }
 
+        /// <inheritdoc/>
+        public bool IsDeleted { get; set; }
+
         /// <summary>
         /// Gets or sets discount branches.
         /// </summary>
-        public ISet<DiscountBranch> Branches { get; private set; }
+        public ISet<DiscountBranch> Branches { get; private set; }  
     }
 }
