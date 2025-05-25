@@ -3,7 +3,7 @@
     /// <summary>
     /// Discount group entity.
     /// </summary>
-    public sealed class DiscountGroupDiscount : CreatedByOperatorBase
+    public sealed class DiscountGroupDiscount
     {
         /// <summary>
         /// Creates new instance.

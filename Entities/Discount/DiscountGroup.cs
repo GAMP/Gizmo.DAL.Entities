@@ -24,7 +24,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets associated discounts.
         /// </summary>
-        public ISet<DiscountGroupDiscount> Discounts { get; private set; }
+        public ISet<DiscountGroupDiscount> Discounts { get; set; }
 
         /// <summary>
         /// Gets associated user groups.

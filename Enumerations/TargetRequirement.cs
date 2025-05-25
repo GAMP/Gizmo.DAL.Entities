@@ -6,21 +6,21 @@
     public enum TargetRequirement
     {
         /// <summary>
+        /// All items in list.
+        /// </summary>
+        /// <remarks>
+        /// This rule requires that customer purchase all target products.
+        /// </remarks>
+        All = 0,
+
+        /// <summary>
         /// Any of items in list.
         /// </summary>
         /// <remarks>
         /// This can also be considered as one of.
         /// This rule basically requires that customer purchase at least one of the target products.
         /// </remarks>
-        Any = 0,
-
-        /// <summary>
-        /// All items in list.
-        /// </summary>
-        /// <remarks>
-        /// This rule requires that customer purchase all target products.
-        /// </remarks>
-        All = 1,
+        Any = 1,
 
         /// <summary>
         /// Specific amount of items in the list.

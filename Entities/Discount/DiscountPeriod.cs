@@ -23,6 +23,6 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets discount.
         /// </summary>
-        public DiscountPeriodic Discount { get; set; }
+        public Discount Discount { get; set; }
     }
 }

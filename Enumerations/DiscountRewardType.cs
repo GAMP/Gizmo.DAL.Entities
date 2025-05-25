@@ -1,18 +1,17 @@
 ﻿namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Discount target group requirement.
+    /// Discount reward type enumeration.
     /// </summary>
-    public enum TargetGroupRequirement
+    public enum DiscountRewardType
     {
         /// <summary>
-        /// All.
+        /// Discount.
         /// </summary>
-        All = 0,
-
+        Discount = 0,
         /// <summary>
-        /// Any.
+        /// Bonus.
         /// </summary>
-        Any = 1,
+        Bonus = 1,
     }
 }

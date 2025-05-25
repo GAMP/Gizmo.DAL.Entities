@@ -29,6 +29,6 @@
         /// <summary>
         /// Gets discount.
         /// </summary>
-        public DiscountTargeted Discount { get; private set; }
+        public Discount Discount { get; private set; }
     }
 }
