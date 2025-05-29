@@ -23,19 +23,19 @@ namespace Gizmo.DAL.Entities
         public int StockId { get; set; }
 
         /// <summary>
-        /// Gets or sets count note.
+        /// Gets or sets stock count type.
         /// </summary>
-        public string? Note { get; set; }
+        public StockCountType Type { get; set; }
 
         /// <summary>
-        /// Gets or sets different (unexpected) entries count.
+        /// Gets or sets unexpected entries count.
         /// </summary>
         public int UnexpectedEntries { get; set; }
 
         /// <summary>
-        /// Gets or sets stock count type.
+        /// Gets or sets count note.
         /// </summary>
-        public StockCountType Type { get; set; }
+        public string? Note { get; set; }
 
         /// <summary>
         /// Gets count entries.

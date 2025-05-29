@@ -1,4 +1,6 @@
-﻿namespace Gizmo.DAL.Entities
+﻿#nullable enable
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Inventory adjustment entity.
@@ -18,6 +20,6 @@
         /// <summary>
         /// Gets or sets invoice id.
         /// </summary>
-        public int? InvoiceId { get; set; }   
+        public int? InvoiceId { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Gizmo.DAL.Entities
+﻿#nullable enable
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Stock count entry entity.
@@ -31,13 +33,18 @@
         public decimal Difference { get; set; }
 
         /// <summary>
+        /// Gets or sets note.
+        /// </summary>
+        public string? Note { get; set; }
+
+        /// <summary>
         /// Gets or sets stock count.
         /// </summary>
-        public StockCount StockCount { get; set; }
+        public StockCount StockCount { get; set; } = null!;
 
         /// <summary>
         /// Gets or sets product.
         /// </summary>
-        public ProductBase Product { get; set; }
+        public ProductBase Product { get; set; } = null!;
     }
 }
