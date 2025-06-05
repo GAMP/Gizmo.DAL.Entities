@@ -34,6 +34,9 @@ namespace Gizmo.DAL.Entities
         [NonSerialized()]
         private Companion? _companion;
 
+        [NonSerialized()]
+        private Stock? _stock;
+
 #nullable disable
 
         /// <summary>
@@ -167,6 +170,18 @@ namespace Gizmo.DAL.Entities
             }
         }
 
+        /// <summary>
+        /// Gets or sets assigned stock.
+        /// </summary>
+        public Stock? Stock
+        {
+            get { return _stock; }
+            set
+            {
+                _stock = value;
+            }
+        }
+
 #nullable disable
 
         /// <summary>
@@ -190,11 +205,6 @@ namespace Gizmo.DAL.Entities
         {
             get { return _branch; }
             protected set { _branch = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets assigned stock.
-        /// </summary>
-        public Stock Stock { get; set; }
+        }  
     }
 }
