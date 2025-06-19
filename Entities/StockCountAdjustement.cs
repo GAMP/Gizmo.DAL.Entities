@@ -3,7 +3,7 @@
     /// <summary>
     /// Stock count inventory adjustment entity.
     /// </summary>
-    public sealed class StockCountAdjustement
+    public sealed class StockCountAdjustment
     {
         /// <summary>
         /// Gets or sets stock count id.

@@ -53,6 +53,15 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
+        /// Payment amount.
+        /// </summary>
+        [ProtoIgnore()]
+        public decimal Amount
+        {
+            get; set;
+        }
+
+        /// <summary>
         /// Gets or sets shift id.
         /// </summary>
         [DataMember()]

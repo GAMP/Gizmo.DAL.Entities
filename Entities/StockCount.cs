@@ -46,5 +46,15 @@ namespace Gizmo.DAL.Entities
         /// Gets associated stock.
         /// </summary>
         public Stock Stock { get; set; } = null!;
+
+        /// <summary>
+        /// Inbound associated with this stock count.
+        /// </summary>
+        public StockCountInbound? Inbound { get; set; }
+
+        /// <summary>
+        /// Adjustment associated with this stock count.
+        /// </summary>
+        public StockCountAdjustment? Adjustment { get; set; }
     }
 }
