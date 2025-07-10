@@ -23,6 +23,6 @@
         /// <summary>
         /// Gets billing profile target group.
         /// </summary>
-        public TargetGroupBillProfile TargetGroupBillProfile { get; private set; }
+        public TargetGroupBillProfile TargetGroupBillProfile { get; set; }
     }
 }
