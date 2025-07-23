@@ -97,6 +97,14 @@ namespace Gizmo.DAL.Entities
             set;
         }
 
+        /// <summary>
+        /// Payment link URL.
+        /// </summary>
+        public string? PaymentLinkUrl
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -125,6 +133,5 @@ namespace Gizmo.DAL.Entities
         }
 
         #endregion
-
     }
 }
