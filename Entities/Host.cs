@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -30,7 +30,8 @@ namespace Gizmo.DAL.Entities
             ReservedGuests = new HashSet<UserGuest>();
             ProductOrders = new HashSet<ProductOrder>();
             Devices = new HashSet<DeviceHost>();
-            AssitanceRequests = new HashSet<AssistanceRequest>();
+            AssistanceRequests = new HashSet<AssistanceRequest>();
+            Reservations = new HashSet<ReservationHost>();
             Guid = Guid.NewGuid(); // always create a new GUID for the host
         }
         #endregion
@@ -151,7 +152,12 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets associated assistance requests.
         /// </summary>
-        public virtual ISet<AssistanceRequest> AssitanceRequests { get; protected set; }
+        public virtual ISet<AssistanceRequest> AssistanceRequests { get; protected set; }
+
+        /// <summary>
+        /// Gets associated reservations.
+        /// </summary>
+        public virtual ISet<ReservationHost> Reservations { get; protected set; }
 
         #endregion
     }
