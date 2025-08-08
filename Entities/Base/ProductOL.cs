@@ -1,6 +1,7 @@
 ﻿using ProtoBuf;
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
@@ -18,7 +19,9 @@ namespace Gizmo.DAL.Entities
         /// Creates new instance.
         /// </summary>
         public ProductOL() : base()
-        { }
+        {
+            Discounts = new HashSet<ProductOrderDiscount>();
+        }
 
         [NonSerialized()]
         private OrderPrepareStatus _prepareStatus;
@@ -361,7 +364,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets reservation.
         /// </summary>
-        public Reservation Reservation
+        public virtual Reservation Reservation
         {
             get; set;
         }
@@ -369,10 +372,15 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets reservation host.
         /// </summary>
-        public ReservationHost ReservationHost
+        public virtual ReservationHost ReservationHost
         {
             get;
             set;
         }
+
+        /// <summary>
+        /// Gets discounts.
+        /// </summary>
+        public ISet<ProductOrderDiscount> Discounts { get;protected set; }
     }
 }

@@ -98,9 +98,22 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Payment link URL.
+        /// Payment URL.
         /// </summary>
-        public string? PaymentLinkUrl
+        public string? PaymentUrl
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Intent expiration.
+        /// </summary>
+        public int? Expiration { get; set; }
+
+        /// <summary>
+        /// Gets or sets intent expiration date/time.
+        /// </summary>
+        public DateTime? ExpireAt
         {
             get; set;
         }

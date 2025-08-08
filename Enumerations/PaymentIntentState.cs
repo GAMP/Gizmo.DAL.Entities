@@ -21,8 +21,13 @@
         Failed = 2,
 
         /// <summary>
-        /// The intent is timed out.
+        /// The intent is expired out.
         /// </summary>
-        TimedOut = 3,
+        Expired = 3,
+
+        /// <summary>
+        /// The intent is canceled.
+        /// </summary>
+        Canceled = 4,
     }
 }
