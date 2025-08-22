@@ -1,55 +1,50 @@
-﻿namespace Gizmo.DAL.Entities
+﻿#nullable enable
+
+using System.Collections.Generic;
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Order payment intent.
     /// </summary>
-    public class PaymentIntentOrder : PaymentIntent
+    public sealed class PaymentIntentOrder : PaymentIntent
     {
         #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
         public PaymentIntentOrder() : base()
-        { }
+        {
+            Orders = new HashSet<IntentOrder>();
+            Deposits = new HashSet<IntentOrderDeposit>();
+        }
         #endregion
 
         #region PROPERTIES
 
         /// <summary>
-        /// Gets or sets product order id.
+        /// Gets or sets auto complete.
         /// </summary>
-        public int ProductOrderId
-        {
-            get; set;
-        }
+        public bool AutoComplete { get; set; }
 
         /// <summary>
-        /// Gets or sets invoice payment id.
+        /// Gets or sets disable receipt printing.
         /// </summary>
-        public int? InvoicePaymentId
-        {
-            get; set;
-        }
+        public bool DisableReceiptPrinting { get; set; }
 
         #endregion
 
         #region NAVIGATION PROPERTIES
 
         /// <summary>
-        /// Gets or sets associated product order.
+        /// Gets associated orders.
         /// </summary>
-        public virtual ProductOrder ProductOrder
-        {
-            get; set;
-        }
+        public ISet<IntentOrder> Orders { get; }
 
         /// <summary>
-        /// Gets or sets associated invoice payment.
+        /// Gets associated deposits.
         /// </summary>
-        public virtual InvoicePayment InvoicePayment
-        {
-            get; set;
-        }
+        public ISet<IntentOrderDeposit> Deposits { get; }   
 
         #endregion
     }

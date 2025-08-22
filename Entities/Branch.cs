@@ -29,6 +29,7 @@ namespace Gizmo.DAL.Entities
             Promotions = new HashSet<PromotionBranch>();
             Discounts = new HashSet<DiscountBranch>();
             Stocks = new HashSet<Stock>();
+            Orders = new HashSet<ProductOrder>();
         }
 
         /// <summary>
@@ -266,5 +267,10 @@ namespace Gizmo.DAL.Entities
         /// Gets branch stocks.
         /// </summary>
         public ISet<Stock> Stocks { get; private set; }
+
+        /// <summary>
+        /// Gets product orders.
+        /// </summary>
+        public ISet<ProductOrder> Orders { get; private set; }
     }
 }

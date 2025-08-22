@@ -7,7 +7,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Payment intent base entity. 
     /// </summary>
-    public abstract class PaymentIntent : ModifiableByUserCreatedByUserBase, IReplicatable , IBranchedOptionalEntity
+    public abstract class PaymentIntent : ModifiableByUserCreatedByUserBase, IReplicatable, IBranchedOptionalEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -22,6 +22,10 @@ namespace Gizmo.DAL.Entities
         #region FIELDS
         [NonSerialized()]
         private Branch? _branch;
+        [NonSerialized()]
+        private Payment? _payment;
+        [NonSerialized()]
+        private int? _paymentId;
         #endregion
 
         #region PROPERTIES
@@ -61,7 +65,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets transaction id.
         /// </summary>
-        public string TransactionId
+        public string? TransactionId
         {
             get; set;
         }
@@ -118,9 +122,20 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets payment id.
+        /// </summary>
+        public int? PaymentId
+        {
+            get { return _paymentId; }
+            set { _paymentId = value; }
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
+
+#nullable disable
 
         /// <summary>
         /// Gets or set target user.
@@ -138,11 +153,22 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+#nullable enable
+
         /// <inheritdoc/>
         public Branch? Branch
         {
             get { return _branch; }
             set { _branch = value; }
+        }
+
+        /// <summary>
+        /// Gets payment.
+        /// </summary>
+        public virtual Payment? Payment
+        {
+            get { return _payment; }
+            set { _payment = value; }
         }
 
         #endregion

@@ -1,9 +1,9 @@
-﻿using ProtoBuf;
-using SharedLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using ProtoBuf;
+using SharedLib;
 
 namespace Gizmo.DAL.Entities
 {
@@ -13,7 +13,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class ProductOrder : ModifiableByWithRequiredUserMemberBase, IDeletable, IVoidable, IDeliverable, IPreparable
+    public class ProductOrder : ModifiableByWithRequiredUserMemberBase, IDeletable, IVoidable, IDeliverable, IPreparable, IBranchedOptionalEntity
     {
         /// <summary>
         /// Creates new instance.
@@ -32,6 +32,10 @@ namespace Gizmo.DAL.Entities
         private DateTime? _prepareTime;
         [NonSerialized()]
         private decimal _preparedQuantity;
+        [NonSerialized]
+        private int? _branchId;
+        [NonSerialized]
+        private Branch _branch;
 
         /// <summary>
         /// Gets or sets order status.
@@ -212,6 +216,15 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
+        /// Gets or sets branch id.
+        /// </summary>
+        public int? BranchId
+        {
+            get { return _branchId; }
+            set { _branchId = value; }
+        }
+
+        /// <summary>
         /// Gets or sets host.
         /// </summary>
         public virtual Host Host
@@ -275,6 +288,17 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets order discounts.
         /// </summary>
-        public virtual ISet<ProductOrderDiscount> Discounts { get;  protected set; }
+        public virtual ISet<ProductOrderDiscount> Discounts { get; protected set; }
+
+
+
+        /// <summary>
+        /// Gets or sets branch.
+        /// </summary>
+        public Branch Branch
+        {
+            get { return _branch; }
+            set { _branch = value; }
+        }
     }
 }
