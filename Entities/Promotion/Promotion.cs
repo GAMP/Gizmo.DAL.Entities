@@ -7,7 +7,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Promotion entity.
     /// </summary>
-    public abstract class Promotion : ModifiableByOperatorBase
+    public abstract class Promotion : ModifiableByOperatorBase , IDeletable , IDisable
     {
         /// <summary>
         /// Creates new instance.
@@ -34,6 +34,12 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public PromotionCodeType CodeType { get; set; }
 
+        /// <inheritdoc/>
+        public bool IsDeleted { get; set; }
+
+        /// <inheritdoc/>
+        public bool IsDisabled { get; set; }
+
         /// <summary>
         /// Gets or sets promotion period.
         /// </summary>
@@ -53,5 +59,6 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets promotion branches.
         /// </summary>
         public ISet<PromotionBranch> Branches { get; private set; }
+
     }
 }
