@@ -1,8 +1,8 @@
-﻿using ProtoBuf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using ProtoBuf;
 
 namespace Gizmo.DAL.Entities
 {
@@ -137,7 +137,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets activation time.
         /// </summary>
-        public DateTime? ActivationTime 
+        public DateTime? ActivationTime
         {
             get { return _activationTime; }
             set { _activationTime = value; }
@@ -163,6 +163,11 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
+        /// Minimum payment percentage.
+        /// </summary>
+        public decimal MinimumPaymentPercentage { get; set; }
+
+        /// <summary>
         /// Gets or sets login block before time.
         /// </summary>
         public int? LoginBlockBeforeTime
@@ -183,7 +188,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets finalized by user id.
         /// </summary>
-        public int? FinalizedById 
+        public int? FinalizedById
         {
             get { return _finalizedById; }
             set { _finalizedById = value; }
@@ -198,7 +203,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets finalized by user.
         /// </summary>
-        public User FinalizedBy 
+        public User FinalizedBy
         {
             get { return _finalizedBy; }
             set { _finalizedBy = value; }
@@ -244,8 +249,8 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public virtual ISet<InvoiceLine> InvoiceLines
         {
-            get; 
-            protected set; 
+            get;
+            protected set;
         }
 
         /// <summary>
@@ -253,7 +258,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public virtual ISet<ReservationProductOrder> Orders
         {
-            get;set;
+            get; set;
         }
     }
 }
