@@ -96,7 +96,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets discount amount.
         /// </summary>
-        public decimal DiscountAmount
+        public decimal Discount
         {
             get { return _discountAmount; }
             set { _discountAmount = value; }
@@ -114,7 +114,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets discount.
         /// </summary>
-        public virtual Discount? Discount
+        public virtual Discount? OrderDiscount
         {
             get { return _discount; }
             set { _discount = value; }

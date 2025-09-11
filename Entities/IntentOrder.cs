@@ -16,6 +16,11 @@
         public int ProductOrderId { get; set; }
 
         /// <summary>
+        /// Order payment amount.
+        /// </summary>
+        public decimal Amount { get; set; }
+
+        /// <summary>
         /// Gets or sets invoice payment id.
         /// </summary>
         public int? InvoicePaymentId
