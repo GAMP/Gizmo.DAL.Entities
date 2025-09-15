@@ -290,8 +290,6 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public virtual ISet<ProductOrderDiscount> Discounts { get; protected set; }
 
-
-
         /// <summary>
         /// Gets or sets branch.
         /// </summary>
