@@ -7,7 +7,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Promotion entity.
     /// </summary>
-    public abstract class Promotion : ModifiableByOperatorBase , IDeletable , IDisable
+    public class Promotion : ModifiableByOperatorBase , IDeletable , IDisable
     {
         /// <summary>
         /// Creates new instance.
