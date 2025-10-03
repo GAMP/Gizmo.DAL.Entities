@@ -263,6 +263,11 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public ISet<AgeRestrictionProduct> AgeRestrictions { get; private set; }
 
+        /// <summary>
+        /// Gets product branches.
+        /// </summary>
+        public ISet<ProductBranch> Branches { get; private set; }
+
         #endregion
     }
 }
