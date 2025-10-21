@@ -131,6 +131,11 @@ namespace Gizmo.DAL.Entities
             set { _paymentId = value; }
         }
 
+        /// <summary>
+        /// Gets or sets disable receipt printing.
+        /// </summary>
+        public bool DisableReceiptPrinting { get; set; }
+
         #endregion
 
         #region NAVIGATION PROPERTIES

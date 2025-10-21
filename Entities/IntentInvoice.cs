@@ -1,9 +1,9 @@
 ﻿namespace Gizmo.DAL.Entities
 {
     /// <summary>
-    /// Payment intent order - order.
+    /// Payment intent invoice - invoice.
     /// </summary>
-    public sealed class IntentOrder : ModifiableByUserCreatedByUserBase
+    public sealed class IntentInvoice : ModifiableByUserCreatedByUserBase
     {
         /// <summary>
         /// Payment intent order id.
@@ -11,17 +11,17 @@
         public int PaymentIntentOrderId { get; set; }
 
         /// <summary>
-        /// Gets order id.
+        /// Gets invoice id.
         /// </summary>
-        public int ProductOrderId { get; set; }
+        public int InvoiceId { get; set; }
 
         /// <summary>
-        /// Order payment amount.
+        /// Invoice payment amount.
         /// </summary>
         public decimal Amount { get; set; }
 
         /// <summary>
-        /// Gets or sets invoice payment id.
+        /// Invoice payment id.
         /// </summary>
         public int? InvoicePaymentId
         {
@@ -34,9 +34,9 @@
         public PaymentIntentOrder PaymentIntentOrder { get; set; }
 
         /// <summary>
-        /// Gets associated order.
+        /// Gets associated invoice.
         /// </summary>
-        public ProductOrder ProductOrder { get; set; }
+        public Invoice Invoice { get; set; }
 
         /// <summary>
         /// Gets or sets associated invoice payment.

@@ -17,6 +17,7 @@ namespace Gizmo.DAL.Entities
         {
             Orders = new HashSet<IntentOrder>();
             Deposits = new HashSet<IntentOrderDeposit>();
+            Invoices = new HashSet<IntentInvoice>();
         }
         #endregion
 
@@ -27,10 +28,6 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public bool AutoComplete { get; set; }
 
-        /// <summary>
-        /// Gets or sets disable receipt printing.
-        /// </summary>
-        public bool DisableReceiptPrinting { get; set; }
 
         #endregion
 
@@ -44,7 +41,12 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets associated deposits.
         /// </summary>
-        public ISet<IntentOrderDeposit> Deposits { get; }   
+        public ISet<IntentOrderDeposit> Deposits { get; }
+
+        /// <summary>
+        /// Gets associated invoices.
+        /// </summary>
+        public ISet<IntentInvoice> Invoices { get; }
 
         #endregion
     }
