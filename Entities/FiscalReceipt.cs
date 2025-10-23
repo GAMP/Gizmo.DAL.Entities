@@ -1,6 +1,7 @@
-﻿using ProtoBuf;
+﻿#nullable enable
 
 using System;
+using ProtoBuf;
 
 namespace Gizmo.DAL.Entities
 {
@@ -9,17 +10,13 @@ namespace Gizmo.DAL.Entities
     /// </summary>
     [Serializable()]
     [ProtoContract()]
-    public class FiscalReceipt : EntityWithShift
+    public sealed class FiscalReceipt : EntityWithShift
     {
-        #region CONSTRUCTOR
         /// <summary>
         /// Creates new instance.
         /// </summary>
         public FiscalReceipt() : base()
         { }
-        #endregion
-
-        #region PROPERTIES
 
         /// <summary>
         /// Gets or sets receipt type.
@@ -28,7 +25,7 @@ namespace Gizmo.DAL.Entities
         /// Indicates fiscal receipt type. For example pay or return (still in consideration).
         /// </remarks>
         [ProtoMember(1)]
-        public int Type
+        public FiscalReceiptType Type
         {
             get; set;
         }
@@ -37,7 +34,7 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets receipt tax system.
         /// </summary>
         [ProtoMember(2)]
-        public int? TaxSystem
+        public TaxSystems? TaxSystem
         {
             get; set;
         }
@@ -58,11 +55,39 @@ namespace Gizmo.DAL.Entities
         /// This value is optional.
         /// </remarks>
         [ProtoMember(4)]
-        public string Signature
+        public string? Signature
         {
             get; set;
         }
 
-        #endregion
+        /// <summary>
+        /// Fiscal receipt companion id.
+        /// </summary>
+        /// <remarks>
+        /// This value identifies the companion the receipt was printed on.
+        /// </remarks>
+        public int? CompanionId
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Fiscal receipt printer number.
+        /// </summary>
+        /// <remarks>
+        /// This value indicates the printer number that printed the fiscal receipt.
+        /// </remarks>
+        public int? PrinterNumber
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or set companion.
+        /// </summary>
+        public Companion? Companion
+        {
+            get; set;
+        }
     }
 }

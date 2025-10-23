@@ -1,7 +1,8 @@
-using ProtoBuf;
+﻿#nullable enable
 
 using System;
 using System.Runtime.Serialization;
+using ProtoBuf;
 
 namespace Gizmo.DAL.Entities
 {
@@ -69,9 +70,27 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(5)]
-        public string Note
+        public string? Note
         {
             get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets fiscal receipt status.
+        /// </summary>
+        public FiscalReceiptPrintStatus FiscalReceiptStatus
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Gets or sets (optional) fiscal receipt id.
+        /// </summary>
+        public int? FiscalReceiptId
+        {
+            get;
+            set;
         }
 
         #endregion
@@ -81,7 +100,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets shift.
         /// </summary>
-        public virtual Shift Shift
+        public virtual Shift? Shift
         {
             get; set;
         }
@@ -90,6 +109,14 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets register.
         /// </summary>
         public virtual Register Register
+        {
+            get; set;
+        } = null!;
+
+        /// <summary>
+        /// Gets or sets (optional) fiscal receipt.
+        /// </summary>
+        public virtual FiscalReceipt? FiscalReceipt
         {
             get; set;
         }

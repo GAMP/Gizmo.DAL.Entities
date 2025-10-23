@@ -1,4 +1,6 @@
-﻿namespace Gizmo.DAL.Entities
+﻿#nullable enable
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Refund payment entity.
@@ -24,7 +26,7 @@
         /// <summary>
         /// Gets or sets (optional) fiscal receipt.
         /// </summary>
-        public FiscalReceipt FiscalReceipt
+        public FiscalReceipt? FiscalReceipt
         {
             get; set;
         }

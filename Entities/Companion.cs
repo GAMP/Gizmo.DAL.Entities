@@ -6,7 +6,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Companion entity.
     /// </summary>
-    public sealed class Companion : ModifiableByOperatorBase , IReplicatable
+    public sealed class Companion : ModifiableByOperatorBase, IReplicatable
     {
         /// <summary>
         /// Creates new instance.
@@ -14,6 +14,10 @@ namespace Gizmo.DAL.Entities
         public Companion()
         {
             Guid = Guid.NewGuid();
+            Branches = new HashSet<Branch>();
+            Registers = new HashSet<Register>();
+            FiscalReceipts = new HashSet<FiscalReceipt>();
+            PaymentReceipts = new HashSet<PaymentReceipt>();
         }
 
         /// <summary>
@@ -35,5 +39,15 @@ namespace Gizmo.DAL.Entities
         /// Gets assigned registers.
         /// </summary>
         public ISet<Register> Registers { get; private set; }
+
+        /// <summary>
+        /// Gets assigned fiscal receipts.
+        /// </summary>
+        public ISet<FiscalReceipt> FiscalReceipts { get; private set; }
+
+        /// <summary>
+        /// Gets assigned payment receipts.
+        /// </summary>
+        public ISet<PaymentReceipt> PaymentReceipts { get; private set; }
     }
 }
