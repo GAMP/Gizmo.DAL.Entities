@@ -89,6 +89,14 @@ namespace Gizmo.DAL.Entities
             set;
         }
 
+        /// <summary>
+        /// Payment reversal status.
+        /// </summary>
+        public PaymentReversalStatus PaymentReversalStatus
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES

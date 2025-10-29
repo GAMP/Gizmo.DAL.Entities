@@ -135,7 +135,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets business vat id.
         /// </summary>
-        public string? BusinessVATId { get; init; }
+        public string? BusinessVATID { get; init; }
 
         /// <summary>
         /// Gets or sets tax system.
@@ -153,19 +153,25 @@ namespace Gizmo.DAL.Entities
         public TaxSystems? ServicesTaxSystem { get; init; }
 
         /// <summary>
-        /// Gets or sets treat deposits as service.
+        /// Deposit tax system.
         /// </summary>
-        public bool? TreatDepositsAsService { get; init; }
+        public TaxSystems? DepositTaxSystem { get; init; }
 
         /// <summary>
-        /// Gets or sets deposit service description.
+        /// Goods VAT rate.
         /// </summary>
-        public string? DepositServiceDescription { get; init; }
+        public VatRates? GoodsVATRate
+        {
+            get; init;
+        }
 
         /// <summary>
-        /// Gets or sets time based service vat rate.
+        /// Service VAT rate.
         /// </summary>
-        public decimal? TimeBasedServiceVATRate { get; init; }
+        public VatRates? ServicesVATRate
+        {
+            get; init;
+        }
 
         /// <summary>
         /// Gets or sets deposit vat rate.
@@ -176,12 +182,19 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets deposit advance payment type.
+        /// Gets or sets time based service vat rate.
         /// </summary>
-        public AdvancePaymentTypes? DepositAdvancePaymentType
-        {
-            get; init;
-        }
+        public decimal? TimeBasedServiceVATRate { get; init; }
+
+        /// <summary>
+        /// Gets or sets treat deposits as service.
+        /// </summary>
+        public bool? TreatDepositsAsService { get; init; }
+
+        /// <summary>
+        /// Gets or sets deposit service description.
+        /// </summary>
+        public string? DepositServiceDescription { get; init; }
 
         /// <summary>
         /// Gets or sets companion id.

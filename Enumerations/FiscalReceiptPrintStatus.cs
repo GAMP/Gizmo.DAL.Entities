@@ -32,5 +32,13 @@
         /// Not all required receipts printed or print failed.
         /// </summary>
         Failed = 4,
+
+        /// <summary>
+        /// Receipt printing is pending but only electronically. 
+        /// </summary>
+        /// <remarks>
+        /// This value is set when we required receipt fiscalization but only electronically.
+        /// </remarks>
+        EReceiptPending = 5,
     }
 }
