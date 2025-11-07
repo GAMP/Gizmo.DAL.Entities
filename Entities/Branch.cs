@@ -30,6 +30,7 @@ namespace Gizmo.DAL.Entities
             Discounts = new HashSet<DiscountBranch>();
             Stocks = new HashSet<Stock>();
             Orders = new HashSet<ProductOrder>();
+            RegisterTransactions = new HashSet<RegisterTransaction>();
         }
 
         /// <summary>
@@ -285,5 +286,10 @@ namespace Gizmo.DAL.Entities
         /// Gets product orders.
         /// </summary>
         public ISet<ProductOrder> Orders { get; private set; }
+
+        /// <summary>
+        /// Gets register transactions.
+        /// </summary>
+        public ISet<RegisterTransaction> RegisterTransactions { get; private set; }
     }
 }

@@ -12,7 +12,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class RegisterTransaction : ModifiableByOperatorBase
+    public class RegisterTransaction : ModifiableByOperatorBase, IBranchedEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -93,6 +93,9 @@ namespace Gizmo.DAL.Entities
             set;
         }
 
+        /// <inheritdoc/>
+        public int BranchId { get; set; }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -117,6 +120,12 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets (optional) fiscal receipt.
         /// </summary>
         public virtual FiscalReceipt? FiscalReceipt
+        {
+            get; set;
+        }
+
+        /// <inheritdoc/>
+        public virtual Branch Branch
         {
             get; set;
         }
