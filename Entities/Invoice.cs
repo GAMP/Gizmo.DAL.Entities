@@ -26,6 +26,7 @@ namespace Gizmo.DAL.Entities
             Voids = new HashSet<VoidInvoice>();
             FiscalReceipts = new HashSet<InvoiceFiscalReceipt>();
             InvoicePaymentRefunds = new HashSet<RefundInvoicePayment>();
+            PaymentIntents = new HashSet<IntentInvoice>();
         }
         #endregion
 
@@ -258,8 +259,17 @@ namespace Gizmo.DAL.Entities
             set { _branch = value; }
         }
 
+        /// <summary>
+        /// Invoice payments refunds.
+        /// </summary>
         [ProtoIgnore()]
         public ISet<RefundInvoicePayment> InvoicePaymentRefunds { get; set; }
+
+        /// <summary>
+        /// Payment intents.
+        /// </summary>
+        [ProtoIgnore()]
+        public ISet<IntentInvoice> PaymentIntents { get; set; }
 
         #endregion
     }

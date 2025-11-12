@@ -21,7 +21,7 @@
         Failed = 2,
 
         /// <summary>
-        /// The intent is expired out.
+        /// The intent is expired.
         /// </summary>
         Expired = 3,
 
@@ -29,5 +29,15 @@
         /// The intent is canceled.
         /// </summary>
         Canceled = 4,
+
+        /// <summary>
+        /// The payment captured.
+        /// </summary>
+        Captured = 5,
+
+        /// <summary>
+        /// Payment declined.
+        /// </summary>
+        Declined = 6,
     }
 }

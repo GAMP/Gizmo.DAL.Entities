@@ -22,8 +22,9 @@ namespace Gizmo.DAL.Entities
         {
             OrderLines = new HashSet<ProductOL>();
             Invoices = new HashSet<Invoice>();
-            PaymentIntents = new HashSet<PaymentIntentOrder>();
+            PaymentIntents = new HashSet<IntentOrder>();
             Discounts = new HashSet<ProductOrderDiscount>();
+            Reservations = new HashSet<ReservationProductOrder>();
         }
 
         [NonSerialized()]
@@ -280,7 +281,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets payment intents.
         /// </summary>
-        public virtual ISet<PaymentIntentOrder> PaymentIntents
+        public virtual ISet<IntentOrder> PaymentIntents
         {
             get; protected set;
         }
@@ -289,6 +290,11 @@ namespace Gizmo.DAL.Entities
         /// Gets order discounts.
         /// </summary>
         public virtual ISet<ProductOrderDiscount> Discounts { get; protected set; }
+
+        /// <summary>
+        /// Gets or sets reservations.
+        /// </summary>
+        public virtual ISet<ReservationProductOrder> Reservations { get; protected set; }
 
         /// <summary>
         /// Gets or sets branch.

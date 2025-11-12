@@ -15,9 +15,9 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public PaymentIntentOrder() : base()
         {
-            Orders = new HashSet<IntentOrder>();
-            Deposits = new HashSet<IntentOrderDeposit>();
-            Invoices = new HashSet<IntentInvoice>();
+            IntentOrders = new HashSet<IntentOrder>();
+            IntentDeposits = new HashSet<IntentOrderDeposit>();
+            IntentInvoices = new HashSet<IntentInvoice>();
         }
         #endregion
 
@@ -36,17 +36,17 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets associated orders.
         /// </summary>
-        public ISet<IntentOrder> Orders { get; }
+        public ISet<IntentOrder> IntentOrders { get; }
 
         /// <summary>
         /// Gets associated deposits.
         /// </summary>
-        public ISet<IntentOrderDeposit> Deposits { get; }
+        public ISet<IntentOrderDeposit> IntentDeposits { get; }
 
         /// <summary>
         /// Gets associated invoices.
         /// </summary>
-        public ISet<IntentInvoice> Invoices { get; }
+        public ISet<IntentInvoice> IntentInvoices { get; }
 
         #endregion
     }

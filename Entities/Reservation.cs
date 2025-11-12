@@ -241,7 +241,7 @@ namespace Gizmo.DAL.Entities
         [ProtoMember(101)]
         public virtual ISet<ReservationHost> Hosts
         {
-            get; protected set;
+            get; set;
         }
 
         /// <summary>
