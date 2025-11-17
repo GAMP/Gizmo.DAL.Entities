@@ -1,9 +1,10 @@
 ﻿#nullable enable
 
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
 using ProtoBuf;
 using SharedLib;
-using System;
-using System.Runtime.Serialization;
 
 namespace Gizmo.DAL.Entities
 {
@@ -13,7 +14,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public class Payment : ModifiableByWithRequiredUserMemberBase, IDeletable, IRefundable, IVoidable , IBranchedOptionalEntity
+    public class Payment : ModifiableByWithRequiredUserMemberBase, IDeletable, IRefundable, IVoidable, IBranchedOptionalEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -21,14 +22,13 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public Payment() : base()
         {
+            Receipts = new HashSet<PaymentReceipt>();
         }
         #endregion
 
         #region FIELDS
         [NonSerialized()]
         private Branch? _branch;
-        [NonSerialized()]
-        private PaymentReceipt? _receipt;
         #endregion
 
         #region PROPERTIES
@@ -211,12 +211,12 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets receipt.
+        /// Gets associated receipts.
         /// </summary>
-        public PaymentReceipt? Receipt
+        [ProtoIgnore()]
+        public ISet<PaymentReceipt> Receipts
         {
-            get { return _receipt; }
-            set { _receipt = value; }
+            get; set;
         }
 
         #endregion

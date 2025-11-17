@@ -8,6 +8,11 @@ namespace Gizmo.DAL.Entities
     public sealed class PaymentReceipt : EntityWithShift
     {
         /// <summary>
+        /// Payment id.
+        /// </summary>
+        public int PaymentId { get; set; }
+
+        /// <summary>
         /// Gets or sets receipt type.
         /// </summary>
         public PaymentReceiptType Type { get; set; }
