@@ -26,10 +26,10 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Fiscal receipt companion id.
+        /// Companion id.
         /// </summary>
         /// <remarks>
-        /// This value identifies the companion the receipt was printed on.
+        /// This value indicates the terminal device number that payment was accepted on.
         /// </remarks>
         public int? CompanionId
         {

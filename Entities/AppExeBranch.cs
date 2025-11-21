@@ -25,7 +25,6 @@
         /// </summary>
         public AppExe AppExe { get; set; }
 
-
         /// <summary>
         /// Branch.
         /// </summary>

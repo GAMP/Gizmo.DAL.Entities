@@ -136,6 +136,28 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public bool DisableReceiptPrinting { get; set; }
 
+        /// <summary>
+        /// Companion id.
+        /// </summary>
+        /// <remarks>
+        /// This value identifies the companion id that payment intent was created on.
+        /// </remarks>
+        public int? CompanionId
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Device number.
+        /// </summary>
+        /// <remarks>
+        /// This value indicates the terminal device number that payment intent was created on.
+        /// </remarks>
+        public int? TerminalNumber
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -174,6 +196,14 @@ namespace Gizmo.DAL.Entities
         {
             get { return _payment; }
             set { _payment = value; }
+        }
+
+        /// <summary>
+        /// Gets or set companion.
+        /// </summary>
+        public Companion? Companion
+        {
+            get; set;
         }
 
         #endregion
