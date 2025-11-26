@@ -1,4 +1,6 @@
-﻿using System;
+﻿#nullable enable
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,8 +17,11 @@ namespace Gizmo.DAL
         /// <param name="period">Period.</param>
         /// <param name="dateTime">Current date/time.</param>
         /// <returns>Result</returns>
-        public static PassPeriodResult PassPeriod(this DAL.Entities.ProductTimePeriod period, DateTime dateTime)
+        public static PassPeriodResult PassPeriod(this DAL.Entities.ProductTimePeriod? period, DateTime dateTime)
         {
+            if (period == null)
+                return PassPeriodResult.Success;
+
             var times = (period.Days ?? Enumerable.Empty<DAL.Entities.ProductTimePeriodDay>())
                 .ToDictionary(
                 d => d.Day,
@@ -30,8 +35,11 @@ namespace Gizmo.DAL
         /// <param name="period">Period.</param>
         /// <param name="dateTime">Current date/time.</param>
         /// <returns>Result</returns>
-        public static PassPeriodResult PassPeriod(this DAL.Entities.ProductPeriod period, DateTime dateTime)
+        public static PassPeriodResult PassPeriod(this DAL.Entities.ProductPeriod? period, DateTime dateTime)
         {
+            if (period == null)
+                return PassPeriodResult.Success;
+
             var times = (period.Days ?? Enumerable.Empty<DAL.Entities.ProductPeriodDay>())
                 .ToDictionary(
                 d => d.Day,
