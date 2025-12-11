@@ -1,4 +1,6 @@
-﻿namespace Gizmo.DAL.Entities
+﻿#nullable enable
+
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Payment intent order deposit.
@@ -28,11 +30,16 @@
         /// <summary>
         /// Gets payment intent order.
         /// </summary>
-        public PaymentIntentOrder PaymentIntentOrder { get; set; }
+        public PaymentIntentOrder PaymentIntentOrder { get; set; } = null!;
 
         /// <summary>
         /// Gets payment intent user.
         /// </summary>
-        public UserMember User { get; set; }
+        public UserMember User { get; set; } = null!;
+
+        /// <summary>
+        /// Deposit payment.
+        /// </summary>
+        public DepositPayment? DepositPayment { get; set; } = null;
     }
 }
