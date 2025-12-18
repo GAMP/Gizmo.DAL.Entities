@@ -1,11 +1,9 @@
-﻿using ProtoBuf;
-
-using SharedLib;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using ProtoBuf;
+using SharedLib;
 
 namespace Gizmo.DAL.Entities
 {
@@ -137,6 +135,14 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// QR Display number.
+        /// </summary>
+        public int? QrDisplayNumber
+        {
+            get; set;
+        }
+
         /// <inheritdoc/>        
         public int BranchId
         {
@@ -205,6 +211,6 @@ namespace Gizmo.DAL.Entities
         {
             get { return _branch; }
             protected set { _branch = value; }
-        }  
+        }
     }
 }
