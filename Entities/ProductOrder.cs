@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using ProtoBuf;
-using SharedLib;
 
 namespace Gizmo.DAL.Entities
 {
