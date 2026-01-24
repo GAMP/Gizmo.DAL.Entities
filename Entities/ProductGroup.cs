@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Collections.Generic;
@@ -65,7 +65,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(4)]
-        public SharedLib.ProductSortOptionType SortOption
+        public ProductSortOptionType SortOption
         {
             get; set;
         }

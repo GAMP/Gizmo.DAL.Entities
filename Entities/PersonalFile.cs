@@ -96,7 +96,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(6)]
-        public SharedLib.PersonalFileActivationType Activation
+        public PersonalFileActivationType Activation
         {
             get;
             set;

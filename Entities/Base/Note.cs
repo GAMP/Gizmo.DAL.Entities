@@ -1,6 +1,4 @@
-using ProtoBuf;
-
-using SharedLib;
+﻿using ProtoBuf;
 
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -49,11 +47,11 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets or sets note sevirirty.
+        /// Gets or sets note severity.
         /// </summary>
         [DataMember()]
         [ProtoMember(3)]
-        public SharedLib.NoteSeverity Sevirity
+        public NoteSeverity Severity
         {
             get; set;
         }

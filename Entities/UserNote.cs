@@ -1,6 +1,4 @@
-using ProtoBuf;
-
-using SharedLib;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
