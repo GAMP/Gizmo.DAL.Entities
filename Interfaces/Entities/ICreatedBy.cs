@@ -1,4 +1,4 @@
-﻿namespace Gizmo.DAL
+﻿namespace Gizmo.DAL.Entities
 {
     #region ICreatedBy
     /// <summary>

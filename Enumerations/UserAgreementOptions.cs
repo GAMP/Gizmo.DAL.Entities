@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gizmo.DAL
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// User agreement options.

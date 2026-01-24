@@ -1,4 +1,4 @@
-﻿namespace Gizmo.DAL
+﻿namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Order preparation status.

@@ -1,6 +1,7 @@
 ﻿using System;
+using Gizmo.DAL.Entities;
 
-namespace Gizmo.DAL
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Represents an entry that can be marked as prepared.

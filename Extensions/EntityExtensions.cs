@@ -3,7 +3,7 @@ using IntegrationLib;
 using System;
 using System.Security.Claims;
 
-namespace Gizmo.DAL
+namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Generic extensions.
