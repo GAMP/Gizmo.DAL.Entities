@@ -9,14 +9,17 @@
         /// The intent is pending.
         /// </summary>
         Pending = 0,
+
         /// <summary>
         /// The intent was processed.
         /// </summary>
         Processed = 1,
+
         /// <summary>
         /// The intent was canceled.
         /// </summary>
         Canceled = 2,
+
         /// <summary>
         /// The intent has failed.
         /// </summary>

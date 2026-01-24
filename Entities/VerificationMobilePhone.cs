@@ -1,17 +1,10 @@
-using ProtoBuf;
-
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Runtime.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Phone number verification entity.
     /// </summary>
-    [DataContract()]
-    [ProtoContract()]
-    [Serializable()]
     public class VerificationMobilePhone : Verification
     {
         #region CONSTRUCTOR
@@ -27,8 +20,6 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Gets or sets phone number.
         /// </summary>
-        [DataMember()]
-        [ProtoMember(1)]
         [MaxLength(20)]
         public string PhoneNumber
         {

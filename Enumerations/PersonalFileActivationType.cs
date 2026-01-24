@@ -9,6 +9,7 @@
         /// Launch.
         /// </summary>
         Launch = 0,
+
         /// <summary>
         /// Login.
         /// </summary>

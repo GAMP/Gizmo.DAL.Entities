@@ -9,10 +9,12 @@
         /// Token unused.
         /// </summary>
         Unused = 0,
+
         /// <summary>
         /// Token used.
         /// </summary>
         Used = 1,
+        
         /// <summary>
         /// Token revoked.
         /// </summary>

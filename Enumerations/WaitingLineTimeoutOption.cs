@@ -12,10 +12,12 @@ namespace Gizmo.DAL.Entities
         /// None.
         /// </summary>
         None = 0,
+
         /// <summary>
         /// Remove.
         /// </summary>
         Remove = 1,
+        
         /// <summary>
         /// Next in line.
         /// </summary>

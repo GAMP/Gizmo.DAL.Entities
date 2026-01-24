@@ -12,6 +12,7 @@ namespace Gizmo.DAL.Entities
         /// None.
         /// </summary>
         None = 0,
+
         /// <summary>
         /// Custom template.
         /// </summary>

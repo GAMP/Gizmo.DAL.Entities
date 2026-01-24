@@ -12,10 +12,12 @@ namespace Gizmo.DAL.Entities
         /// None.
         /// </summary>
         None = 0,
+
         /// <summary>
         /// Visual.
         /// </summary>
         Visual = 1,
+
         /// <summary>
         /// Audible.
         /// </summary>

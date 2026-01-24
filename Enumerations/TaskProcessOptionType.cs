@@ -12,10 +12,12 @@ namespace Gizmo.DAL.Entities
         /// None.
         /// </summary>
         None = 0,
+
         /// <summary>
         /// Wait.
         /// </summary>
         Wait = 1,
+        
         /// <summary>
         /// No window.
         /// </summary>

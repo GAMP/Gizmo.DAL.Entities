@@ -1,9 +1,6 @@
-using ProtoBuf;
-
-using SharedLib;
-
-using System;
+﻿using System;
 using System.Runtime.Serialization;
+using ProtoBuf;
 
 namespace Gizmo.DAL.Entities
 {

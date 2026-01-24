@@ -9,6 +9,7 @@
         /// Unverified.
         /// </summary>
         Unverified = 0,
+
         /// <summary>
         /// Verified.
         /// </summary>

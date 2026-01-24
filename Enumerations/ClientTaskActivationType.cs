@@ -9,22 +9,25 @@ namespace Gizmo.DAL.Entities
     public enum ClientTaskActivationType
     {
         /// <summary>
-        /// Disabled.
+        /// None.
         /// </summary>
-        [Obsolete()]
-        Disabled = 0,
+        None = 0,
+
         /// <summary>
         /// Startup.
         /// </summary>
         Startup = 1,
+
         /// <summary>
         /// Shut down.
         /// </summary>
         Shutdown = 2,
+
         /// <summary>
         /// Login.
         /// </summary>
         Login = 4,
+
         /// <summary>
         /// Logout.
         /// </summary>

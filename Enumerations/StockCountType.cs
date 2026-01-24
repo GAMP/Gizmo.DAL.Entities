@@ -9,10 +9,12 @@
         /// Interval stock count, used for regular stock counts.
         /// </summary>
         Interval = 0,
+
         /// <summary>
         /// Shift open stock count, used to open a shift.
         /// </summary>
         ShiftOpen = 1,
+        
         /// <summary>
         /// Shift close stock count, used to close a shift.
         /// </summary>

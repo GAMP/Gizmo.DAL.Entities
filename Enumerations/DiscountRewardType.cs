@@ -9,6 +9,7 @@
         /// Discount.
         /// </summary>
         Discount = 0,
+
         /// <summary>
         /// Bonus.
         /// </summary>

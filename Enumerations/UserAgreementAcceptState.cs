@@ -9,10 +9,12 @@
         /// None.
         /// </summary>
         None = 0,
+
         /// <summary>
         /// Agreement was accepted.
         /// </summary>
         Accepted = 1,
+        
         /// <summary>
         /// Agreement was rejected.
         /// </summary>

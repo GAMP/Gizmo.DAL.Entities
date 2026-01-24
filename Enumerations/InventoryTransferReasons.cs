@@ -9,10 +9,12 @@
         /// Product is in demand.
         /// </summary>
         InDemand = -1,
+
         /// <summary>
         /// Product is not in demand.
         /// </summary>
         NotInDemand = -2,
+
         /// <summary>
         /// For adjustment purposes.
         /// </summary>
