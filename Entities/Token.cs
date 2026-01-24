@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -63,7 +63,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(4)]
-        public SharedLib.TokenType Type
+        public TokenType Type
         {
             get; set;
         }
