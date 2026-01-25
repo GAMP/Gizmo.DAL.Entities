@@ -135,7 +135,7 @@ namespace Gizmo.DAL.DTO
         /// Gets or sets sex.
         /// </summary>
         [DataMember()]
-        public Sex Sex
+        public Web.Api.Models.Sex Sex
         {
             get; set;
         }
