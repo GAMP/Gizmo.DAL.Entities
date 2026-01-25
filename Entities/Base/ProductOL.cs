@@ -233,7 +233,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(19)]
-        public SharedLib.OrderLinePayType PayType
+        public OrderLinePayType PayType
         {
             get; set;
         }
