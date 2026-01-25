@@ -34,7 +34,7 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets fiscal receipt status.
         /// </summary>
         [ProtoMember(2)]
-        public int FiscalReceiptStatus
+        public FiscalReceiptPrintStatus FiscalReceiptStatus
         {
             get; set;
         }

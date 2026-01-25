@@ -106,7 +106,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(8)]
-        public int FiscalReceiptStatus
+        public FiscalReceiptPrintStatus FiscalReceiptStatus
         {
             get; set;
         }

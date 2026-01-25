@@ -158,7 +158,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(18)]
-        public int SaleFiscalReceiptStatus
+        public FiscalReceiptPrintStatus SaleFiscalReceiptStatus
         {
             get; set;
         }
@@ -168,7 +168,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(19)]
-        public int ReturnFiscalReceiptStatus
+        public FiscalReceiptPrintStatus ReturnFiscalReceiptStatus
         {
             get; set;
         }

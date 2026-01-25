@@ -1,0 +1,56 @@
+﻿namespace Gizmo.DAL.Entities
+{
+    /// <summary>
+    /// Fiscal receipt type.
+    /// </summary>
+    /// <remarks>
+    /// Represents the type of fiscal receipt printed.
+    /// </remarks>
+    public enum FiscalReceiptType
+    {
+        /// <summary>
+        /// Invoice sale.
+        /// </summary>
+        Sale = 0,
+
+        /// <summary>
+        /// Invoice void.
+        /// </summary>
+        VoidSale = 1,
+
+        /// <summary>
+        /// Deposit sale.
+        /// </summary>
+        Deposit = 2,
+
+        /// <summary>
+        /// Deposit void.
+        /// </summary>
+        VoidDeposit = 3,
+
+        /// <summary>
+        /// Deposit withdraw.
+        /// </summary>
+        WithdrawDeposit = 4,
+
+        /// <summary>
+        /// Pay in transaction.
+        /// </summary>
+        PayIn = 5,
+
+        /// <summary>
+        /// Pay out transaction.
+        /// </summary>
+        PayOut = 6,
+
+        /// <summary>
+        /// Shift open.
+        /// </summary>
+        ShiftOpen = 7,
+
+        /// <summary>
+        /// Shift close.
+        /// </summary>
+        ShiftClose = 8,
+    }
+}
