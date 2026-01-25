@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -54,7 +54,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(4)]
-        public ModuleEnum ModuleType { get; set; }
+        public ModuleType ModuleType { get; set; }
 
         /// <summary>
         /// Gets or sets module version.
