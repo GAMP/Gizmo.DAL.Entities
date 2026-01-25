@@ -86,7 +86,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(6)]
-        public SharedLib.PurchaseOptionType PurchaseOptions { get; set; }
+        public PurchaseOptionType PurchaseOptions { get; set; }
 
         /// <summary>
         /// Gets or sets points.

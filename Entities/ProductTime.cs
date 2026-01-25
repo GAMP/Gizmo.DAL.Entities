@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using SharedLib;
 
@@ -93,7 +93,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(6)]
-        public SharedLib.ProductTimeExpirationOptionType ExpirationOptions
+        public ProductTimeExpirationOptionType ExpirationOptions
         {
             get;
             set;
@@ -104,7 +104,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(7)]
-        public SharedLib.ExpireFromOptionType ExpireFromOptions
+        public ExpireFromOptionType ExpireFromOptions
         {
             get; set;
         }
@@ -135,7 +135,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(12)]
-        public SharedLib.ExpireAfterType ExpireAfterType
+        public ExpireAfterType ExpireAfterType
         {
             get; set;
         }

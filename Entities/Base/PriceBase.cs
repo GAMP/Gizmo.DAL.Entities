@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -50,7 +50,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(3)]
-        public SharedLib.PurchaseOptionType PurchaseOptions { get; set; }
+        public PurchaseOptionType PurchaseOptions { get; set; }
 
         #endregion
     }

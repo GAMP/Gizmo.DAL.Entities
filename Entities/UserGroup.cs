@@ -137,7 +137,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(9)]
-        public SharedLib.CreditLimitOptionType CreditLimitOptions
+        public CreditLimitOptionType CreditLimitOptions
         {
             get;
             set;
@@ -169,7 +169,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(12)]
-        public SharedLib.TimePointAwardOptionType PointsAwardOptions
+        public TimePointAwardOptionType PointsAwardOptions
         {
             get; set;
         }
