@@ -150,7 +150,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(10)]
-        public SharedLib.LicenseReservationType ReservationType
+        public LicenseReservationType ReservationType
         {
             get;
             set;
@@ -161,7 +161,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(11)]
-        public SharedLib.ExecutableOptionType Options
+        public ExecutableOptionType Options
         {
             get;
             set;

@@ -150,7 +150,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(11)]
-        public SharedLib.PersonalUserFileType Type
+        public PersonalUserFileType Type
         {
             get;
             set;

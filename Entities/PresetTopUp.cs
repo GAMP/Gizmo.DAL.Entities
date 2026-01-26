@@ -1,6 +1,4 @@
-﻿using SharedLib;
-
-namespace Gizmo.DAL.Entities
+﻿namespace Gizmo.DAL.Entities
 {
     /// <summary>
     /// Preset top up.

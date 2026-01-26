@@ -1,5 +1,4 @@
 ﻿using System;
-using SharedLib;
 
 namespace Gizmo.DAL.Entities
 {
@@ -22,13 +21,11 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Online multiplayer.
         /// </summary>
-        [IsGameModeAttibute()]
         Online = 2,
 
         /// <summary>
         /// Lan Multiplayer.
         /// </summary>
-        [IsGameModeAttibute()]
         Multiplayer = 4,
 
         /// <summary>
@@ -69,19 +66,16 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Split screen.
         /// </summary>
-        [IsGameModeAttibute()]
         SplitScreenMultiPlayer = 1024,
 
         /// <summary>
         /// Lan co-op.
         /// </summary>
-        [IsGameModeAttibute()]
         CoOpLan = 2048,
 
         /// <summary>
         /// Online co-op.
         /// </summary>
-        [IsGameModeAttibute()]
         CoOpOnline = 4096,
 
         /// <summary>

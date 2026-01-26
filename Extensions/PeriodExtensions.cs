@@ -47,14 +47,14 @@ namespace Gizmo.DAL
             return PassPeriod(period.Options, dateTime, period.StartDate, period.EndDate, times);
         }
 
-        static PassPeriodResult PassPeriod(SharedLib.PeriodOptionType options,
+        static PassPeriodResult PassPeriod(DAL.Entities.PeriodOptionType options,
             DateTime now,
             DateTime? periodStart,
             DateTime? periodEnd,
             IReadOnlyDictionary<DayOfWeek, IReadOnlyList<DayTimeRange>>? dayTimeRanges = null)
         {
             // Date range check
-            if (options.HasFlag(SharedLib.PeriodOptionType.HasDateRange))
+            if (options.HasFlag(Entities.PeriodOptionType.HasDateRange))
             {
                 // Must be within [periodStart, periodEnd], when those bounds are present.
                 if ((periodStart.HasValue && now < periodStart.Value) ||
@@ -65,7 +65,7 @@ namespace Gizmo.DAL
             }
 
             // Day-of-week / time-of-day check
-            if (options.HasFlag(SharedLib.PeriodOptionType.HasDayTimeRange))
+            if (options.HasFlag(Entities.PeriodOptionType.HasDayTimeRange))
             {
                 var secondOfDay = now.TimeOfDay.TotalSeconds;
 

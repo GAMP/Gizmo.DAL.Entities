@@ -1,7 +1,4 @@
 ﻿using ProtoBuf;
-
-using SharedLib;
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -104,7 +101,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(6)]
-        public SharedLib.UserInfoTypes RequiredUserInfo
+        public UserInfoTypes RequiredUserInfo
         {
             get;
             set;

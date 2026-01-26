@@ -29,7 +29,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(1)]
-        public SharedLib.ScriptTypes ScriptType
+        public ScriptTypes ScriptType
         {
             get;
             set;
