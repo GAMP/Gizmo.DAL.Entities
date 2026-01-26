@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using ProtoBuf;
-using SharedLib;
 
 namespace Gizmo.DAL.Entities
 {

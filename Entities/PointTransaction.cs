@@ -1,7 +1,4 @@
-using ProtoBuf;
-
-using SharedLib;
-
+﻿using ProtoBuf;
 using System;
 using System.Runtime.Serialization;
 
@@ -30,7 +27,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(1)]
-        public LoyalityPointsTransactionType Type
+        public LoyaltyPointsTransactionType Type
         {
             get;
             set;
