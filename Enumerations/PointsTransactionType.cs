@@ -3,7 +3,7 @@
     /// <summary>
     /// Loyalty points transaction type.
     /// </summary>
-    public enum LoyaltyPointsTransactionType
+    public enum PointsTransactionType
     {
         /// <summary>
         /// Points award.

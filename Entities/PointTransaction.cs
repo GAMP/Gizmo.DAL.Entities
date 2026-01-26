@@ -27,7 +27,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(1)]
-        public LoyaltyPointsTransactionType Type
+        public PointsTransactionType Type
         {
             get;
             set;
