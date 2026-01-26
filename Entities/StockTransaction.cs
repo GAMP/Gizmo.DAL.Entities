@@ -58,7 +58,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(3)]
-        public SharedLib.StockTransactionType Type
+        public StockTransactionType Type
         {
             get;
             set;

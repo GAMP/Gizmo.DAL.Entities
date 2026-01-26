@@ -1,11 +1,8 @@
-﻿using ProtoBuf;
-
-using SharedLib;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
+using ProtoBuf;
 
 namespace Gizmo.DAL.Entities
 {
@@ -79,7 +76,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(5)]
-        public SharedLib.OrderOptionType OrderOptions { get; set; }
+        public OrderOptionType OrderOptions { get; set; }
 
         /// <summary>
         /// Gets or sets purchase options.
