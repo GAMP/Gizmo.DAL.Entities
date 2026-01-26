@@ -58,7 +58,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(3)]
-        public SessionState State
+        public UserSessionState State
         {
             get;
             set;

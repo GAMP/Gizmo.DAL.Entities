@@ -6,7 +6,7 @@ namespace Gizmo.DAL.Entities
     /// User session states.
     /// </summary>
     [Flags()]
-    public enum SessionState
+    public enum UserSessionState
     {
         /// <summary>
         /// Session initialized.
