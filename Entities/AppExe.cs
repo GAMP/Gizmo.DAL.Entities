@@ -91,7 +91,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(5)]
-        public SharedLib.ApplicationModes Modes
+        public ApplicationModes Modes
         {
             get;
             set;
@@ -139,7 +139,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(9)]
-        public SharedLib.RunMode RunMode
+        public RunMode RunMode
         {
             get;
             set;

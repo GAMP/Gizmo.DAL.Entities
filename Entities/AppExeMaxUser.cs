@@ -1,4 +1,4 @@
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -40,7 +40,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(2)]
-        public SharedLib.ApplicationModes Mode
+        public ApplicationModes Mode
         {
             get;
             set;
