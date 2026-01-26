@@ -42,7 +42,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(1)]
-        public SharedLib.OrderStatus Status
+        public OrderStatus Status
         {
             get;
             set;
