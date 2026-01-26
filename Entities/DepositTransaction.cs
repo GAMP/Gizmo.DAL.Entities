@@ -1,5 +1,4 @@
-using ProtoBuf;
-
+﻿using ProtoBuf;
 using System;
 using System.Runtime.Serialization;
 
@@ -28,7 +27,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(1)]
-        public SharedLib.DepositTransactionType Type
+        public DepositTransactionType Type
         {
             get;
             set;
