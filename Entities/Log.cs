@@ -65,14 +65,14 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(6)]
-        public LogCategories Category { get; set; }
+        public LogCategory Category { get; set; }
 
         /// <summary>
         /// Gets or sets message type.
         /// </summary>
         [DataMember()]
         [ProtoMember(7)]
-        public EventTypes MessageType { get; set; }
+        public LogMessageType MessageType { get; set; }
 
         /// <summary>
         /// Gets or sets message.

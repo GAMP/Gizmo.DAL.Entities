@@ -6,7 +6,7 @@ namespace Gizmo.DAL.Entities
     /// Event Log types representation.
     /// </summary>
     [Flags()]
-    public enum EventTypes
+    public enum LogMessageType
     {
         /// <summary>
         /// None.

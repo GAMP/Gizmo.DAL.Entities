@@ -6,7 +6,7 @@ namespace Gizmo.DAL.Entities
     /// Log categories.
     /// </summary>
     [Flags()]
-    public enum LogCategories
+    public enum LogCategory
     {
         /// <summary>
         /// None.
