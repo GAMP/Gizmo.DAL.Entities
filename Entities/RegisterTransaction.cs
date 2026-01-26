@@ -60,7 +60,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(4)]
-        public SharedLib.RegisterTransactionType Type
+        public RegisterTransactionType Type
         {
             get; set;
         }

@@ -22,7 +22,7 @@ namespace Gizmo.DAL.Entities
         }
 
         [NonSerialized()]
-        private SharedLib.ReservationStatus _status;
+        private ReservationStatus _status;
         [NonSerialized()]
         private int? _finalizedById;
         [NonSerialized()]
@@ -77,7 +77,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Get or sets reservation status.
         /// </summary>
-        public SharedLib.ReservationStatus Status
+        public ReservationStatus Status
         {
             get { return _status; }
             set { _status = value; }
