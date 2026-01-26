@@ -6,7 +6,7 @@ namespace Gizmo.DAL.Entities
     /// Deployment options.
     /// </summary>
     [Flags()]
-    public enum DeployOptionType : int
+    public enum DeployOptionType
     {
         /// <summary>
         /// Default option.
