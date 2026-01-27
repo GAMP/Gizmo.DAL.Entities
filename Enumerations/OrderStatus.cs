@@ -28,7 +28,6 @@
         /// <summary>
         /// Processing.
         /// </summary>
-        [Localized("ORDER_STATUS_PROCESSING")]
         Processing = 4,
     }
 }
