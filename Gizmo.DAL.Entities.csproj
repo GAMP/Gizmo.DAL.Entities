@@ -33,7 +33,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\DataInterfaces\DataInterfaces\DataInterfaces.csproj" />
+	  <ProjectReference Include="..\Gizmo.Shared\Gizmo.Shared.csproj" />
 	</ItemGroup>
 
 </Project>
