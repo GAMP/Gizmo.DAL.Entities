@@ -1,6 +1,4 @@
-using CoreLib;
-
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.Runtime.Serialization;
@@ -31,7 +29,7 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         [DataMember()]
         [ProtoMember(1)]
-        public SecurityPolicyType Type
+        public int Type
         {
             get;
             set;
