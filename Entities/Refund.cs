@@ -1,9 +1,8 @@
 ﻿#nullable enable
 
-using ProtoBuf;
-
 using System;
 using System.Runtime.Serialization;
+using ProtoBuf;
 
 namespace Gizmo.DAL.Entities
 {
@@ -13,7 +12,7 @@ namespace Gizmo.DAL.Entities
     [Serializable()]
     [DataContract()]
     [ProtoContract()]
-    public abstract class Refund : EntityWithShift , IBranchedOptionalEntity
+    public abstract class Refund : EntityWithShift, IBranchedOptionalEntity
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -94,6 +93,11 @@ namespace Gizmo.DAL.Entities
         {
             get; set;
         }
+
+        /// <summary>
+        /// Optional refund note.
+        /// </summary>
+        public string? Note { get; set; }
 
         #endregion
 
