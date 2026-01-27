@@ -135,31 +135,6 @@ namespace Gizmo.DAL.Entities
         }
 
         /// <summary>
-        /// Gets age rating type.
-        /// </summary>
-        [DataMember()]
-        [ProtoIgnore()]
-        public SharedLib.AgeRatingType AgeRatingType
-        {
-            get
-            {
-                if (AgeRating > 0)
-                {
-                    return SharedLib.AgeRatingType.Manual;
-                }
-                else if (AgeRating < 0 & AgeRating >= -20)
-                {
-                    return SharedLib.AgeRatingType.PEGI;
-                }
-                else if (AgeRating < -20 & AgeRating >= -40)
-                {
-                    return SharedLib.AgeRatingType.ESRB;
-                }
-                return SharedLib.AgeRatingType.None;
-            }
-        }
-
-        /// <summary>
         /// Gets or sets items guid.
         /// <remarks>This property is required to globally identify the object. In case of exporting or importing applications it gives us ability to have unique objects.</remarks>
         /// </summary>

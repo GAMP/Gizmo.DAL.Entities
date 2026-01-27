@@ -1,6 +1,4 @@
-using CyClone;
-
-using ProtoBuf;
+﻿using ProtoBuf;
 
 using System;
 using System.ComponentModel.DataAnnotations;

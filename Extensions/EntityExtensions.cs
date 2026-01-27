@@ -81,7 +81,7 @@ namespace Gizmo.DAL.Entities
             }
 
             //get current http principal
-            principal = HttpContextIdentityProvider.Current?.CurrentPrincipal;
+            principal = Web.HttpContextIdentityProvider.Current?.CurrentPrincipal;
 
             //no http principal attached to current thread
             if (principal == null)
@@ -115,7 +115,7 @@ namespace Gizmo.DAL.Entities
             }
 
             //get current http principal
-            principal = HttpContextIdentityProvider.Current?.CurrentPrincipal;
+            principal = Web.HttpContextIdentityProvider.Current?.CurrentPrincipal;
 
             //no http principal attached to current thread
             if (principal == null)
