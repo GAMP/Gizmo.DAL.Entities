@@ -1,5 +1,5 @@
 ﻿using Gizmo.Server;
-using IntegrationLib;
+using Gizmo.Server.Security;
 using System;
 using System.Security.Claims;
 
@@ -70,18 +70,13 @@ namespace Gizmo.DAL.Entities
         /// <returns>Current user id.</returns>
         public static int? GetCurrentUserId()
         {
-            //get current thread principal
-            var principal = System.Threading.Thread.CurrentPrincipal as ClaimsPrincipal;
-
-            //try to obtain user identity
-            if (principal?.Identity is IUserIdentity identity)
+            if (System.Threading.Thread.CurrentPrincipal is IGizmoServerPrincipal gizmoServerPrincipal)
             {
-                //return user id
-                return identity.UserId;
+                return gizmoServerPrincipal.UserId;
             }
 
             //get current http principal
-            principal = Web.HttpContextIdentityProvider.Current?.CurrentPrincipal;
+            var principal = Web.HttpContextIdentityProvider.Current?.CurrentPrincipal;
 
             //no http principal attached to current thread
             if (principal == null)
@@ -100,22 +95,16 @@ namespace Gizmo.DAL.Entities
         /// <returns>Operator id.</returns>
         public static int? GetCurrentOperatorId()
         {
-            //get current thread principal
-            var principal = System.Threading.Thread.CurrentPrincipal as ClaimsPrincipal;
-
-            //try to obtain user identity
-            if (principal?.Identity is IUserIdentity identity)
+            if(System.Threading.Thread.CurrentPrincipal is IGizmoServerPrincipal gizmoServerPrincipal)
             {
-                //ensure if the current user is operator
-                if (identity.Role != UserRoles.Operator)
+                if (gizmoServerPrincipal.Role != UserRoles.Operator)
                     return null;
 
-                //return user id
-                return identity.UserId;
+                return gizmoServerPrincipal.UserId;
             }
 
             //get current http principal
-            principal = Web.HttpContextIdentityProvider.Current?.CurrentPrincipal;
+            var principal = Web.HttpContextIdentityProvider.Current?.CurrentPrincipal;
 
             //no http principal attached to current thread
             if (principal == null)
@@ -125,7 +114,7 @@ namespace Gizmo.DAL.Entities
             var nameIdClaim = principal.FindFirst(ClaimTypes.NameIdentifier);
 
             //name id set parse it else return null
-            return nameIdClaim != null ? int.Parse(nameIdClaim.Value) : (int?)null;
+            return nameIdClaim != null ? int.Parse(nameIdClaim.Value) : null;
         }
     }
 }
