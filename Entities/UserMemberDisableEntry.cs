@@ -10,7 +10,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// User id.
         /// </summary>
-        public int UserId { get; set; }
+        public required int UserId { get; set; }
 
         /// <summary>
         /// Entry type.
