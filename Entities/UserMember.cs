@@ -48,6 +48,7 @@ namespace Gizmo.DAL.Entities
             Reservations = new HashSet<Reservation>();
 
             PaymentIntents = new HashSet<PaymentIntent>();
+            DisableEntries = new HashSet<UserMemberDisableEntry>();
         }
         #endregion
 
@@ -312,6 +313,11 @@ namespace Gizmo.DAL.Entities
         {
             get; protected set;
         }
+
+        /// <summary>
+        /// Gets disable entries.
+        /// </summary>
+        public virtual ISet<UserMemberDisableEntry> DisableEntries { get; set; }
 
         #endregion
     }

@@ -7,14 +7,14 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// User disable reason.
     /// </summary>
-    public sealed class UserDisableReason : ModifiableByOperatorBase
+    public sealed class UserMemberDisableReason : ModifiableByOperatorBase
     {
         /// <summary>
         /// Creates new instance.
         /// </summary>
-        public UserDisableReason() : base()
+        public UserMemberDisableReason() : base()
         {
-            Entries = new HashSet<UserDisableEntry>();
+            Entries = new HashSet<UserMemberDisableEntry>();
         }
 
         /// <summary>
@@ -30,6 +30,6 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Disable entries.
         /// </summary>
-        public ISet<UserDisableEntry> Entries { get; set; }
+        public ISet<UserMemberDisableEntry> Entries { get; set; }
     }
 }

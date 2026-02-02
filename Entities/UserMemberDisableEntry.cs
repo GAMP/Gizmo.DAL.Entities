@@ -5,8 +5,13 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// User disable entry.
     /// </summary>
-    public sealed class UserDisableEntry : CreatedByOperatorBase
+    public sealed class UserMemberDisableEntry : CreatedByOperatorBase
     {
+        /// <summary>
+        /// User id.
+        /// </summary>
+        public int UserId { get; set; }
+
         /// <summary>
         /// Entry type.
         /// </summary>
@@ -25,6 +30,11 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Optional disable reason.
         /// </summary>
-        public UserDisableReason? DisableReason { get; set; }
+        public UserMemberDisableReason? DisableReason { get; set; }
+
+        /// <summary>
+        /// Entry user.
+        /// </summary>
+        public UserMember? User {  get; set; }
     }
 }
