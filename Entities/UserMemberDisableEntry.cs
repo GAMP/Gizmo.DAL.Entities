@@ -1,5 +1,8 @@
 ﻿#nullable enable
 
+using System;
+using Gizmo.DAL.Entities.Enumerations;
+
 namespace Gizmo.DAL.Entities
 {
     /// <summary>
@@ -15,7 +18,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Entry type.
         /// </summary>
-        public UserDisableEntryType Type { get; set; }
+        public UserMemberDisableEntryType Type { get; set; }
 
         /// <summary>
         /// Disable reason id.
@@ -26,6 +29,16 @@ namespace Gizmo.DAL.Entities
         /// Disable note.
         /// </summary>
         public string? Note { get; set; }
+
+        /// <summary>
+        /// Acknowledge state.
+        /// </summary>
+        public UserMemberDisableAcknowledgeState AcknowledgeState { get; set; }
+
+        /// <summary>
+        /// Acknowledge date/time.
+        /// </summary>
+        public DateTime? AcknowledgedDate { get; set; }
 
         /// <summary>
         /// Optional disable reason.

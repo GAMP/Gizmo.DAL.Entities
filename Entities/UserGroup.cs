@@ -260,6 +260,22 @@ namespace Gizmo.DAL.Entities
             set { _discountGroupId = value; }
         }
 
+        /// <summary>
+        /// Gets or sets if login age rating is enabled.
+        /// </summary>
+        public bool IsLoginAgeRatingEnabled
+        {
+            get;set;
+        }
+
+        /// <summary>
+        /// Gets or sets if product age rating is enabled.
+        /// </summary>
+        public bool IsProductAgeRatingEnabled
+        {
+            get;set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES

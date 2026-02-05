@@ -6,7 +6,7 @@
     /// <remarks>
     /// Describe the type of the entry.
     /// </remarks>
-    public enum UserDisableEntryType
+    public enum UserMemberDisableEntryType
     {
         /// <summary>
         /// Disable entry.
