@@ -5,7 +5,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Discount group entity.
     /// </summary>
-    public sealed class DiscountGroup : ModifiableByOperatorBase
+    public sealed class DiscountGroup : ModifiableByOperatorBase, IDeletable
     {
         /// <summary>
         /// Creates new instance.
@@ -20,6 +20,9 @@ namespace Gizmo.DAL.Entities
         /// Gets or sets discount group name.
         /// </summary>
         public string Name { get; set; }
+
+        /// <inheritdoc/>
+        public bool IsDeleted { get; set; }
 
         /// <summary>
         /// Gets associated discounts.
