@@ -31,6 +31,11 @@ namespace Gizmo.DAL.Entities
         public string? Note { get; set; }
 
         /// <summary>
+        /// Re-enable date.
+        /// </summary>
+        public DateTime? EnableDate { get; set; }
+
+        /// <summary>
         /// Acknowledge state.
         /// </summary>
         public UserMemberDisableAcknowledgeState AcknowledgeState { get; set; }

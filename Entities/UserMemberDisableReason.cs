@@ -7,7 +7,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// User disable reason.
     /// </summary>
-    public sealed class UserMemberDisableReason : ModifiableByOperatorBase
+    public sealed class UserMemberDisableReason : ModifiableByOperatorBase , IDisplayOrder
     {
         /// <summary>
         /// Creates new instance.
@@ -26,6 +26,9 @@ namespace Gizmo.DAL.Entities
         /// Disable reason description.
         /// </summary>
         public string? Description { get; set; }
+
+        /// <inheritdoc/>
+        public int DisplayOrder { get; set; }
 
         /// <summary>
         /// Disable entries.
