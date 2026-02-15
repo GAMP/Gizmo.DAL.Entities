@@ -7,7 +7,7 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Payment intent base entity. 
     /// </summary>
-    public abstract class PaymentIntent : ModifiableByUserCreatedByUserBase, IReplicatable, IBranchedOptionalEntity
+    public class PaymentIntent : ModifiableByUserCreatedByUserBase, IReplicatable, IBranchedOptionalEntity
     {
         #region CONSTRUCTOR
         /// <summary>
