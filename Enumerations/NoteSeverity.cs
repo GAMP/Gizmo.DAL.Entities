@@ -6,18 +6,18 @@
     public enum NoteSeverity
     {
         /// <summary>
-        /// Green.
+        /// Blue.
         /// </summary>
-        Green = 0,
+        Blue = 0,  
 
         /// <summary>
-        /// Yellow.
+        /// Orange.
         /// </summary>
-        Yellow = 1,
+        Orange = 1,
 
         /// <summary>
-        /// Red.
+        /// Purple.
         /// </summary>
-        Red = 2,
+        Purple = 2,
     }
 }
