@@ -17,6 +17,7 @@
 
     <!-- !IMPORTANT! will break compatibility with migration generation, needs carefull consideration-->
     <Nullable>disable</Nullable>
+    <Version>3.0.0</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)'=='Release'">
@@ -32,8 +33,12 @@
 		<PackageReference Include="protobuf-net" Version="2.4.6" />
 	</ItemGroup>
 
-	<ItemGroup>
+	<ItemGroup Condition="Exists('..\Gizmo.Shared\Gizmo.Shared.csproj')">
 	  <ProjectReference Include="..\Gizmo.Shared\Gizmo.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="!Exists('..\Gizmo.Shared\Gizmo.Shared.csproj')">
+	  <PackageReference Include="Gizmo.Shared" Version="1.0.7" />
 	</ItemGroup>
 
 </Project>
