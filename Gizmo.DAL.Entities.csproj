@@ -6,18 +6,18 @@
 		<LangVersion>latest</LangVersion>
 		<Product>Gizmo.DAL.Entities</Product>
 		<Description>Gizmo.DAL.Entities</Description>
-		<Copyright>Copyright ©  2014</Copyright>
-		<Authors />
-		<Company>NETProjects</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>NETProjects LP</Authors>
+    <Company>NETProjects LP</Company>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Optimize>true</Optimize>		
-		<!-- !IMPORTANT! will break compatibility with older builds if name is changed-->
 		<AssemblyName>Gizmo.DAL.Entities</AssemblyName>
 
     <!-- !IMPORTANT! will break compatibility with migration generation, needs carefull consideration-->
     <Nullable>disable</Nullable>
-    <Version>3.0.0</Version>
+    <Version>3.0.1</Version>
+    <PackageIcon>package_icon.png</PackageIcon>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)'=='Release'">
@@ -28,6 +28,13 @@
 		<Optimize>false</Optimize>
 		<DefineConstants>DEBUG;TRACE</DefineConstants>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="Resources\package_icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="protobuf-net" Version="2.4.6" />
