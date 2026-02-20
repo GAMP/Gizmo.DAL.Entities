@@ -12,7 +12,7 @@ namespace Gizmo.DAL.Entities
         /// <summary>
         /// Integration name.
         /// </summary>
-        public required string Name { get; set; }
+        public string Name { get; set; } = null!;
 
         /// <summary>
         /// Integration type guid.
