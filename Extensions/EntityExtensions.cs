@@ -110,6 +110,11 @@ namespace Gizmo.DAL.Entities
             if (principal == null)
                 return null;
 
+            //only operators can be the creator of operator-audited entities
+            var roleClaim = principal.FindFirst(ClaimTypes.Role);
+            if (roleClaim?.Value != ClaimNames.OperatorRoleName)
+                return null;
+
             //get current name identifier (user id)
             var nameIdClaim = principal.FindFirst(ClaimTypes.NameIdentifier);
 
