@@ -1,4 +1,4 @@
-﻿#nullable enable
+#nullable enable
 
 using System;
 using System.Collections.Generic;
@@ -12,12 +12,12 @@ namespace Gizmo.DAL
     public static class PeriodExtensions
     {
         /// <summary>
-        /// Checks if passes period.
+        /// Checks if passes period. All period fields (StartDate/EndDate and day-time seconds) are interpreted as branch-local wall-clock.
         /// </summary>
         /// <param name="period">Period.</param>
-        /// <param name="dateTime">Current date/time.</param>
+        /// <param name="branchLocalNow">Current time in the branch's local time zone.</param>
         /// <returns>Result</returns>
-        public static PassPeriodResult PassPeriod(this DAL.Entities.ProductTimePeriod? period, DateTime dateTime)
+        public static PassPeriodResult PassPeriod(this DAL.Entities.ProductTimePeriod? period, DateTime branchLocalNow)
         {
             if (period == null)
                 return PassPeriodResult.Success;
@@ -26,16 +26,16 @@ namespace Gizmo.DAL
                 .ToDictionary(
                 d => d.Day,
                 d => (IReadOnlyList<DayTimeRange>)[.. d.Times.Select(t => new DayTimeRange(t.StartSecond, t.EndSecond))]);
-            return PassPeriod(period.Options, dateTime, period.StartDate, period.EndDate, times);
+            return PassPeriod(period.Options, branchLocalNow, period.StartDate, period.EndDate, times);
         }
 
         /// <summary>
-        /// Checks if passes period.
+        /// Checks if passes period. All period fields (StartDate/EndDate and day-time seconds) are interpreted as branch-local wall-clock.
         /// </summary>
         /// <param name="period">Period.</param>
-        /// <param name="dateTime">Current date/time.</param>
+        /// <param name="branchLocalNow">Current time in the branch's local time zone.</param>
         /// <returns>Result</returns>
-        public static PassPeriodResult PassPeriod(this DAL.Entities.ProductPeriod? period, DateTime dateTime)
+        public static PassPeriodResult PassPeriod(this DAL.Entities.ProductPeriod? period, DateTime branchLocalNow)
         {
             if (period == null)
                 return PassPeriodResult.Success;
@@ -44,33 +44,32 @@ namespace Gizmo.DAL
                 .ToDictionary(
                 d => d.Day,
                 d => (IReadOnlyList<DayTimeRange>)[.. d.Times.Select(t => new DayTimeRange(t.StartSecond, t.EndSecond))]);
-            return PassPeriod(period.Options, dateTime, period.StartDate, period.EndDate, times);
+            return PassPeriod(period.Options, branchLocalNow, period.StartDate, period.EndDate, times);
         }
 
         static PassPeriodResult PassPeriod(DAL.Entities.PeriodOptionType options,
-            DateTime now,
+            DateTime branchLocalNow,
             DateTime? periodStart,
             DateTime? periodEnd,
             IReadOnlyDictionary<DayOfWeek, IReadOnlyList<DayTimeRange>>? dayTimeRanges = null)
         {
-            // Date range check
+            // Date range check — branch-local wall-clock.
             if (options.HasFlag(Entities.PeriodOptionType.HasDateRange))
             {
-                // Must be within [periodStart, periodEnd], when those bounds are present.
-                if ((periodStart.HasValue && now < periodStart.Value) ||
-                    (periodEnd.HasValue && now > periodEnd.Value))
+                if ((periodStart.HasValue && branchLocalNow < periodStart.Value) ||
+                    (periodEnd.HasValue && branchLocalNow > periodEnd.Value))
                 {
                     return PassPeriodResult.Date;
                 }
             }
 
-            // Day-of-week / time-of-day check
+            // Day-of-week / time-of-day check — branch-local wall-clock.
             if (options.HasFlag(Entities.PeriodOptionType.HasDayTimeRange))
             {
-                var secondOfDay = now.TimeOfDay.TotalSeconds;
+                var secondOfDay = branchLocalNow.TimeOfDay.TotalSeconds;
 
                 if (dayTimeRanges == null ||
-                    !dayTimeRanges.TryGetValue(now.DayOfWeek, out var dayWindows) ||
+                    !dayTimeRanges.TryGetValue(branchLocalNow.DayOfWeek, out var dayWindows) ||
                     dayWindows == null ||
                     !dayWindows.Any(w => w.StartSecond <= secondOfDay && secondOfDay <= w.EndSecond))
                 {
