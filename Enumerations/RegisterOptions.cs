@@ -9,5 +9,10 @@
         /// None option.
         /// </summary>
         None,
+
+        /// <summary>
+        /// Indicates primary branch register.
+        /// </summary>
+        Primary = 1,
     }
 }
