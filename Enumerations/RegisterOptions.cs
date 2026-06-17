@@ -11,8 +11,8 @@
         None,
 
         /// <summary>
-        /// Indicates primary branch register.
+        /// Indicates default branch register.
         /// </summary>
-        Primary = 1,
+        Default = 1,
     }
 }
