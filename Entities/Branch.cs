@@ -31,6 +31,7 @@ namespace Gizmo.DAL.Entities
             Stocks = new HashSet<Stock>();
             Orders = new HashSet<ProductOrder>();
             RegisterTransactions = new HashSet<RegisterTransaction>();
+            Registers = new HashSet<Register>();
         }
 
         /// <summary>
@@ -291,5 +292,10 @@ namespace Gizmo.DAL.Entities
         /// Gets register transactions.
         /// </summary>
         public ISet<RegisterTransaction> RegisterTransactions { get; private set; }
+
+        /// <summary>
+        /// Branch registers.
+        /// </summary>
+        public virtual ISet<Register> Registers { get; set; }
     }
 }
