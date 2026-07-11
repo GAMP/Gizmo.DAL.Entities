@@ -132,6 +132,18 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets if the user is exempt from achievement ladder moves.
+        /// The ladder evaluator never changes an exempt user's group — neither live
+        /// promotion nor period settle; manual operator moves remain possible.
+        /// </summary>
+        [DataMember()]
+        [ProtoMember(9)]
+        public bool IsTierExempt
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
