@@ -4,15 +4,29 @@ namespace Gizmo.DAL.Entities
     /// Verification method chain context.
     /// </summary>
     /// <remarks>
-    /// Identifies the chain a <see cref="VerificationMethod"/> entry belongs to. <see cref="Global"/>
-    /// applies to all flows; more specific contexts may be added in the future to form separate chains,
-    /// resolved most specific first with fallback to <see cref="Global"/>.
+    /// Identifies the chain a <see cref="VerificationMethod"/> entry belongs to. Every verification
+    /// flow resolves its chain by exact context match — there is no shared or fallback chain.
     /// </remarks>
     public enum VerificationContext
     {
         /// <summary>
-        /// Global chain, applies to all flows.
+        /// User registration chain.
         /// </summary>
-        Global = 0,
+        Registration = 0,
+
+        /// <summary>
+        /// Password recovery chain.
+        /// </summary>
+        PasswordRecovery = 1,
+
+        /// <summary>
+        /// Phone number verification chain. Only phone channel mechanisms are eligible.
+        /// </summary>
+        PhoneVerification = 2,
+
+        /// <summary>
+        /// Email address verification chain. Only email channel mechanisms are eligible.
+        /// </summary>
+        EmailVerification = 3,
     }
 }
