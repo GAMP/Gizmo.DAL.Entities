@@ -43,6 +43,15 @@ namespace Gizmo.DAL.Entities
         public int Occurrence { get; set; }
 
         /// <summary>
+        /// Gets or sets the one-based global finisher number across all users of the
+        /// challenge — always populated ("finisher #7"). The unique index over challenge
+        /// and this value makes the slot claimable exactly once, which is how the global
+        /// completion pool is enforced under concurrency: when the pool is exhausted no
+        /// completion row is written at all.
+        /// </summary>
+        public int GlobalOccurrence { get; set; }
+
+        /// <summary>
         /// Gets or sets the UTC time the challenge requirements were satisfied.
         /// Grant state is tracked per reward row — rewards of one completion may be
         /// fulfilled at different times by different operators.

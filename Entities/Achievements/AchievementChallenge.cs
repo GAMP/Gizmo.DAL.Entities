@@ -54,6 +54,13 @@ namespace Gizmo.DAL.Entities
         public int MaxCompletions { get; set; } = 1;
 
         /// <summary>
+        /// Gets or sets the total completion pool across all users — "first N finishers"
+        /// scarcity campaigns. Null means uncapped. Slots are consumed per completion, not
+        /// per winner; combine with a per-user max of one for "N distinct winners".
+        /// </summary>
+        public int? GlobalMaxCompletions { get; set; }
+
+        /// <summary>
         /// Gets or sets option flags.
         /// </summary>
         public AchievementChallengeOptionType Options { get; set; }
