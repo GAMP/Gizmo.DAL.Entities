@@ -50,8 +50,10 @@ namespace Gizmo.DAL.Entities
 
         /// <summary>
         /// Gets or sets the maximum number of completions per user within the window.
+        /// Null means unlimited — a recurring reward the user earns every time the
+        /// requirements are met again.
         /// </summary>
-        public int MaxCompletions { get; set; } = 1;
+        public int? MaxCompletions { get; set; } = 1;
 
         /// <summary>
         /// Gets or sets the total completion pool across all users — "first N finishers"
