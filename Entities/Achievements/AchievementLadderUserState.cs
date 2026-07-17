@@ -6,12 +6,13 @@ namespace Gizmo.DAL.Entities
     /// Per-user evaluation state of an achievement ladder.
     /// </summary>
     /// <remarks>
-    /// Tracks which period was last settled for the user so the lazy settle (run at the
-    /// user's next appearance after a period boundary) knows whether the previous period
-    /// still needs authoritative evaluation. Keyed per ladder so future scoped ladders
-    /// need no schema change.
+    /// Tracks which period was last settled for the user so the settle knows whether the
+    /// previous period still needs authoritative evaluation. Keyed per ladder so future
+    /// scoped ladders need no schema change. Identified by its composite key
+    /// (UserId, LadderId) — one row per user per ladder, nothing references it, so it
+    /// carries no surrogate id (link-table convention).
     /// </remarks>
-    public sealed class AchievementLadderUserState : EntityBase
+    public sealed class AchievementLadderUserState
     {
         /// <summary>
         /// Creates new instance.
