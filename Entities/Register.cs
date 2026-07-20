@@ -142,6 +142,17 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Gets or sets receipt printer number.
+        /// </summary>
+        /// <remarks>
+        /// Null value indicates that receipt printing is disabled on the register.
+        /// </remarks>
+        public int? ReceiptPrinterNumber
+        {
+            get; set;
+        }
+
         /// <inheritdoc/>        
         public int BranchId
         {
