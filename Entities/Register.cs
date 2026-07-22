@@ -172,6 +172,15 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public int? StockId { get; set; }
 
+        /// <summary>
+        /// Gets or sets default operator id.
+        /// </summary>
+        /// <remarks>
+        /// When set, this operator is attributed as the fiscal cashier for transactions fiscalized on this
+        /// register that carry no operator of their own (online or automatic payments).
+        /// </remarks>
+        public int? DefaultOperatorId { get; set; }
+
 #nullable enable
 
         /// <summary>
