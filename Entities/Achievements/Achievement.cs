@@ -75,8 +75,18 @@ namespace Gizmo.DAL.Entities
         /// </summary>
         public bool IsDisabled { get; set; }
 
+        /// <summary>
+        /// Gets or sets optional badge image id.
+        /// </summary>
+        public int? ImageId { get; set; }
+
         /// <inheritdoc/>
         public bool IsDeleted { get; set; }
+
+        /// <summary>
+        /// Gets or sets badge image.
+        /// </summary>
+        public FileImage Image { get; set; }
 
         /// <summary>
         /// Gets id filter values restricting counted activity (hosts, host groups, apps etc.).
