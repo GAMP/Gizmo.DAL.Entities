@@ -29,5 +29,10 @@
         /// Reset password token.
         /// </summary>
         ResetPassword = 4,
+
+        /// <summary>
+        /// Device JWT refresh token minted by phone-approved activation.
+        /// </summary>
+        DeviceRefresh = 5,
     }
 }
