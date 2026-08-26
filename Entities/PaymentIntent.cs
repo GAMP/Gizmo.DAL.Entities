@@ -158,6 +158,44 @@ namespace Gizmo.DAL.Entities
             get; set;
         }
 
+        /// <summary>
+        /// Register id.
+        /// </summary>
+        /// <remarks>
+        /// The register the intent was created on. Pinned at creation for operator initiated intents so the
+        /// processing pass can attribute the resulting payment/invoice to the same register without re-deriving
+        /// it from the operator's current context. Null for user initiated (self service) intents.
+        /// </remarks>
+        public int? RegisterId
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Shift id.
+        /// </summary>
+        /// <remarks>
+        /// The operator shift active on <see cref="RegisterId"/> at creation time, if any. Null for user initiated
+        /// intents and for operators without an active shift.
+        /// </remarks>
+        public int? ShiftId
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Qr display device number.
+        /// </summary>
+        /// <remarks>
+        /// The customer display that showed the payment qr code, pinned so the processing pass clears the device it
+        /// was actually shown on rather than whichever one the register points at by then. Null when no qr code was
+        /// displayed, which is every intent except a synchronous payment provider one.
+        /// </remarks>
+        public int? QrDisplayNumber
+        {
+            get; set;
+        }
+
         #endregion
 
         #region NAVIGATION PROPERTIES
@@ -202,6 +240,22 @@ namespace Gizmo.DAL.Entities
         /// Gets or set companion.
         /// </summary>
         public Companion? Companion
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets register.
+        /// </summary>
+        public Register? Register
+        {
+            get; set;
+        }
+
+        /// <summary>
+        /// Gets or sets shift.
+        /// </summary>
+        public Shift? Shift
         {
             get; set;
         }
