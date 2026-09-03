@@ -45,9 +45,11 @@ namespace Gizmo.DAL.Entities
         public DateTime? ProcessedTime { get; set; }
 
         /// <summary>
-        /// Gets or sets the operator that granted or declined the reward.
-        /// Null for system acts (automatic grants) and user declines, and while the
-        /// reward is unprocessed — set by the operator-facing fulfillment flow.
+        /// Gets or sets the operator that processed the reward — set only when an operator
+        /// acted for the user. Null while the reward is unprocessed, for system acts
+        /// (automatic delivery), and for anything the user did themselves (claiming a
+        /// non-physical reward, or refusing one). Audit only: what happened to the reward is
+        /// <see cref="Status"/>, never inferred from this column.
         /// </summary>
         public int? ProcessedById { get; set; }
 
