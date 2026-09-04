@@ -3,6 +3,10 @@ namespace Gizmo.DAL.Entities
     /// <summary>
     /// Snapshot of a product granted by an achievement challenge completion.
     /// </summary>
+    /// <remarks>
+    /// One row is one unit: a reward configured for five colas mints five rows, so every unit
+    /// is claimed and stocked on its own.
+    /// </remarks>
     public sealed class AchievementChallengeCompletionProductReward : AchievementChallengeCompletionReward
     {
         /// <summary>
@@ -18,7 +22,7 @@ namespace Gizmo.DAL.Entities
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the granted quantity.
+        /// Gets or sets the granted quantity — one, since a row is a single unit.
         /// </summary>
         public int Quantity { get; set; }
 

@@ -18,7 +18,9 @@ namespace Gizmo.DAL.Entities
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Gets or sets the rewarded quantity.
+        /// Gets or sets the rewarded quantity — how many single-unit reward rows a completion
+        /// mints, since each unit is claimed and stocked on its own. The same product may be
+        /// rewarded more than once, at different quantities.
         /// </summary>
         public int Quantity { get; set; } = 1;
 
